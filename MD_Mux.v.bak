@@ -1,0 +1,12 @@
+module MD_Mux (output [31:0] Output, input [31:0] A, input [31:0] B, input Select);
+	always @(Select, A, B)
+	begin
+	if(Select):
+		Output<= A;
+		end
+	else:
+		Output<=B;
+		end
+	end
+endmodule 	
+	

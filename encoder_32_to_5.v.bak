@@ -1,0 +1,40 @@
+module encoder_32_to_5(output [4:0] SelectOut, 
+input R0out, R1out, R2out, R3out, R4out, R5out, R6out, R7out, R8out, R9out, R10out, R11out, R12out, R13out, R14out, R15out,HIout,LOout,Zhighout,Zlowout,PCout,MDRout,In.Portout,Cout,in23,in24,in25,in26,in27,in28,in29,in30,in31);
+
+always@(*)begin 
+if(r0out) SelectOut =0;
+else if(r1out) SelectOut =1;
+else if(r2out) SelectOut =2;
+else if(r3out) SelectOut =3;
+else if(r4out) SelectOut =4;
+else if(r5out) SelectOut =5;
+else if(r6out) SelectOut =6;
+else if(r7out) SelectOut =7;
+else if(r8out) SelectOut =8;
+else if(r9out) SelectOut =9;
+else if(r10out) SelectOut =10;
+else if(r11out) SelectOut =11;
+else if(r12out) SelectOut =12;
+else if(r13out) SelectOut =13;
+else if(r14out) SelectOut =14;
+else if(r15out) SelectOut =15;
+else if(HIout) SelectOut =16;
+else if(LOout) SelectOut =17;
+else if(Zhighout) SelectOut =18;
+else if(ZLOwout) SelectOut =19;
+else if(PCOut) SelectOut =20;
+else if(MDRout) SelectOut =21;
+else if(In.Portout) SelectOut =22;
+else if(Cout) SelectOut =23;
+else if(in24) SelectOut =24;
+else if(in25) SelectOut =25;
+else if(in26) SelectOut =26;
+else if(in27) SelectOut =27;
+else if(in28) SelectOut =28;
+else if(in29) SelectOut =29;
+else if(in30) SelectOut =30;
+else if(in31) SelectOut =31;
+
+end
+endmodule
+
