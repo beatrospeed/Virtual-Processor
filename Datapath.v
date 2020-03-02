@@ -34,11 +34,11 @@ module dataPath(
 );
 	
 	wire [4:0] Select_D; 
-	wire [31:0] Y_D, InPort_D, OutPort_D, MAR_D, PCVal_D; 
+	wire [31:0] YVal, InPort_D, OutPort_D, MAR_D, PCVal,CVal,in24Val,in25Val,in26Val,in27Val,in28Val,in29Val,in30Val,in31Val; 
 	wire [63:0] ALUVal_D; 
 	
 	
-	Reg32 Y(bus, clk, reset, Y_in, Y_D); 
+	Reg32 Y(bus, clk, reset, Y_in, YVal); 
 	Reg32 Z(ALUVal_D, clk, reset, Z_in, Zval);
 	Reg32 HI(Bus, clk, reset, HIin, HIval); 
    Reg32 LO(Bus, Clock, reset, LOin, LOval);
@@ -63,10 +63,10 @@ module dataPath(
    Reg32 R12(bus, clk, reset, R12in, R12Val); 
    Reg32 R13(bus, clk, reset, R13in, R13Val); 
    Reg32 R14(bus, clk, reset, R14in, R14Val); 
-   Reg32 R15(bus, clk, reset, R15in, R15Val); 
+   Reg32 R15(bus, clk, reset, R15in, R15Val); 	
 
    
-	   encoder_32_to_5 BusMux_encoder(Select_D,BusMuxin_R0, BusMuxin_R1, BusMuxin_R2,
+	encoder_32_to_5 BusMux_encoder(Select_D,BusMuxin_R0, BusMuxin_R1, BusMuxin_R2,
 									 BusMuxin_R3, BusMuxin_R4, BusMuxin_R5,
 									 BusMuxin_R6, BusMuxin_R7, BusMuxin_R8,
 									 BusMuxin_R9, BusMuxin_R10, BusMuxin_R11,
@@ -78,16 +78,10 @@ module dataPath(
 									 BusMuxin_in27, BusMuxin_in28, BusMuxin_in29,
 									 BusMuxin_in30, BusMuxin_in31, Y_in, Z_in);
 
-	Mux_32_to_1 Bus_Mux(bus,Select_D,BusMuxin_R0, BusMuxin_R1, BusMuxin_R2,
-									 BusMuxin_R3, BusMuxin_R4, BusMuxin_R5,
-									 BusMuxin_R6, BusMuxin_R7, BusMuxin_R8,
-									 BusMuxin_R9, BusMuxin_R10, BusMuxin_R11,
-									 BusMuxin_R12, BusMuxin_R13, BusMuxin_R14,
-									 BusMuxin_R15, BusMuxin_HIout, BusMuxin_LOout,
-									 BusMuxin_Zhighout, BusMuxin_Zlowout, BusMuxin_PCout,
-									 BusMuxin_MDRout, BusMuxin_In_Portout, BusMuxin_Cin,
-									 BusMuxin_in24, BusMuxin_in25, BusMuxin_in26,
-									 BusMuxin_in27, BusMuxin_in28, BusMuxin_in29,
-									 BusMuxin_in30, BusMuxin_in31, Y_in, Z_in);
+	Mux_32_to_1 Bus_Mux(bus,Select_D,R0Val,R1Val,R2Val,R3Val,R4Val,R5Val,R6Val,R7Val,
+	R8Val,R9Val,R10Val,R11Val,R12Val,R13Val,R14Val,R15Val,HIval,LOval,ZVal[63:32], ZVal[31:0],
+	PCVal,MDRval,InPortVal,CVal,in24Val,in25Val,in26Val,in27Val,in28Val,in29Val,in30Val,in31Val);
+	
+	alu Alu(ZVal[63:32], ZVal[31:0],YVal,bus,control,IncPc,clk);
 
 endmodule 
