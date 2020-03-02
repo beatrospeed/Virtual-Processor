@@ -11,13 +11,13 @@ module REG32(input [31:0] D, input clock, input clear, input load, output reg[31
 endmodule 
 
 
-module mdr_reg (input [31:0] out, input [31:0] BusMuxOut, input [31:0] mdata_in, input MDR_read,
-input reset, input clock, input mdr_in); 
+module mdr_reg (output [31:0] Q, input [31:0] mdata_in, input MDR_read, input clock, input reset, input mdr_in, input [31:0] BusMuxOut 
+  ); 
 
 	wire [31:0] d; 
 	MD_MUX MD_mux (d, BusMuxOut, mdata_in,MDR_read); 
 	
-	Reg32 q (d, clock, reset,mdr_in,q); 
+	Reg32 q (d, clock, reset,mdr_in, Q); 
 	
 endmodule
 
