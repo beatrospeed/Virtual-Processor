@@ -1,5 +1,5 @@
 Analysis & Synthesis report for MINISRC
-Sun Mar 01 19:32:49 2020
+Sun Mar 01 21:02:10 2020
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -36,7 +36,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Sun Mar 01 19:32:49 2020               ;
+; Analysis & Synthesis Status        ; Failed - Sun Mar 01 21:02:10 2020               ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; MINISRC                                         ;
 ; Top-level Entity Name              ; MINISRC                                         ;
@@ -146,7 +146,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 ; Processors                 ; Number ;
 +----------------------------+--------+
-; Number detected on machine ; 12     ;
+; Number detected on machine ; 8      ;
 ; Maximum allowed            ; 1      ;
 +----------------------------+--------+
 
@@ -157,7 +157,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Sun Mar 01 19:32:49 2020
+    Info: Processing started: Sun Mar 01 21:02:09 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off MINISRC -c MINISRC
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Warning (12019): Can't analyze file -- file Reg32.v is missing
@@ -185,7 +185,7 @@ Warning (10236): Verilog HDL Implicit Net warning at ALU.v(80): created implicit
 Error (12007): Top-level design entity "MINISRC" is undefined
 Error: Quartus II 64-Bit Analysis & Synthesis was unsuccessful. 1 error, 7 warnings
     Error: Peak virtual memory: 4572 megabytes
-    Error: Processing ended: Sun Mar 01 19:32:50 2020
+    Error: Processing ended: Sun Mar 01 21:02:10 2020
     Error: Elapsed time: 00:00:01
     Error: Total CPU time (on all processors): 00:00:01
 
