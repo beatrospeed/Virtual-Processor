@@ -17,22 +17,23 @@ reg clk;
 reg reset; 
 reg [31:0] Mdata_in; 
 reg [3:0] control; 
- 
+
+wire 
 
 
 wire [31:0] zhigh_d, zlow_d; 
 //Bus encoder inputs
- reg BusMuxin_R0, BusMuxin_R1, BusMuxin_R2,
- BusMuxin_R3, BusMuxin_R4, BusMuxin_R5,
- BusMuxin_R6, BusMuxin_R7, BusMuxin_R8,
- BusMuxin_R9, BusMuxin_R10, BusMuxin_R11,
- BusMuxin_R12, BusMuxin_R13, BusMuxin_R14,
- BusMuxin_R15, BusMuxin_HIout, BusMuxin_LOout,
- BusMuxin_Zhighout, BusMuxin_Zlowout, BusMuxin_PCout,
- BusMuxin_MDRout, BusMuxin_In_Portout, BusMuxin_Cin,
- BusMuxin_in24, BusMuxin_in25, BusMuxin_in26,
- BusMuxin_in27, BusMuxin_in28, BusMuxin_in29,
- BusMuxin_in30, BusMuxin_in31; 
+reg BusMuxin_R0,reg BusMuxin_R1,reg BusMuxin_R2,
+reg BusMuxin_R3,reg BusMuxin_R4,reg BusMuxin_R5,
+reg BusMuxin_R6,reg BusMuxin_R7,reg BusMuxin_R8,
+reg BusMuxin_R9,reg BusMuxin_R10,reg BusMuxin_R11,
+reg BusMuxin_R12,reg BusMuxin_R13,reg BusMuxin_R14,
+reg BusMuxin_R15,reg BusMuxin_HIout,reg BusMuxin_LOout,
+reg BusMuxin_Zhighout,reg BusMuxin_Zlowout,reg BusMuxin_PCout,
+reg BusMuxin_MDRout,reg BusMuxin_In_Portout,reg BusMuxin_Cin,
+reg BusMuxin_in24,reg BusMuxin_in25,reg BusMuxin_in26,
+reg BusMuxin_in27,reg BusMuxin_in28,reg BusMuxin_in29,
+reg BusMuxin_in30,reg BusMuxin_in31; 
 
 
 
@@ -46,4 +47,4 @@ reg  [4:0] Present_state = Default;
 
 
 
-endmodule 
+ 
