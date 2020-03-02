@@ -1,5 +1,5 @@
 Analysis & Synthesis report for MINISRC
-Sat Feb 29 20:55:34 2020
+Sun Mar 01 19:32:49 2020
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -36,7 +36,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Sat Feb 29 20:55:34 2020               ;
+; Analysis & Synthesis Status        ; Failed - Sun Mar 01 19:32:49 2020               ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; MINISRC                                         ;
 ; Top-level Entity Name              ; MINISRC                                         ;
@@ -157,7 +157,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Sat Feb 29 20:55:33 2020
+    Info: Processing started: Sun Mar 01 19:32:49 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off MINISRC -c MINISRC
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Warning (12019): Can't analyze file -- file Reg32.v is missing
@@ -167,11 +167,26 @@ Info (12021): Found 1 design units, including 1 entities, in source file encoder
     Info (12023): Found entity 1: encoder_32_to_5
 Info (12021): Found 1 design units, including 1 entities, in source file mux_32_to_1.v
     Info (12023): Found entity 1: Mux_32_to_1
+Info (12021): Found 9 design units, including 9 entities, in source file alu.v
+    Info (12023): Found entity 1: bit_Stage_cell
+    Info (12023): Found entity 2: four_bit_adder
+    Info (12023): Found entity 3: sixteen_bit_carry_adder
+    Info (12023): Found entity 4: thirtytwo_bit_carry_adder
+    Info (12023): Found entity 5: thirtytwo_bit_twos_complement
+    Info (12023): Found entity 6: thirtytwo_bit_subtractor
+    Info (12023): Found entity 7: thirtytwo_bit_booth_algorithm
+    Info (12023): Found entity 8: nonrestoring_divison_algo
+    Info (12023): Found entity 9: alu
+Warning (10236): Verilog HDL Implicit Net warning at ALU.v(29): created implicit net for "pc2"
+Warning (10236): Verilog HDL Implicit Net warning at ALU.v(41): created implicit net for "go"
+Warning (10236): Verilog HDL Implicit Net warning at ALU.v(42): created implicit net for "g"
+Warning (10236): Verilog HDL Implicit Net warning at ALU.v(68): created implicit net for "pc2"
+Warning (10236): Verilog HDL Implicit Net warning at ALU.v(80): created implicit net for "go"
 Error (12007): Top-level design entity "MINISRC" is undefined
-Error: Quartus II 64-Bit Analysis & Synthesis was unsuccessful. 1 error, 2 warnings
+Error: Quartus II 64-Bit Analysis & Synthesis was unsuccessful. 1 error, 7 warnings
     Error: Peak virtual memory: 4572 megabytes
-    Error: Processing ended: Sat Feb 29 20:55:34 2020
+    Error: Processing ended: Sun Mar 01 19:32:50 2020
     Error: Elapsed time: 00:00:01
-    Error: Total CPU time (on all processors): 00:00:00
+    Error: Total CPU time (on all processors): 00:00:01
 
 
