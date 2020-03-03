@@ -1,4 +1,4 @@
-module REG32(input [31:0] D, input clock, input clear, input load, output reg[31:0] Q); 
+module Reg32(input [31:0] D, input clock, input clear, input load, output reg[31:0] Q); 
 	always @(posedge clock)
 		if(clear)
 		begin
@@ -15,7 +15,7 @@ module mdr_reg (output [31:0] Q, input [31:0] mdata_in, input MDR_read, input cl
   ); 
 
 	wire [31:0] d; 
-	MD_MUX MD_mux (d, BusMuxOut, mdata_in,MDR_read); 
+	MD_Mux MD_mux (d, BusMuxOut, mdata_in,MDR_read); 
 	
 	Reg32 q (d, clock, reset,mdr_in, Q); 
 	

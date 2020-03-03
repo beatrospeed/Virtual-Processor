@@ -1,2 +1,2 @@
 Info (10281): Verilog HDL Declaration information at REG32_MDR.v(14): object "Q" differs only in case from object "q" in the same scope
-Info (10281): Verilog HDL Declaration information at Datapath.v(47): object "MDR" differs only in case from object "mdr" in the same scope
+Info (10281): Verilog HDL Declaration information at Datapath.v(48): object "MDR" differs only in case from object "mdr" in the same scope

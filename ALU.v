@@ -1,10 +1,10 @@
-module bit_Stage_cell(output g, p, sum, input x,y,c_in);
+module bit_stage_cell(output g, p, sum, input x,y,c_in);
 	and(g,x,y);
 	xor(p,x,y);
 	xor(sum,p,c_in);
 endmodule 
 
-module four_bit_adder(output [3:0] sum, output p, input [3:0] x, input [3:0] y, input c_0);
+module four_bit_adder(output [3:0] sum,output g, output p, input [3:0] x, input [3:0] y, input c_0);
 
 	wire g0, p0;
 	bit_stage_cell b0(g0, p0, sum[0], x[0], y[0], c_0);
