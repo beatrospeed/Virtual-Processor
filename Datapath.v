@@ -34,7 +34,7 @@ module dataPath(
 );
 	
 	wire [4:0] Select_D; 
-	wire [31:0] YVal, InPort_D, OutPort_D, MAR_D, PCVal,CVal,in24Val,in25Val,in26Val,in27Val,in28Val,in29Val,in30Val,in31Val; 
+	wire [31:0] YVal, InPort_D, OutPort_D, MAR_D, PCVal,CVal; 
 	wire [63:0] ALUVal_D; 
 	
 	
@@ -74,13 +74,11 @@ module dataPath(
 									 BusMuxin_R15, BusMuxin_HIout, BusMuxin_LOout,
 									 BusMuxin_Zhighout, BusMuxin_Zlowout, BusMuxin_PCout,
 									 BusMuxin_MDRout, BusMuxin_In_Portout, BusMuxin_Cin,
-									 BusMuxin_in24, BusMuxin_in25, BusMuxin_in26,
-									 BusMuxin_in27, BusMuxin_in28, BusMuxin_in29,
-									 BusMuxin_in30, BusMuxin_in31);
+										);
 
 	Mux_32_to_1 Bus_Mux(bus,Select_D,R0Val,R1Val,R2Val,R3Val,R4Val,R5Val,R6Val,R7Val,
 	R8Val,R9Val,R10Val,R11Val,R12Val,R13Val,R14Val,R15Val,HIval,LOval,ZVal[63:32], ZVal[31:0],
-	PCVal,MDRval,InPortVal,CVal,in24Val,in25Val,in26Val,in27Val,in28Val,in29Val,in30Val,in31Val);
+	PCVal,MDRval,InPortVal,CVal);
 	
 	alu Alu(ZVal[63:32], ZVal[31:0],YVal,bus,control,IncPc,clk);
 
