@@ -14,7 +14,7 @@ L0 203
 Z5 OV;L;10.1d;51
 r1
 31
-Z6 !s108 1583195765.426000
+Z6 !s108 1583196711.945000
 Z7 !s107 D:/Elec_374/Virtual-Processor/ALU.v|
 Z8 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Elec_374/Virtual-Processor|D:/Elec_374/Virtual-Processor/ALU.v|
 Z9 o-vlog01compat -work work -O0
@@ -60,10 +60,30 @@ ndata@path
 !i10b 1
 !s100 6?]l;Ri>@Q3a<Ucl@mnIL2
 !s85 0
-!s108 1583195765.719000
+!s108 1583196712.213000
 !s107 D:/Elec_374/Virtual-Processor/Datapath.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Elec_374/Virtual-Processor|D:/Elec_374/Virtual-Processor/Datapath.v|
 !s101 -O0
+vdiv_testbench
+!i10b 1
+!s100 @c8Q4JG<8DdhD[z@XQQmN2
+IIS[8ngeQB^moi6NG<R5kD1
+V^@kjTVECIk6P_`ln64GCA0
+R1
+w1583196673
+8D:/Elec_374/Virtual-Processor/div_testbench.v
+FD:/Elec_374/Virtual-Processor/div_testbench.v
+L0 3
+R5
+r1
+!s85 0
+31
+!s108 1583196712.280000
+!s107 D:/Elec_374/Virtual-Processor/div_testbench.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Elec_374/Virtual-Processor|D:/Elec_374/Virtual-Processor/div_testbench.v|
+!s101 -O0
+R9
+R10
 vencoder_32_to_5
 ICcdNKeQ?o?Z8Q0J7cM7051
 Vfm<h66IiGaMW7>F?e>Poe1
@@ -80,7 +100,7 @@ R10
 !i10b 1
 !s100 ``0kO8n5_oBE0YZ_?<2MU3
 !s85 0
-!s108 1583195765.278000
+!s108 1583196711.796000
 !s107 D:/Elec_374/Virtual-Processor/encoder_32_to_5.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Elec_374/Virtual-Processor|D:/Elec_374/Virtual-Processor/encoder_32_to_5.v|
 !s101 -O0
@@ -121,7 +141,7 @@ R10
 !i10b 1
 !s100 =FZhj?z;ZA]Wg^ze`d_9I2
 !s85 0
-!s108 1583195765.205000
+!s108 1583196711.715000
 !s107 D:/Elec_374/Virtual-Processor/MD_Mux.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Elec_374/Virtual-Processor|D:/Elec_374/Virtual-Processor/MD_Mux.v|
 !s101 -O0
@@ -136,7 +156,7 @@ L0 14
 R5
 r1
 31
-Z15 !s108 1583195765.623000
+Z15 !s108 1583196712.134000
 Z16 !s107 D:/Elec_374/Virtual-Processor/REG32_MDR.v|
 Z17 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Elec_374/Virtual-Processor|D:/Elec_374/Virtual-Processor/REG32_MDR.v|
 R9
@@ -162,7 +182,7 @@ n@mux_32_to_1
 !i10b 1
 !s100 :2m@0Wa5[g@TTaM;bgOjB3
 !s85 0
-!s108 1583195765.350000
+!s108 1583196711.874000
 !s107 D:/Elec_374/Virtual-Processor/Mux_32_to_1.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Elec_374/Virtual-Processor|D:/Elec_374/Virtual-Processor/Mux_32_to_1.v|
 !s101 -O0
@@ -207,26 +227,6 @@ n@reg32
 !s100 F;;G^SKG;LJcP3Y4VZ<S]0
 !s85 0
 !s101 -O0
-vreg_tb
-!i10b 1
-!s100 ia]6kglX1a9@OPRfV5R6a0
-ICSYo`RbMgGhaOzo?_E=;E3
-VAkc5oNlH0mzRbC4IT_E1R1
-R1
-w1583195744
-8D:/Elec_374/Virtual-Processor/reg_tb.v
-FD:/Elec_374/Virtual-Processor/reg_tb.v
-L0 3
-R5
-r1
-!s85 0
-31
-!s108 1583195765.793000
-!s107 D:/Elec_374/Virtual-Processor/reg_tb.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Elec_374/Virtual-Processor|D:/Elec_374/Virtual-Processor/reg_tb.v|
-!s101 -O0
-R9
-R10
 vsixteen_bit_carry_adder
 ITf;XVbgg^:jLo^S`L<Wfo2
 V;<1`9[VDa@RnH0c<Q:46f1

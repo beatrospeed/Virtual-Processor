@@ -1,5 +1,5 @@
 Fitter report for MINISRC
-Mon Mar 02 19:32:10 2020
+Mon Mar 02 19:49:57 2020
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -55,7 +55,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Fitter Summary                                                                       ;
 +------------------------------------+-------------------------------------------------+
-; Fitter Status                      ; Failed - Mon Mar 02 19:32:10 2020               ;
+; Fitter Status                      ; Failed - Mon Mar 02 19:49:57 2020               ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; MINISRC                                         ;
 ; Top-level Entity Name              ; dataPath                                        ;
@@ -6233,7 +6233,7 @@ Warning (169069): Following 770 pins have nothing, GND, or VCC driving datain po
     Info (169070): Pin LOval[31] has GND driving its datain port
 Error: Quartus II 64-Bit Fitter was unsuccessful. 2 errors, 5 warnings
     Error: Peak virtual memory: 4763 megabytes
-    Error: Processing ended: Mon Mar 02 19:32:10 2020
+    Error: Processing ended: Mon Mar 02 19:49:57 2020
     Error: Elapsed time: 00:00:02
     Error: Total CPU time (on all processors): 00:00:02
 

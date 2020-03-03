@@ -12,11 +12,11 @@ vlog -vlog01compat -work work +incdir+D:/Elec_374/Virtual-Processor {D:/Elec_374
 vlog -vlog01compat -work work +incdir+D:/Elec_374/Virtual-Processor {D:/Elec_374/Virtual-Processor/REG32_MDR.v}
 vlog -vlog01compat -work work +incdir+D:/Elec_374/Virtual-Processor {D:/Elec_374/Virtual-Processor/Datapath.v}
 
-vlog -vlog01compat -work work +incdir+D:/Elec_374/Virtual-Processor {D:/Elec_374/Virtual-Processor/div_testbench.v}
+vlog -vlog01compat -work work +incdir+D:/Elec_374/Virtual-Processor {D:/Elec_374/Virtual-Processor/reg_tb.v}
 
-vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneiii_ver -L rtl_work -L work -voptargs="+acc"  div_testbench
+vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneiii_ver -L rtl_work -L work -voptargs="+acc"  reg_tb
 
 add wave *
 view structure
 view signals
-run -all
+run 1 sec
