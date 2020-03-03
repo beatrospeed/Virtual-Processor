@@ -56,23 +56,28 @@
 # Top level modules:
 # 	dataPath
 # 
-# vlog -vlog01compat -work work +incdir+D:/Elec_374/Virtual-Processor {D:/Elec_374/Virtual-Processor/reg_tb.v}
+# vlog -vlog01compat -work work +incdir+D:/Elec_374/Virtual-Processor {D:/Elec_374/Virtual-Processor/div_testbench.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module reg_tb
+# -- Compiling module div_testbench
 # 
 # Top level modules:
-# 	reg_tb
+# 	div_testbench
 # 
-# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneiii_ver -L rtl_work -L work -voptargs="+acc"  reg_tb
-# vsim -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneiii_ver -L rtl_work -L work -voptargs=\"+acc\" -t 1ps reg_tb 
-# Loading work.reg_tb
-# Loading work.Reg32
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneiii_ver -L rtl_work -L work -voptargs="+acc"  div_testbench
+# vsim -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneiii_ver -L rtl_work -L work -voptargs=\"+acc\" -t 1ps div_testbench 
+# Loading work.div_testbench
+# Loading work.nonrestoring_divison_algo
 # 
 # add wave *
 # view structure
 # .main_pane.structure.interior.cs.body.struct
 # view signals
 # .main_pane.objects.interior.cs.body.tree
-# run 1 sec
-# Break key hit 
-# Break in Module reg_tb at D:/Elec_374/Virtual-Processor/reg_tb.v line 22
+# run -all
+# ** Note: $finish    : D:/Elec_374/Virtual-Processor/div_testbench.v(10)
+#    Time: 100 ns  Iteration: 0  Instance: /div_testbench
+# 1
+# Break in Module div_testbench at D:/Elec_374/Virtual-Processor/div_testbench.v line 10
+# Simulation Breakpoint: 1
+# Break in Module div_testbench at D:/Elec_374/Virtual-Processor/div_testbench.v line 10
+# MACRO ./MINISRC_run_msim_rtl_verilog.do PAUSED at line 22
