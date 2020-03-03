@@ -5,7 +5,7 @@ module reg_tb();
 	reg [31:0] d;
 	wire [31:0] q;
 	
-	bit32_register reg32(d, clk, clear, load, q);
+	Reg32 reg32(d, clk, clear, load, q);
 	
 initial begin
     @(posedge clk);

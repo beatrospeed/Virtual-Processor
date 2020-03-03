@@ -7,7 +7,7 @@ module dataPath(
 	
 
 	//bus encoder inputs
-	input BusMuxin_R0, BusMuxin_R1, BusMuxin_R2,
+	output BusMuxin_R0, BusMuxin_R1, BusMuxin_R2,
 	 BusMuxin_R3, BusMuxin_R4, BusMuxin_R5,
 	 BusMuxin_R6, BusMuxin_R7, BusMuxin_R8,
 	 BusMuxin_R9, BusMuxin_R10, BusMuxin_R11,
@@ -29,8 +29,7 @@ module dataPath(
 	 input ADD, SUB, MUL, DIV, SHR, SHL, ROR, ROL, AND, OR, NEG, NOT, IncPc,
 	 output [31:0] Mdatain,
 	 output [63:0] ZVal,
-	 input wire [31:0] bus,
-	 output wire [31:0] IRval, MDRval,HIval, LOval
+	 output wire [31:0] bus,IRval, MDRval,HIval, LOval
 	 
 );
 	
@@ -45,8 +44,8 @@ module dataPath(
    Reg32 LO(bus, clk, reset, LOin, LOval);
 	Reg32 InPort(32'b0, clk, reset, InPortin,InPortVal);
    Reg32 OutPort(bus, clk, reset, OutPortin, OutPortVal);
-   Reg32 MDR(bus, clk, reset, MARin, MAR_D);
-   mdr_reg mdr(bus ,MDRval, mDataIn, load ,reset, clk, MDRin);
+   Reg32 MDR(BusMuxin_MDRout, clk, reset, MARin, MAR_D);
+   mdr_reg mdr(BusMuxin_MDRout ,MDRval, mDataIn, load ,reset, clk, MDRin);
    Reg32 IR(bus, clk, reset, IRin, IRval);
    Reg32 PC(bus, clk, reset, PCin, PCVal);
    Reg32 R0(bus, clk, reset, R0in, R0Val); 
@@ -79,9 +78,9 @@ module dataPath(
 									 BusMuxin_in27, BusMuxin_in28, BusMuxin_in29,
 									 BusMuxin_in30, BusMuxin_in31);
 
-//	Mux_32_to_1 Bus_Mux(bus,Select_D,R0Val,R1Val,R2Val,R3Val,R4Val,R5Val,R6Val,R7Val,
-//	R8Val,R9Val,R10Val,R11Val,R12Val,R13Val,R14Val,R15Val,HIval,LOval,ZVal[63:32], ZVal[31:0],
-//	PCVal,MDRval,InPortVal,CVal,in24Val,in25Val,in26Val,in27Val,in28Val,in29Val,in30Val,in31Val);
+	Mux_32_to_1 Bus_Mux(bus,Select_D,R0Val,R1Val,R2Val,R3Val,R4Val,R5Val,R6Val,R7Val,
+	R8Val,R9Val,R10Val,R11Val,R12Val,R13Val,R14Val,R15Val,HIval,LOval,ZVal[63:32], ZVal[31:0],
+	PCVal,MDRval,InPortVal,CVal,in24Val,in25Val,in26Val,in27Val,in28Val,in29Val,in30Val,in31Val);
 	
 	alu Alu(ZVal[63:32], ZVal[31:0],YVal,bus,control,IncPc,clk);
 

@@ -1,0 +1,329 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\Elec_374\Virtual-Processor\simulation\modelsim
+valu
+IZH7e@gNK;GCc>nAifh5Y@2
+VJ<LBe6FC3[:MzSJ=W[C;93
+Z1 dD:\Elec_374\Virtual-Processor\simulation\modelsim
+Z2 w1583192860
+Z3 8D:/Elec_374/Virtual-Processor/ALU.v
+Z4 FD:/Elec_374/Virtual-Processor/ALU.v
+L0 203
+Z5 OV;L;10.1d;51
+r1
+31
+Z6 !s108 1583195765.426000
+Z7 !s107 D:/Elec_374/Virtual-Processor/ALU.v|
+Z8 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Elec_374/Virtual-Processor|D:/Elec_374/Virtual-Processor/ALU.v|
+Z9 o-vlog01compat -work work -O0
+Z10 !s92 -vlog01compat -work work +incdir+D:/Elec_374/Virtual-Processor -O0
+!i10b 1
+!s100 _F65nO`XU[]m4Mik:AzAC2
+!s85 0
+!s101 -O0
+vbit_stage_cell
+IZ_hdKO9C0W4@<_[7K5jPz0
+V58nSU7IeLmV54:J0bBojG3
+R1
+R2
+R3
+R4
+L0 1
+R5
+r1
+31
+R6
+R7
+R8
+R9
+R10
+!i10b 1
+!s100 ]OJh7=djDgT5oR?bNiBfY1
+!s85 0
+!s101 -O0
+vdataPath
+I=HjkPjg;9KoQKP1L8AXlT2
+Vfa>dNjJl8Uf?]VW9f8]hH1
+R1
+w1583195523
+8D:/Elec_374/Virtual-Processor/Datapath.v
+FD:/Elec_374/Virtual-Processor/Datapath.v
+L0 3
+R5
+r1
+31
+R9
+R10
+ndata@path
+!i10b 1
+!s100 6?]l;Ri>@Q3a<Ucl@mnIL2
+!s85 0
+!s108 1583195765.719000
+!s107 D:/Elec_374/Virtual-Processor/Datapath.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Elec_374/Virtual-Processor|D:/Elec_374/Virtual-Processor/Datapath.v|
+!s101 -O0
+vencoder_32_to_5
+ICcdNKeQ?o?Z8Q0J7cM7051
+Vfm<h66IiGaMW7>F?e>Poe1
+R1
+Z11 w1583176425
+8D:/Elec_374/Virtual-Processor/encoder_32_to_5.v
+FD:/Elec_374/Virtual-Processor/encoder_32_to_5.v
+L0 1
+R5
+r1
+31
+R9
+R10
+!i10b 1
+!s100 ``0kO8n5_oBE0YZ_?<2MU3
+!s85 0
+!s108 1583195765.278000
+!s107 D:/Elec_374/Virtual-Processor/encoder_32_to_5.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Elec_374/Virtual-Processor|D:/Elec_374/Virtual-Processor/encoder_32_to_5.v|
+!s101 -O0
+vfour_bit_adder
+IQ`C6oLRm:2i^NDbU[B7_a0
+VCbUJi05^FUQ=EIX5;DkK]2
+R1
+R2
+R3
+R4
+L0 7
+R5
+r1
+31
+R6
+R7
+R8
+R9
+R10
+!i10b 1
+!s100 Ul;<OLibg]77NHF4MGTR50
+!s85 0
+!s101 -O0
+vMD_Mux
+II4l_12lGlF@X[TzFOL]QR2
+VMJTWH[E[`noOWCj@7TSnT1
+R1
+w1583192928
+8D:/Elec_374/Virtual-Processor/MD_Mux.v
+FD:/Elec_374/Virtual-Processor/MD_Mux.v
+L0 1
+R5
+r1
+31
+R9
+n@m@d_@mux
+R10
+!i10b 1
+!s100 =FZhj?z;ZA]Wg^ze`d_9I2
+!s85 0
+!s108 1583195765.205000
+!s107 D:/Elec_374/Virtual-Processor/MD_Mux.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Elec_374/Virtual-Processor|D:/Elec_374/Virtual-Processor/MD_Mux.v|
+!s101 -O0
+vmdr_reg
+Id]AR_V=47:Bg11Ch]aQ292
+V5o<h5CZ4<J@1?bD8[P>bE0
+R1
+Z12 w1583194424
+Z13 8D:/Elec_374/Virtual-Processor/REG32_MDR.v
+Z14 FD:/Elec_374/Virtual-Processor/REG32_MDR.v
+L0 14
+R5
+r1
+31
+Z15 !s108 1583195765.623000
+Z16 !s107 D:/Elec_374/Virtual-Processor/REG32_MDR.v|
+Z17 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Elec_374/Virtual-Processor|D:/Elec_374/Virtual-Processor/REG32_MDR.v|
+R9
+R10
+!i10b 1
+!s100 6]o<ZMF5<n9haDCT9L1JU1
+!s85 0
+!s101 -O0
+vMux_32_to_1
+I0Im_?3bOA3m;]g^o3h3:f0
+VgeO4fHgBgfmTa^7NkPNnG3
+R1
+R11
+8D:/Elec_374/Virtual-Processor/Mux_32_to_1.v
+FD:/Elec_374/Virtual-Processor/Mux_32_to_1.v
+L0 1
+R5
+r1
+31
+R9
+R10
+n@mux_32_to_1
+!i10b 1
+!s100 :2m@0Wa5[g@TTaM;bgOjB3
+!s85 0
+!s108 1583195765.350000
+!s107 D:/Elec_374/Virtual-Processor/Mux_32_to_1.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Elec_374/Virtual-Processor|D:/Elec_374/Virtual-Processor/Mux_32_to_1.v|
+!s101 -O0
+vnonrestoring_divison_algo
+IjcL[CFajFIOIz3jzioiHN0
+VIk@;H`N97oI@7n^GM6VA_2
+R1
+R2
+R3
+R4
+L0 154
+R5
+r1
+31
+R6
+R7
+R8
+R9
+R10
+!i10b 1
+!s100 dXZzH?Ebl3G`coO`G^PWo1
+!s85 0
+!s101 -O0
+vReg32
+IbcCNCjnL2B7MoJ<7JR6i`1
+Vd8MSK>MP5W4CY2;N?`2R_1
+R1
+R12
+R13
+R14
+L0 1
+R5
+r1
+31
+R15
+R16
+R17
+R9
+R10
+n@reg32
+!i10b 1
+!s100 F;;G^SKG;LJcP3Y4VZ<S]0
+!s85 0
+!s101 -O0
+vreg_tb
+!i10b 1
+!s100 ia]6kglX1a9@OPRfV5R6a0
+ICSYo`RbMgGhaOzo?_E=;E3
+VAkc5oNlH0mzRbC4IT_E1R1
+R1
+w1583195744
+8D:/Elec_374/Virtual-Processor/reg_tb.v
+FD:/Elec_374/Virtual-Processor/reg_tb.v
+L0 3
+R5
+r1
+!s85 0
+31
+!s108 1583195765.793000
+!s107 D:/Elec_374/Virtual-Processor/reg_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Elec_374/Virtual-Processor|D:/Elec_374/Virtual-Processor/reg_tb.v|
+!s101 -O0
+R9
+R10
+vsixteen_bit_carry_adder
+ITf;XVbgg^:jLo^S`L<Wfo2
+V;<1`9[VDa@RnH0c<Q:46f1
+R1
+R2
+R3
+R4
+L0 46
+R5
+r1
+31
+R6
+R7
+R8
+R9
+R10
+!i10b 1
+!s100 nzME_X1[1DN2K<Yc9`zmh1
+!s85 0
+!s101 -O0
+vthirtytwo_bit_booth_algorithm
+INZ5Fg6bJjIgQeT>U@N@`I0
+V__<0ebYgVWlEdU]iC=YVK2
+R1
+R2
+R3
+R4
+L0 114
+R5
+r1
+31
+R6
+R7
+R8
+R9
+R10
+!i10b 1
+!s100 Sh^b?TRNm9g^[PjZ?dCRk1
+!s85 0
+!s101 -O0
+vthirtytwo_bit_carry_adder
+IH`42D;H6^VPjK_V6GBE=M3
+V<nbQ<78@@>_n^j?aZBFDH2
+R1
+R2
+R3
+R4
+L0 84
+R5
+r1
+31
+R6
+R7
+R8
+R9
+R10
+!i10b 1
+!s100 2>]THZ79:OKY7gYk>kS5D1
+!s85 0
+!s101 -O0
+vthirtytwo_bit_subtractor
+IS_o]SPH=Ukeo;`hoFCc8N1
+VO9^TM@nnN1KflIF?Q00=X2
+R1
+R2
+R3
+R4
+L0 106
+R5
+r1
+31
+R6
+R7
+R8
+R9
+R10
+!i10b 1
+!s100 hP4SJlM5NPe`e5KI6<ogg0
+!s85 0
+!s101 -O0
+vthirtytwo_bit_twos_complement
+IU=DzSE4dV_CP0`lnETCMI0
+V2Oa?F0j8zIf@CN_aVTZ_Y0
+R1
+R2
+R3
+R4
+L0 98
+R5
+r1
+31
+R6
+R7
+R8
+R9
+R10
+!i10b 1
+!s100 gHH2Vh[[AQm;M3hd@H;jA2
+!s85 0
+!s101 -O0

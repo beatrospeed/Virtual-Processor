@@ -1,5 +1,5 @@
-Analysis & Synthesis report for MINISRC
-Mon Mar 02 19:16:45 2020
+Analysis & Elaboration report for MINISRC
+Mon Mar 02 19:34:23 2020
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -7,9 +7,9 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
 ; Table of Contents ;
 ---------------------
   1. Legal Notice
-  2. Analysis & Synthesis Summary
-  3. Analysis & Synthesis Settings
-  4. Parallel Compilation
+  2. Analysis & Elaboration Summary
+  3. Parallel Compilation
+  4. Analysis & Elaboration Settings
   5. Port Connectivity Checks: "alu:Alu|thirtytwo_bit_carry_adder:a2"
   6. Port Connectivity Checks: "alu:Alu|thirtytwo_bit_subtractor:s|thirtytwo_bit_carry_adder:sub"
   7. Port Connectivity Checks: "alu:Alu|thirtytwo_bit_carry_adder:a"
@@ -19,7 +19,7 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
  11. Port Connectivity Checks: "alu:Alu|thirtytwo_bit_twos_complement:c|thirtytwo_bit_carry_adder:ttb|sixteen_bit_carry_adder:s0|four_bit_adder:f1"
  12. Port Connectivity Checks: "alu:Alu|thirtytwo_bit_twos_complement:c|thirtytwo_bit_carry_adder:ttb|sixteen_bit_carry_adder:s0|four_bit_adder:f0"
  13. Port Connectivity Checks: "alu:Alu|thirtytwo_bit_twos_complement:c|thirtytwo_bit_carry_adder:ttb"
- 14. Port Connectivity Checks: "encoder_32_to_5:BusMux_encoder"
+ 14. Port Connectivity Checks: "Mux_32_to_1:Bus_Mux"
  15. Port Connectivity Checks: "Reg32:PC"
  16. Port Connectivity Checks: "mdr_reg:mdr|MD_Mux:MD_mux"
  17. Port Connectivity Checks: "mdr_reg:mdr"
@@ -27,8 +27,8 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
  19. Port Connectivity Checks: "Reg32:OutPort"
  20. Port Connectivity Checks: "Reg32:InPort"
  21. Port Connectivity Checks: "Reg32:Z"
- 22. Analysis & Synthesis Messages
- 23. Analysis & Synthesis Suppressed Messages
+ 22. Analysis & Elaboration Messages
+ 23. Analysis & Elaboration Suppressed Messages
 
 
 
@@ -52,9 +52,9 @@ applicable agreement for further details.
 
 
 +--------------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                         ;
+; Analysis & Elaboration Summary                                                       ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Mon Mar 02 19:16:45 2020               ;
+; Analysis & Elaboration Status      ; Successful - Mon Mar 02 19:34:23 2020           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; MINISRC                                         ;
 ; Top-level Entity Name              ; dataPath                                        ;
@@ -71,8 +71,19 @@ applicable agreement for further details.
 +------------------------------------+-------------------------------------------------+
 
 
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 12     ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
 +----------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Settings                                                                                        ;
+; Analysis & Elaboration Settings                                                                                      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                                     ; Setting            ; Default Value      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
@@ -156,17 +167,6 @@ applicable agreement for further details.
 ; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
 ; Synthesis Seed                                                             ; 1                  ; 1                  ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
-
-
-Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
-+-------------------------------------+
-; Parallel Compilation                ;
-+----------------------------+--------+
-; Processors                 ; Number ;
-+----------------------------+--------+
-; Number detected on machine ; 12     ;
-; Maximum allowed            ; 1      ;
-+----------------------------+--------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -267,22 +267,52 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "encoder_32_to_5:BusMux_encoder"                                                          ;
-+-----------+--------+----------+-------------------------------------------------------------------------------------+
-; Port      ; Type   ; Severity ; Details                                                                             ;
-+-----------+--------+----------+-------------------------------------------------------------------------------------+
-; SelectOut ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+-----------+--------+----------+-------------------------------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Mux_32_to_1:Bus_Mux"                                                                                                                                                                           ;
++-------------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port              ; Type  ; Severity ; Details                                                                                                                                                                            ;
++-------------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; BusMuxin_R0       ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; BusMuxin_R1       ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; BusMuxin_R2       ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; BusMuxin_R3       ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; BusMuxin_R4       ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; BusMuxin_R5       ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; BusMuxin_R6       ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; BusMuxin_R7       ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; BusMuxin_R8       ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; BusMuxin_R9       ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; BusMuxin_R10      ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; BusMuxin_R11      ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; BusMuxin_R12      ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; BusMuxin_R13      ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; BusMuxin_R14      ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; BusMuxin_R15      ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; BusMuxin_HIout    ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; BusMuxin_LOout    ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; BusMuxin_Zhighout ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; BusMuxin_Zlowout  ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; BusMuxin_PCout    ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; BusMuxin_MDRout   ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; BusMuxin_Cout     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; BusMuxin_in24     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; BusMuxin_in25     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; BusMuxin_in26     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; BusMuxin_in27     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; BusMuxin_in28     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; BusMuxin_in29     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; BusMuxin_in30     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; BusMuxin_in31     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
++-------------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "Reg32:PC"                                                                           ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Q    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Reg32:PC"                                                                               ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Q[31..1] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -294,22 +324,24 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +--------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "mdr_reg:mdr"                                                                                                                                            ;
-+-----------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port      ; Type  ; Severity ; Details                                                                                                                                             ;
-+-----------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
-; BusMuxOut ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (32 bits) it drives.  Extra input bit(s) "BusMuxOut[31..1]" will be connected to GND. ;
-+-----------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "mdr_reg:mdr"                                                                                                                                             ;
++-----------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                                                                                             ;
++-----------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Q         ; Output ; Warning  ; Output or bidir port (32 bits) is wider than the port expression (1 bits) it drives; bit(s) "Q[31..1]" have no fanouts                              ;
+; BusMuxOut ; Input  ; Warning  ; Input port expression (1 bits) is smaller than the input port (32 bits) it drives.  Extra input bit(s) "BusMuxOut[31..1]" will be connected to GND. ;
++-----------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "Reg32:MDR"                                                                          ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Q    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Reg32:MDR"                                                                                                                                  ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                                                     ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+; D    ; Input  ; Warning  ; Input port expression (1 bits) is smaller than the input port (32 bits) it drives.  Extra input bit(s) "D[31..1]" will be connected to GND. ;
+; Q    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                         ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -329,7 +361,6 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +------+--------+----------+------------------------------------------------------------------------------------------------------------------------+
 ; D    ; Input  ; Info     ; Stuck at GND                                                                                                           ;
 ; Q    ; Output ; Warning  ; Output or bidir port (32 bits) is wider than the port expression (1 bits) it drives; bit(s) "Q[31..1]" have no fanouts ;
-; Q    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                    ;
 +------+--------+----------+------------------------------------------------------------------------------------------------------------------------+
 
 
@@ -344,14 +375,14 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+-------------------------------+
-; Analysis & Synthesis Messages ;
-+-------------------------------+
++---------------------------------+
+; Analysis & Elaboration Messages ;
++---------------------------------+
 Info: *******************************************************************
-Info: Running Quartus II 64-Bit Analysis & Synthesis
+Info: Running Quartus II 64-Bit Analysis & Elaboration
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Mon Mar 02 19:16:43 2020
-Info: Command: quartus_map --read_settings_files=on --write_settings_files=off MINISRC -c MINISRC
+    Info: Processing started: Mon Mar 02 19:34:22 2020
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off MINISRC -c MINISRC --analysis_and_elaboration
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file md_mux.v
     Info (12023): Found entity 1: MD_Mux
@@ -378,10 +409,10 @@ Warning (10236): Verilog HDL Implicit Net warning at ALU.v(29): created implicit
 Warning (10236): Verilog HDL Implicit Net warning at ALU.v(41): created implicit net for "go"
 Warning (10236): Verilog HDL Implicit Net warning at ALU.v(68): created implicit net for "pc2"
 Warning (10236): Verilog HDL Implicit Net warning at ALU.v(80): created implicit net for "go"
-Warning (10236): Verilog HDL Implicit Net warning at Datapath.v(43): created implicit net for "Zval"
-Warning (10236): Verilog HDL Implicit Net warning at Datapath.v(46): created implicit net for "InPortVal"
-Warning (10236): Verilog HDL Implicit Net warning at Datapath.v(47): created implicit net for "OutPortVal"
-Warning (10236): Verilog HDL Implicit Net warning at Datapath.v(49): created implicit net for "mDataIn"
+Warning (10236): Verilog HDL Implicit Net warning at Datapath.v(42): created implicit net for "Zval"
+Warning (10236): Verilog HDL Implicit Net warning at Datapath.v(45): created implicit net for "InPortVal"
+Warning (10236): Verilog HDL Implicit Net warning at Datapath.v(46): created implicit net for "OutPortVal"
+Warning (10236): Verilog HDL Implicit Net warning at Datapath.v(48): created implicit net for "mDataIn"
 Info (12127): Elaborating entity "dataPath" for the top level hierarchy
 Warning (10034): Output port "Mdatain" at Datapath.v(30) has no driver
 Info (12128): Elaborating entity "Reg32" for hierarchy "Reg32:Y"
@@ -396,6 +427,40 @@ Info (10041): Inferred latch for "SelectOut[1]" at encoder_32_to_5.v(6)
 Info (10041): Inferred latch for "SelectOut[2]" at encoder_32_to_5.v(6)
 Info (10041): Inferred latch for "SelectOut[3]" at encoder_32_to_5.v(6)
 Info (10041): Inferred latch for "SelectOut[4]" at encoder_32_to_5.v(6)
+Info (12128): Elaborating entity "Mux_32_to_1" for hierarchy "Mux_32_to_1:Bus_Mux"
+Warning (10240): Verilog HDL Always Construct warning at Mux_32_to_1.v(5): inferring latch(es) for variable "BusMuxOut", which holds its previous value in one or more paths through the always construct
+Info (10041): Inferred latch for "BusMuxOut[0]" at Mux_32_to_1.v(6)
+Info (10041): Inferred latch for "BusMuxOut[1]" at Mux_32_to_1.v(6)
+Info (10041): Inferred latch for "BusMuxOut[2]" at Mux_32_to_1.v(6)
+Info (10041): Inferred latch for "BusMuxOut[3]" at Mux_32_to_1.v(6)
+Info (10041): Inferred latch for "BusMuxOut[4]" at Mux_32_to_1.v(6)
+Info (10041): Inferred latch for "BusMuxOut[5]" at Mux_32_to_1.v(6)
+Info (10041): Inferred latch for "BusMuxOut[6]" at Mux_32_to_1.v(6)
+Info (10041): Inferred latch for "BusMuxOut[7]" at Mux_32_to_1.v(6)
+Info (10041): Inferred latch for "BusMuxOut[8]" at Mux_32_to_1.v(6)
+Info (10041): Inferred latch for "BusMuxOut[9]" at Mux_32_to_1.v(6)
+Info (10041): Inferred latch for "BusMuxOut[10]" at Mux_32_to_1.v(6)
+Info (10041): Inferred latch for "BusMuxOut[11]" at Mux_32_to_1.v(6)
+Info (10041): Inferred latch for "BusMuxOut[12]" at Mux_32_to_1.v(6)
+Info (10041): Inferred latch for "BusMuxOut[13]" at Mux_32_to_1.v(6)
+Info (10041): Inferred latch for "BusMuxOut[14]" at Mux_32_to_1.v(6)
+Info (10041): Inferred latch for "BusMuxOut[15]" at Mux_32_to_1.v(6)
+Info (10041): Inferred latch for "BusMuxOut[16]" at Mux_32_to_1.v(6)
+Info (10041): Inferred latch for "BusMuxOut[17]" at Mux_32_to_1.v(6)
+Info (10041): Inferred latch for "BusMuxOut[18]" at Mux_32_to_1.v(6)
+Info (10041): Inferred latch for "BusMuxOut[19]" at Mux_32_to_1.v(6)
+Info (10041): Inferred latch for "BusMuxOut[20]" at Mux_32_to_1.v(6)
+Info (10041): Inferred latch for "BusMuxOut[21]" at Mux_32_to_1.v(6)
+Info (10041): Inferred latch for "BusMuxOut[22]" at Mux_32_to_1.v(6)
+Info (10041): Inferred latch for "BusMuxOut[23]" at Mux_32_to_1.v(6)
+Info (10041): Inferred latch for "BusMuxOut[24]" at Mux_32_to_1.v(6)
+Info (10041): Inferred latch for "BusMuxOut[25]" at Mux_32_to_1.v(6)
+Info (10041): Inferred latch for "BusMuxOut[26]" at Mux_32_to_1.v(6)
+Info (10041): Inferred latch for "BusMuxOut[27]" at Mux_32_to_1.v(6)
+Info (10041): Inferred latch for "BusMuxOut[28]" at Mux_32_to_1.v(6)
+Info (10041): Inferred latch for "BusMuxOut[29]" at Mux_32_to_1.v(6)
+Info (10041): Inferred latch for "BusMuxOut[30]" at Mux_32_to_1.v(6)
+Info (10041): Inferred latch for "BusMuxOut[31]" at Mux_32_to_1.v(6)
 Info (12128): Elaborating entity "alu" for hierarchy "alu:Alu"
 Info (12128): Elaborating entity "thirtytwo_bit_twos_complement" for hierarchy "alu:Alu|thirtytwo_bit_twos_complement:c"
 Info (12128): Elaborating entity "thirtytwo_bit_carry_adder" for hierarchy "alu:Alu|thirtytwo_bit_twos_complement:c|thirtytwo_bit_carry_adder:ttb"
@@ -552,114 +617,282 @@ Warning (12011): Net is missing source, defaulting to GND
     Warning (12110): Net "mdr_reg:mdr|d[3]" is missing source, defaulting to GND
     Warning (12110): Net "mdr_reg:mdr|d[2]" is missing source, defaulting to GND
     Warning (12110): Net "mdr_reg:mdr|d[1]" is missing source, defaulting to GND
-Error (12014): Net "bus[31]", which fans out to "alu:Alu|reg2[31]", cannot be assigned more than one value File: D:/Elec_374/Virtual-Processor/Datapath.v Line: 32
-    Error (12015): Net is fed by "mdr_reg:mdr|Q[31]" File: D:/Elec_374/Virtual-Processor/REG32_MDR.v Line: 14
-    Error (12015): Net is fed by "bus[31]" File: D:/Elec_374/Virtual-Processor/Datapath.v Line: 32
-Error (12014): Net "bus[30]", which fans out to "alu:Alu|reg2[30]", cannot be assigned more than one value File: D:/Elec_374/Virtual-Processor/Datapath.v Line: 32
-    Error (12015): Net is fed by "mdr_reg:mdr|Q[30]" File: D:/Elec_374/Virtual-Processor/REG32_MDR.v Line: 14
-    Error (12015): Net is fed by "bus[30]" File: D:/Elec_374/Virtual-Processor/Datapath.v Line: 32
-Error (12014): Net "bus[29]", which fans out to "alu:Alu|reg2[29]", cannot be assigned more than one value File: D:/Elec_374/Virtual-Processor/Datapath.v Line: 32
-    Error (12015): Net is fed by "mdr_reg:mdr|Q[29]" File: D:/Elec_374/Virtual-Processor/REG32_MDR.v Line: 14
-    Error (12015): Net is fed by "bus[29]" File: D:/Elec_374/Virtual-Processor/Datapath.v Line: 32
-Error (12014): Net "bus[28]", which fans out to "alu:Alu|reg2[28]", cannot be assigned more than one value File: D:/Elec_374/Virtual-Processor/Datapath.v Line: 32
-    Error (12015): Net is fed by "mdr_reg:mdr|Q[28]" File: D:/Elec_374/Virtual-Processor/REG32_MDR.v Line: 14
-    Error (12015): Net is fed by "bus[28]" File: D:/Elec_374/Virtual-Processor/Datapath.v Line: 32
-Error (12014): Net "bus[27]", which fans out to "alu:Alu|reg2[27]", cannot be assigned more than one value File: D:/Elec_374/Virtual-Processor/Datapath.v Line: 32
-    Error (12015): Net is fed by "mdr_reg:mdr|Q[27]" File: D:/Elec_374/Virtual-Processor/REG32_MDR.v Line: 14
-    Error (12015): Net is fed by "bus[27]" File: D:/Elec_374/Virtual-Processor/Datapath.v Line: 32
-Error (12014): Net "bus[26]", which fans out to "alu:Alu|reg2[26]", cannot be assigned more than one value File: D:/Elec_374/Virtual-Processor/Datapath.v Line: 32
-    Error (12015): Net is fed by "mdr_reg:mdr|Q[26]" File: D:/Elec_374/Virtual-Processor/REG32_MDR.v Line: 14
-    Error (12015): Net is fed by "bus[26]" File: D:/Elec_374/Virtual-Processor/Datapath.v Line: 32
-Error (12014): Net "bus[25]", which fans out to "alu:Alu|reg2[25]", cannot be assigned more than one value File: D:/Elec_374/Virtual-Processor/Datapath.v Line: 32
-    Error (12015): Net is fed by "mdr_reg:mdr|Q[25]" File: D:/Elec_374/Virtual-Processor/REG32_MDR.v Line: 14
-    Error (12015): Net is fed by "bus[25]" File: D:/Elec_374/Virtual-Processor/Datapath.v Line: 32
-Error (12014): Net "bus[24]", which fans out to "alu:Alu|reg2[24]", cannot be assigned more than one value File: D:/Elec_374/Virtual-Processor/Datapath.v Line: 32
-    Error (12015): Net is fed by "mdr_reg:mdr|Q[24]" File: D:/Elec_374/Virtual-Processor/REG32_MDR.v Line: 14
-    Error (12015): Net is fed by "bus[24]" File: D:/Elec_374/Virtual-Processor/Datapath.v Line: 32
-Error (12014): Net "bus[23]", which fans out to "alu:Alu|reg2[23]", cannot be assigned more than one value File: D:/Elec_374/Virtual-Processor/Datapath.v Line: 32
-    Error (12015): Net is fed by "mdr_reg:mdr|Q[23]" File: D:/Elec_374/Virtual-Processor/REG32_MDR.v Line: 14
-    Error (12015): Net is fed by "bus[23]" File: D:/Elec_374/Virtual-Processor/Datapath.v Line: 32
-Error (12014): Net "bus[22]", which fans out to "alu:Alu|reg2[22]", cannot be assigned more than one value File: D:/Elec_374/Virtual-Processor/Datapath.v Line: 32
-    Error (12015): Net is fed by "mdr_reg:mdr|Q[22]" File: D:/Elec_374/Virtual-Processor/REG32_MDR.v Line: 14
-    Error (12015): Net is fed by "bus[22]" File: D:/Elec_374/Virtual-Processor/Datapath.v Line: 32
-Error (12014): Net "bus[21]", which fans out to "alu:Alu|reg2[21]", cannot be assigned more than one value File: D:/Elec_374/Virtual-Processor/Datapath.v Line: 32
-    Error (12015): Net is fed by "mdr_reg:mdr|Q[21]" File: D:/Elec_374/Virtual-Processor/REG32_MDR.v Line: 14
-    Error (12015): Net is fed by "bus[21]" File: D:/Elec_374/Virtual-Processor/Datapath.v Line: 32
-Error (12014): Net "bus[20]", which fans out to "alu:Alu|reg2[20]", cannot be assigned more than one value File: D:/Elec_374/Virtual-Processor/Datapath.v Line: 32
-    Error (12015): Net is fed by "mdr_reg:mdr|Q[20]" File: D:/Elec_374/Virtual-Processor/REG32_MDR.v Line: 14
-    Error (12015): Net is fed by "bus[20]" File: D:/Elec_374/Virtual-Processor/Datapath.v Line: 32
-Error (12014): Net "bus[19]", which fans out to "alu:Alu|reg2[19]", cannot be assigned more than one value File: D:/Elec_374/Virtual-Processor/Datapath.v Line: 32
-    Error (12015): Net is fed by "mdr_reg:mdr|Q[19]" File: D:/Elec_374/Virtual-Processor/REG32_MDR.v Line: 14
-    Error (12015): Net is fed by "bus[19]" File: D:/Elec_374/Virtual-Processor/Datapath.v Line: 32
-Error (12014): Net "bus[18]", which fans out to "alu:Alu|reg2[18]", cannot be assigned more than one value File: D:/Elec_374/Virtual-Processor/Datapath.v Line: 32
-    Error (12015): Net is fed by "mdr_reg:mdr|Q[18]" File: D:/Elec_374/Virtual-Processor/REG32_MDR.v Line: 14
-    Error (12015): Net is fed by "bus[18]" File: D:/Elec_374/Virtual-Processor/Datapath.v Line: 32
-Error (12014): Net "bus[17]", which fans out to "alu:Alu|reg2[17]", cannot be assigned more than one value File: D:/Elec_374/Virtual-Processor/Datapath.v Line: 32
-    Error (12015): Net is fed by "mdr_reg:mdr|Q[17]" File: D:/Elec_374/Virtual-Processor/REG32_MDR.v Line: 14
-    Error (12015): Net is fed by "bus[17]" File: D:/Elec_374/Virtual-Processor/Datapath.v Line: 32
-Error (12014): Net "bus[16]", which fans out to "alu:Alu|reg2[16]", cannot be assigned more than one value File: D:/Elec_374/Virtual-Processor/Datapath.v Line: 32
-    Error (12015): Net is fed by "mdr_reg:mdr|Q[16]" File: D:/Elec_374/Virtual-Processor/REG32_MDR.v Line: 14
-    Error (12015): Net is fed by "bus[16]" File: D:/Elec_374/Virtual-Processor/Datapath.v Line: 32
-Error (12014): Net "bus[15]", which fans out to "alu:Alu|reg2[15]", cannot be assigned more than one value File: D:/Elec_374/Virtual-Processor/Datapath.v Line: 32
-    Error (12015): Net is fed by "mdr_reg:mdr|Q[15]" File: D:/Elec_374/Virtual-Processor/REG32_MDR.v Line: 14
-    Error (12015): Net is fed by "bus[15]" File: D:/Elec_374/Virtual-Processor/Datapath.v Line: 32
-Error (12014): Net "bus[14]", which fans out to "alu:Alu|reg2[14]", cannot be assigned more than one value File: D:/Elec_374/Virtual-Processor/Datapath.v Line: 32
-    Error (12015): Net is fed by "mdr_reg:mdr|Q[14]" File: D:/Elec_374/Virtual-Processor/REG32_MDR.v Line: 14
-    Error (12015): Net is fed by "bus[14]" File: D:/Elec_374/Virtual-Processor/Datapath.v Line: 32
-Error (12014): Net "bus[13]", which fans out to "alu:Alu|reg2[13]", cannot be assigned more than one value File: D:/Elec_374/Virtual-Processor/Datapath.v Line: 32
-    Error (12015): Net is fed by "mdr_reg:mdr|Q[13]" File: D:/Elec_374/Virtual-Processor/REG32_MDR.v Line: 14
-    Error (12015): Net is fed by "bus[13]" File: D:/Elec_374/Virtual-Processor/Datapath.v Line: 32
-Error (12014): Net "bus[12]", which fans out to "alu:Alu|reg2[12]", cannot be assigned more than one value File: D:/Elec_374/Virtual-Processor/Datapath.v Line: 32
-    Error (12015): Net is fed by "mdr_reg:mdr|Q[12]" File: D:/Elec_374/Virtual-Processor/REG32_MDR.v Line: 14
-    Error (12015): Net is fed by "bus[12]" File: D:/Elec_374/Virtual-Processor/Datapath.v Line: 32
-Error (12014): Net "bus[11]", which fans out to "alu:Alu|reg2[11]", cannot be assigned more than one value File: D:/Elec_374/Virtual-Processor/Datapath.v Line: 32
-    Error (12015): Net is fed by "mdr_reg:mdr|Q[11]" File: D:/Elec_374/Virtual-Processor/REG32_MDR.v Line: 14
-    Error (12015): Net is fed by "bus[11]" File: D:/Elec_374/Virtual-Processor/Datapath.v Line: 32
-Error (12014): Net "bus[10]", which fans out to "alu:Alu|reg2[10]", cannot be assigned more than one value File: D:/Elec_374/Virtual-Processor/Datapath.v Line: 32
-    Error (12015): Net is fed by "mdr_reg:mdr|Q[10]" File: D:/Elec_374/Virtual-Processor/REG32_MDR.v Line: 14
-    Error (12015): Net is fed by "bus[10]" File: D:/Elec_374/Virtual-Processor/Datapath.v Line: 32
-Error (12014): Net "bus[9]", which fans out to "alu:Alu|reg2[9]", cannot be assigned more than one value File: D:/Elec_374/Virtual-Processor/Datapath.v Line: 32
-    Error (12015): Net is fed by "mdr_reg:mdr|Q[9]" File: D:/Elec_374/Virtual-Processor/REG32_MDR.v Line: 14
-    Error (12015): Net is fed by "bus[9]" File: D:/Elec_374/Virtual-Processor/Datapath.v Line: 32
-Error (12014): Net "bus[8]", which fans out to "alu:Alu|reg2[8]", cannot be assigned more than one value File: D:/Elec_374/Virtual-Processor/Datapath.v Line: 32
-    Error (12015): Net is fed by "mdr_reg:mdr|Q[8]" File: D:/Elec_374/Virtual-Processor/REG32_MDR.v Line: 14
-    Error (12015): Net is fed by "bus[8]" File: D:/Elec_374/Virtual-Processor/Datapath.v Line: 32
-Error (12014): Net "bus[7]", which fans out to "alu:Alu|reg2[7]", cannot be assigned more than one value File: D:/Elec_374/Virtual-Processor/Datapath.v Line: 32
-    Error (12015): Net is fed by "mdr_reg:mdr|Q[7]" File: D:/Elec_374/Virtual-Processor/REG32_MDR.v Line: 14
-    Error (12015): Net is fed by "bus[7]" File: D:/Elec_374/Virtual-Processor/Datapath.v Line: 32
-Error (12014): Net "bus[6]", which fans out to "alu:Alu|reg2[6]", cannot be assigned more than one value File: D:/Elec_374/Virtual-Processor/Datapath.v Line: 32
-    Error (12015): Net is fed by "mdr_reg:mdr|Q[6]" File: D:/Elec_374/Virtual-Processor/REG32_MDR.v Line: 14
-    Error (12015): Net is fed by "bus[6]" File: D:/Elec_374/Virtual-Processor/Datapath.v Line: 32
-Error (12014): Net "bus[5]", which fans out to "alu:Alu|reg2[5]", cannot be assigned more than one value File: D:/Elec_374/Virtual-Processor/Datapath.v Line: 32
-    Error (12015): Net is fed by "mdr_reg:mdr|Q[5]" File: D:/Elec_374/Virtual-Processor/REG32_MDR.v Line: 14
-    Error (12015): Net is fed by "bus[5]" File: D:/Elec_374/Virtual-Processor/Datapath.v Line: 32
-Error (12014): Net "bus[4]", which fans out to "alu:Alu|reg2[4]", cannot be assigned more than one value File: D:/Elec_374/Virtual-Processor/Datapath.v Line: 32
-    Error (12015): Net is fed by "mdr_reg:mdr|Q[4]" File: D:/Elec_374/Virtual-Processor/REG32_MDR.v Line: 14
-    Error (12015): Net is fed by "bus[4]" File: D:/Elec_374/Virtual-Processor/Datapath.v Line: 32
-Error (12014): Net "bus[3]", which fans out to "alu:Alu|reg2[3]", cannot be assigned more than one value File: D:/Elec_374/Virtual-Processor/Datapath.v Line: 32
-    Error (12015): Net is fed by "mdr_reg:mdr|Q[3]" File: D:/Elec_374/Virtual-Processor/REG32_MDR.v Line: 14
-    Error (12015): Net is fed by "bus[3]" File: D:/Elec_374/Virtual-Processor/Datapath.v Line: 32
-Error (12014): Net "bus[2]", which fans out to "alu:Alu|reg2[2]", cannot be assigned more than one value File: D:/Elec_374/Virtual-Processor/Datapath.v Line: 32
-    Error (12015): Net is fed by "mdr_reg:mdr|Q[2]" File: D:/Elec_374/Virtual-Processor/REG32_MDR.v Line: 14
-    Error (12015): Net is fed by "bus[2]" File: D:/Elec_374/Virtual-Processor/Datapath.v Line: 32
-Error (12014): Net "bus[1]", which fans out to "alu:Alu|reg2[1]", cannot be assigned more than one value File: D:/Elec_374/Virtual-Processor/Datapath.v Line: 32
-    Error (12015): Net is fed by "mdr_reg:mdr|Q[1]" File: D:/Elec_374/Virtual-Processor/REG32_MDR.v Line: 14
-    Error (12015): Net is fed by "bus[1]" File: D:/Elec_374/Virtual-Processor/Datapath.v Line: 32
-Error (12014): Net "bus[0]", which fans out to "alu:Alu|reg2[0]", cannot be assigned more than one value File: D:/Elec_374/Virtual-Processor/Datapath.v Line: 32
-    Error (12015): Net is fed by "mdr_reg:mdr|Q[0]" File: D:/Elec_374/Virtual-Processor/REG32_MDR.v Line: 14
-    Error (12015): Net is fed by "bus[0]" File: D:/Elec_374/Virtual-Processor/Datapath.v Line: 32
-Warning (12241): 13 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (12011): Net is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[31]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[30]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[29]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[28]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[27]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[26]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[25]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[24]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[23]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[22]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[21]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[20]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[19]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[18]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[17]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[16]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[15]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[14]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[13]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[12]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[11]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[10]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[9]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[8]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[7]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[6]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[5]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[4]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[3]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[2]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[1]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[0]" is missing source, defaulting to GND
+Warning (12011): Net is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[31]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[30]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[29]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[28]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[27]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[26]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[25]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[24]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[23]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[22]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[21]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[20]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[19]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[18]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[17]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[16]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[15]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[14]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[13]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[12]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[11]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[10]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[9]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[8]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[7]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[6]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[5]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[4]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[3]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[2]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[1]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[0]" is missing source, defaulting to GND
+Warning (12011): Net is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[31]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[30]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[29]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[28]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[27]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[26]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[25]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[24]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[23]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[22]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[21]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[20]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[19]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[18]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[17]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[16]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[15]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[14]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[13]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[12]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[11]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[10]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[9]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[8]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[7]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[6]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[5]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[4]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[3]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[2]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[1]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[0]" is missing source, defaulting to GND
+Warning (12011): Net is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[31]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[30]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[29]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[28]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[27]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[26]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[25]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[24]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[23]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[22]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[21]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[20]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[19]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[18]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[17]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[16]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[15]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[14]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[13]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[12]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[11]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[10]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[9]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[8]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[7]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[6]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[5]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[4]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[3]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[2]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[1]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[0]" is missing source, defaulting to GND
+Warning (12011): Net is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[31]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[30]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[29]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[28]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[27]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[26]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[25]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[24]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[23]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[22]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[21]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[20]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[19]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[18]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[17]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[16]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[15]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[14]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[13]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[12]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[11]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[10]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[9]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[8]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[7]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[6]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[5]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[4]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[3]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[2]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[1]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[0]" is missing source, defaulting to GND
+Warning (12011): Net is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[31]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[30]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[29]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[28]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[27]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[26]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[25]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[24]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[23]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[22]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[21]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[20]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[19]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[18]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[17]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[16]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[15]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[14]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[13]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[12]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[11]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[10]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[9]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[8]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[7]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[6]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[5]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[4]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[3]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[2]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[1]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[0]" is missing source, defaulting to GND
+Warning (12011): Net is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[31]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[30]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[29]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[28]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[27]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[26]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[25]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[24]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[23]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[22]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[21]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[20]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[19]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[18]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[17]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[16]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[15]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[14]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[13]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[12]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[11]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[10]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[9]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[8]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[7]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[6]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[5]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[4]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[3]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[2]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[1]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[0]" is missing source, defaulting to GND
+Warning (12011): Net is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[31]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[30]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[29]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[28]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[27]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[26]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[25]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[24]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[23]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[22]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[21]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[20]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[19]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[18]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[17]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[16]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[15]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[14]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[13]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[12]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[11]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[10]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[9]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[8]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[7]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[6]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[5]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[4]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[3]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[2]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[1]" is missing source, defaulting to GND
+    Warning (12110): Net "MDRval[0]" is missing source, defaulting to GND
+Warning (12241): 15 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info (144001): Generated suppressed messages file D:/Elec_374/Virtual-Processor/output_files/MINISRC.map.smsg
-Error: Quartus II 64-Bit Analysis & Synthesis was unsuccessful. 96 errors, 161 warnings
-    Error: Peak virtual memory: 4589 megabytes
-    Error: Processing ended: Mon Mar 02 19:16:45 2020
-    Error: Elapsed time: 00:00:02
-    Error: Total CPU time (on all processors): 00:00:01
+Info: Quartus II 64-Bit Analysis & Elaboration was successful. 0 errors, 426 warnings
+    Info: Peak virtual memory: 4584 megabytes
+    Info: Processing ended: Mon Mar 02 19:34:23 2020
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
 
 
-+------------------------------------------+
-; Analysis & Synthesis Suppressed Messages ;
-+------------------------------------------+
++--------------------------------------------+
+; Analysis & Elaboration Suppressed Messages ;
++--------------------------------------------+
 The suppressed messages can be found in D:/Elec_374/Virtual-Processor/output_files/MINISRC.map.smsg.
 
 
