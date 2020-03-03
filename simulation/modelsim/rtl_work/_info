@@ -2,29 +2,29 @@ m255
 K3
 13
 cModel Technology
-Z0 dD:\Elec_374\Virtual-Processor\simulation\modelsim
+Z0 dC:\Users\Christopher Masloub\Documents\GitHub\Virtual-Processor\simulation\modelsim
 valu
-IZH7e@gNK;GCc>nAifh5Y@2
+I5h2R27NZ:@cOjchfgc;R41
 VJ<LBe6FC3[:MzSJ=W[C;93
-Z1 dD:\Elec_374\Virtual-Processor\simulation\modelsim
-Z2 w1583192860
-Z3 8D:/Elec_374/Virtual-Processor/ALU.v
-Z4 FD:/Elec_374/Virtual-Processor/ALU.v
+Z1 dC:\Users\Christopher Masloub\Documents\GitHub\Virtual-Processor\simulation\modelsim
+Z2 w1583196359
+Z3 8C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v
+Z4 FC:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v
 L0 203
 Z5 OV;L;10.1d;51
 r1
 31
-Z6 !s108 1583196711.945000
-Z7 !s107 D:/Elec_374/Virtual-Processor/ALU.v|
-Z8 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Elec_374/Virtual-Processor|D:/Elec_374/Virtual-Processor/ALU.v|
+Z6 !s108 1583219023.223000
+Z7 !s107 C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v|
+Z8 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor|C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v|
 Z9 o-vlog01compat -work work -O0
-Z10 !s92 -vlog01compat -work work +incdir+D:/Elec_374/Virtual-Processor -O0
+Z10 !s92 -vlog01compat -work work {+incdir+C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor} -O0
 !i10b 1
-!s100 _F65nO`XU[]m4Mik:AzAC2
+!s100 <_kW>Nll=<0Nf6^cZmUfb2
 !s85 0
 !s101 -O0
 vbit_stage_cell
-IZ_hdKO9C0W4@<_[7K5jPz0
+IBo^^<S3kIYfVNR5=Ff:9W3
 V58nSU7IeLmV54:J0bBojG3
 R1
 R2
@@ -40,16 +40,16 @@ R8
 R9
 R10
 !i10b 1
-!s100 ]OJh7=djDgT5oR?bNiBfY1
+!s100 C9TG?YoVYk7SnJei?IMIn0
 !s85 0
 !s101 -O0
 vdataPath
-I=HjkPjg;9KoQKP1L8AXlT2
-Vfa>dNjJl8Uf?]VW9f8]hH1
+Il@@;UH7ozb2EE_b]@ZnC>1
+V4F<YjU@d;90?Ue:fj<Je;0
 R1
-w1583195523
-8D:/Elec_374/Virtual-Processor/Datapath.v
-FD:/Elec_374/Virtual-Processor/Datapath.v
+w1583219008
+8C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v
+FC:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v
 L0 3
 R5
 r1
@@ -58,39 +58,39 @@ R9
 R10
 ndata@path
 !i10b 1
-!s100 6?]l;Ri>@Q3a<Ucl@mnIL2
+!s100 8EO9ii9VD895?R^PKf5Mg3
 !s85 0
-!s108 1583196712.213000
-!s107 D:/Elec_374/Virtual-Processor/Datapath.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Elec_374/Virtual-Processor|D:/Elec_374/Virtual-Processor/Datapath.v|
+!s108 1583219023.711000
+!s107 C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor|C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v|
 !s101 -O0
-vdiv_testbench
+vdatapath_test
 !i10b 1
-!s100 @c8Q4JG<8DdhD[z@XQQmN2
-IIS[8ngeQB^moi6NG<R5kD1
-V^@kjTVECIk6P_`ln64GCA0
+!s100 CaTP_9ej9:eYZABmi71R43
+ITF@_?@0g>ZdCg0:>8nW];3
+VCQ]B;N]ghP[KcYbfo3F<23
 R1
-w1583196673
-8D:/Elec_374/Virtual-Processor/div_testbench.v
-FD:/Elec_374/Virtual-Processor/div_testbench.v
+w1583216868
+8C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/datapath_test.v
+FC:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/datapath_test.v
 L0 3
 R5
 r1
 !s85 0
 31
-!s108 1583196712.280000
-!s107 D:/Elec_374/Virtual-Processor/div_testbench.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Elec_374/Virtual-Processor|D:/Elec_374/Virtual-Processor/div_testbench.v|
+!s108 1583219023.835000
+!s107 C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/datapath_test.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor|C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/datapath_test.v|
 !s101 -O0
 R9
 R10
 vencoder_32_to_5
-ICcdNKeQ?o?Z8Q0J7cM7051
-Vfm<h66IiGaMW7>F?e>Poe1
+IFHUR4fJHk4kHA`ibIHCH00
+VYHbVSbRY4[EIKMhe:@Z`m3
 R1
-Z11 w1583176425
-8D:/Elec_374/Virtual-Processor/encoder_32_to_5.v
-FD:/Elec_374/Virtual-Processor/encoder_32_to_5.v
+w1583199536
+8C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/encoder_32_to_5.v
+FC:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/encoder_32_to_5.v
 L0 1
 R5
 r1
@@ -98,14 +98,14 @@ r1
 R9
 R10
 !i10b 1
-!s100 ``0kO8n5_oBE0YZ_?<2MU3
+!s100 9I7O]z3M;Fn]e:3A=e<?W1
 !s85 0
-!s108 1583196711.796000
-!s107 D:/Elec_374/Virtual-Processor/encoder_32_to_5.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Elec_374/Virtual-Processor|D:/Elec_374/Virtual-Processor/encoder_32_to_5.v|
+!s108 1583219023.012000
+!s107 C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/encoder_32_to_5.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor|C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/encoder_32_to_5.v|
 !s101 -O0
 vfour_bit_adder
-IQ`C6oLRm:2i^NDbU[B7_a0
+IPmcL?bG_59]6COm?Qh7IO2
 VCbUJi05^FUQ=EIX5;DkK]2
 R1
 R2
@@ -121,16 +121,16 @@ R8
 R9
 R10
 !i10b 1
-!s100 Ul;<OLibg]77NHF4MGTR50
+!s100 g=EY1KJZPS1`73:7`IWBm1
 !s85 0
 !s101 -O0
 vMD_Mux
-II4l_12lGlF@X[TzFOL]QR2
+IlKTJTcZoElzIO1e<E93[_2
 VMJTWH[E[`noOWCj@7TSnT1
 R1
-w1583192928
-8D:/Elec_374/Virtual-Processor/MD_Mux.v
-FD:/Elec_374/Virtual-Processor/MD_Mux.v
+R2
+8C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/MD_Mux.v
+FC:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/MD_Mux.v
 L0 1
 R5
 r1
@@ -139,39 +139,39 @@ R9
 n@m@d_@mux
 R10
 !i10b 1
-!s100 =FZhj?z;ZA]Wg^ze`d_9I2
+!s100 AI>_eAY3^QM[?eaVjUZCI1
 !s85 0
-!s108 1583196711.715000
-!s107 D:/Elec_374/Virtual-Processor/MD_Mux.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Elec_374/Virtual-Processor|D:/Elec_374/Virtual-Processor/MD_Mux.v|
+!s108 1583219022.908000
+!s107 C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/MD_Mux.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor|C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/MD_Mux.v|
 !s101 -O0
 vmdr_reg
-Id]AR_V=47:Bg11Ch]aQ292
-V5o<h5CZ4<J@1?bD8[P>bE0
+Ion6>fLh[fZFQX3E]Gbkf?1
+V3_=Qjb8ob@EP7`J`ck0R03
 R1
-Z12 w1583194424
-Z13 8D:/Elec_374/Virtual-Processor/REG32_MDR.v
-Z14 FD:/Elec_374/Virtual-Processor/REG32_MDR.v
+Z11 w1583218837
+Z12 8C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/REG32_MDR.v
+Z13 FC:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/REG32_MDR.v
 L0 14
 R5
 r1
 31
-Z15 !s108 1583196712.134000
-Z16 !s107 D:/Elec_374/Virtual-Processor/REG32_MDR.v|
-Z17 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Elec_374/Virtual-Processor|D:/Elec_374/Virtual-Processor/REG32_MDR.v|
+Z14 !s108 1583219023.571000
+Z15 !s107 C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/REG32_MDR.v|
+Z16 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor|C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/REG32_MDR.v|
 R9
 R10
 !i10b 1
-!s100 6]o<ZMF5<n9haDCT9L1JU1
+!s100 ^M4G365z<=YDldOES`j>Z3
 !s85 0
 !s101 -O0
 vMux_32_to_1
-I0Im_?3bOA3m;]g^o3h3:f0
-VgeO4fHgBgfmTa^7NkPNnG3
+I=hQJ_i`Q:GK7`[ckSfOXX1
+VFnbeBn9NeTUn=CN;9;<`Q0
 R1
-R11
-8D:/Elec_374/Virtual-Processor/Mux_32_to_1.v
-FD:/Elec_374/Virtual-Processor/Mux_32_to_1.v
+w1583205838
+8C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Mux_32_to_1.v
+FC:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Mux_32_to_1.v
 L0 1
 R5
 r1
@@ -180,14 +180,14 @@ R9
 R10
 n@mux_32_to_1
 !i10b 1
-!s100 :2m@0Wa5[g@TTaM;bgOjB3
+!s100 e;^<;3KZMWWYHj86B0TNR0
 !s85 0
-!s108 1583196711.874000
-!s107 D:/Elec_374/Virtual-Processor/Mux_32_to_1.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Elec_374/Virtual-Processor|D:/Elec_374/Virtual-Processor/Mux_32_to_1.v|
+!s108 1583219023.120000
+!s107 C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Mux_32_to_1.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor|C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Mux_32_to_1.v|
 !s101 -O0
 vnonrestoring_divison_algo
-IjcL[CFajFIOIz3jzioiHN0
+I[Oi<[1JWFoUiS<9eFm?[Z3
 VIk@;H`N97oI@7n^GM6VA_2
 R1
 R2
@@ -203,32 +203,32 @@ R8
 R9
 R10
 !i10b 1
-!s100 dXZzH?Ebl3G`coO`G^PWo1
+!s100 9DX^z6b_`8MV?V2@f5HcQ0
 !s85 0
 !s101 -O0
 vReg32
-IbcCNCjnL2B7MoJ<7JR6i`1
+IcJ==ozb;BNGl=;k=e=eeD0
 Vd8MSK>MP5W4CY2;N?`2R_1
 R1
+R11
 R12
 R13
-R14
 L0 1
 R5
 r1
 31
+R14
 R15
 R16
-R17
 R9
 R10
 n@reg32
 !i10b 1
-!s100 F;;G^SKG;LJcP3Y4VZ<S]0
+!s100 <Wz:Zn5hY50R<M;`k94510
 !s85 0
 !s101 -O0
 vsixteen_bit_carry_adder
-ITf;XVbgg^:jLo^S`L<Wfo2
+Ini>eMcTZM?C;]FaJTVZXZ3
 V;<1`9[VDa@RnH0c<Q:46f1
 R1
 R2
@@ -244,11 +244,11 @@ R8
 R9
 R10
 !i10b 1
-!s100 nzME_X1[1DN2K<Yc9`zmh1
+!s100 l0C]@oOo`OVP^8gaGAI^P0
 !s85 0
 !s101 -O0
 vthirtytwo_bit_booth_algorithm
-INZ5Fg6bJjIgQeT>U@N@`I0
+IWLDR9FFe^@j@EdXL1HP762
 V__<0ebYgVWlEdU]iC=YVK2
 R1
 R2
@@ -264,11 +264,11 @@ R8
 R9
 R10
 !i10b 1
-!s100 Sh^b?TRNm9g^[PjZ?dCRk1
+!s100 7Ze`HHXiXDYL@3>WJ6ERj3
 !s85 0
 !s101 -O0
 vthirtytwo_bit_carry_adder
-IH`42D;H6^VPjK_V6GBE=M3
+ITa4MbLhZl[5i1GdCDdTMf2
 V<nbQ<78@@>_n^j?aZBFDH2
 R1
 R2
@@ -284,11 +284,11 @@ R8
 R9
 R10
 !i10b 1
-!s100 2>]THZ79:OKY7gYk>kS5D1
+!s100 o2PhW:9`_fKjT[Co;3YH51
 !s85 0
 !s101 -O0
 vthirtytwo_bit_subtractor
-IS_o]SPH=Ukeo;`hoFCc8N1
+IO^T>6=3F@Y_1`?Lc:eL^k0
 VO9^TM@nnN1KflIF?Q00=X2
 R1
 R2
@@ -304,11 +304,11 @@ R8
 R9
 R10
 !i10b 1
-!s100 hP4SJlM5NPe`e5KI6<ogg0
+!s100 UlG4B>FU3LSR0^6VCDhWg2
 !s85 0
 !s101 -O0
 vthirtytwo_bit_twos_complement
-IU=DzSE4dV_CP0`lnETCMI0
+IfRDL=I>KP9=7oMGBUgKHV1
 V2Oa?F0j8zIf@CN_aVTZ_Y0
 R1
 R2
@@ -324,6 +324,6 @@ R8
 R9
 R10
 !i10b 1
-!s100 gHH2Vh[[AQm;M3hd@H;jA2
+!s100 zg9lck2a[_?Y2a]HH2D872
 !s85 0
 !s101 -O0

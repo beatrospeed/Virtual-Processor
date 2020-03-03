@@ -1,31 +1,34 @@
-module Mux_32_to_1(output reg [31:0] BusMuxOut,input BusMuxin_R0,input BusMuxin_R1,input BusMuxin_R2,input BusMuxin_R3,input BusMuxin_R4,input BusMuxin_R5,input BusMuxin_R6,input BusMuxin_R7,input BusMuxin_R8,input BusMuxin_R9,input BusMuxin_R10,input BusMuxin_R11,input BusMuxin_R12,input BusMuxin_R13,input BusMuxin_R14,input BusMuxin_R15,input BusMuxin_HIout,input BusMuxin_LOout,input BusMuxin_Zhighout,input BusMuxin_Zlowout,input BusMuxin_PCout,input BusMuxin_MDRout,input BusMuxin_In_Portout,input BusMuxin_Cout,input [4:0] Select);
+module Mux_32_to_1(output reg [31:0] BusMuxOut,input R0in,input R1in,input R2in,input R3in,input R4in
+,input R5in,input R6in,input R7in,input R8in,input R9in,input R10in,input R11in,input R12in,input R13in,input R14in,input R15in,
+input HIoutin,input LOoutin,input Zhighoutin,input Zlowoutin,input PCoutin,input MDRoutin,input In_Portoutin,input Coutin,
+input [4:0] Selectin);
 
 always@(*)
 	begin
-	if(Select==0) BusMuxOut = BusMuxin_R0;
-	else if(Select==1) BusMuxOut = BusMuxin_R1;
-	else if(Select==2) BusMuxOut = BusMuxin_R2;
-	else if(Select==3) BusMuxOut = BusMuxin_R3;
-	else if(Select==4) BusMuxOut = BusMuxin_R4;
-	else if(Select==5) BusMuxOut = BusMuxin_R5;
-	else if(Select==6) BusMuxOut = BusMuxin_R6;
-	else if(Select==7) BusMuxOut = BusMuxin_R7;
-	else if(Select==8) BusMuxOut = BusMuxin_R8;
-	else if(Select==9) BusMuxOut = BusMuxin_R9;
-	else if(Select==10) BusMuxOut = BusMuxin_R10;
-	else if(Select==11) BusMuxOut = BusMuxin_R11;
-	else if(Select==12) BusMuxOut = BusMuxin_R12;
-	else if(Select==13) BusMuxOut = BusMuxin_R13;
-	else if(Select==14) BusMuxOut = BusMuxin_R14;
-	else if(Select==15) BusMuxOut = BusMuxin_R15;
-	else if(Select==16) BusMuxOut =BusMuxin_HIout;
-	else if(Select==17) BusMuxOut =BusMuxin_LOout;
-	else if(Select==18) BusMuxOut =BusMuxin_Zhighout;
-	else if(Select==19) BusMuxOut =BusMuxin_Zlowout;
-	else if(Select==20) BusMuxOut =BusMuxin_PCout;
-	else if(Select==21) BusMuxOut =BusMuxin_MDRout;
-	else if(Select==22) BusMuxOut =BusMuxin_In_Portout;
-	else if(Select==23) BusMuxOut =BusMuxin_Cout;
+	if(Selectin==0) BusMuxOut = R0in;
+	else if(Selectin==1) BusMuxOut = R1in;
+	else if(Selectin==2) BusMuxOut = R2in;
+	else if(Selectin==3) BusMuxOut = R3in;
+	else if(Selectin==4) BusMuxOut = R4in;
+	else if(Selectin==5) BusMuxOut = R5in;
+	else if(Selectin==6) BusMuxOut = R6in;
+	else if(Selectin==7) BusMuxOut = R7in;
+	else if(Selectin==8) BusMuxOut = R8in;
+	else if(Selectin==9) BusMuxOut = R9in;
+	else if(Selectin==10) BusMuxOut = R10in;
+	else if(Selectin==11) BusMuxOut = R11in;
+	else if(Selectin==12) BusMuxOut = R12in;
+	else if(Selectin==13) BusMuxOut = R13in;
+	else if(Selectin==14) BusMuxOut = R14in;
+	else if(Selectin==15) BusMuxOut = R15in;
+	else if(Selectin==16) BusMuxOut =HIoutin;
+	else if(Selectin==17) BusMuxOut =LOoutin;
+	else if(Selectin==18) BusMuxOut =Zhighoutin;
+	else if(Selectin==19) BusMuxOut =Zlowoutin;
+	else if(Selectin==20) BusMuxOut =PCoutin;
+	else if(Selectin==21) BusMuxOut =MDRoutin;
+	else if(Selectin==22) BusMuxOut =In_Portoutin;
+	else if(Selectin==23) BusMuxOut =Coutin;
 	end
 endmodule
 	
