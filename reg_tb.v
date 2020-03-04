@@ -2,8 +2,8 @@
 
 module reg_tb();
 	reg clk, clear, load;
-	reg [31:0] d;
-	wire [31:0] q;
+	reg [31:0] q;
+	wire [31:0] d;
 	
 	Reg32 reg32(d, clk, clear, load, q);
 	

@@ -8,13 +8,13 @@ entity dataPath is
         R2out           : in     vl_logic;
         R4out           : in     vl_logic;
         MARin           : in     vl_logic;
-        Z_in            : in     vl_logic;
+        Zin             : in     vl_logic;
         PCin            : in     vl_logic;
         MDRin           : in     vl_logic;
         IRin            : in     vl_logic;
-        Y_in            : in     vl_logic;
+        Yin             : in     vl_logic;
         IncPc           : in     vl_logic;
-        load            : in     vl_logic;
+        read            : in     vl_logic;
         control         : in     vl_logic_vector(3 downto 0);
         R5in            : in     vl_logic_vector(3 downto 0);
         R2in            : in     vl_logic_vector(3 downto 0);

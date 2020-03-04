@@ -5,9 +5,9 @@ datapath_test;
 reg PCout, Zlowout, MDRout, R2out, R4out;     
 reg MARin, Zin, PCin, MDRin, IRin, Yin;        
 reg IncPC, Read; 
-reg [3:0] control;
 reg R5in, R2in, R4in;     
 reg Clock;   
+reg [3:0] control;
 reg [31:0] Mdatain;
 
 	 

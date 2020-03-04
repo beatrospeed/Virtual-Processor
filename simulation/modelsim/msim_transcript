@@ -24,10 +24,13 @@
 # 	encoder_32_to_5
 # vlog -vlog01compat -work work +incdir+C:/Users/Christopher\ Masloub/Documents/GitHub/Virtual-Processor {C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Mux_32_to_1.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module Mux_32_to_1
+# -- Compiling module two_to_one_mux
+# -- Compiling module four_to_one_mux
+# -- Compiling module thirtytwo_to_one_mux
 # 
 # Top level modules:
-# 	Mux_32_to_1
+# 	two_to_one_mux
+# 	thirtytwo_to_one_mux
 # vlog -vlog01compat -work work +incdir+C:/Users/Christopher\ Masloub/Documents/GitHub/Virtual-Processor {C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module bit_stage_cell
@@ -45,9 +48,11 @@
 # vlog -vlog01compat -work work +incdir+C:/Users/Christopher\ Masloub/Documents/GitHub/Virtual-Processor {C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/REG32_MDR.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module Reg32
+# -- Compiling module Reg64
 # -- Compiling module mdr_reg
 # 
 # Top level modules:
+# 	Reg64
 # 	mdr_reg
 # vlog -vlog01compat -work work +incdir+C:/Users/Christopher\ Masloub/Documents/GitHub/Virtual-Processor {C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
@@ -68,10 +73,12 @@
 # Loading work.datapath_test
 # Loading work.dataPath
 # Loading work.Reg32
+# Loading work.Reg64
 # Loading work.mdr_reg
 # Loading work.MD_Mux
 # Loading work.encoder_32_to_5
-# Loading work.Mux_32_to_1
+# Loading work.thirtytwo_to_one_mux
+# Loading work.four_to_one_mux
 # Loading work.alu
 # Loading work.thirtytwo_bit_twos_complement
 # Loading work.thirtytwo_bit_carry_adder
@@ -93,549 +100,130 @@
 # ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/datapath_test.v(22): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'clk'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v(6).
 # 
 #         Region: /datapath_test/DUT
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v(29): [PCDPC] - Port size (1 or 1) does not match connection size (4) for port 'clock'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/REG32_MDR.v(1).
-# 
-#         Region: /datapath_test/DUT/Y
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v(30): [PCDPC] - Port size (32 or 32) does not match connection size (64) for port 'D'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/REG32_MDR.v(1).
-# 
-#         Region: /datapath_test/DUT/Z
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v(30): [PCDPC] - Port size (1 or 1) does not match connection size (4) for port 'clock'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/REG32_MDR.v(1).
-# 
-#         Region: /datapath_test/DUT/Z
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v(30): [PCDPC] - Port size (32 or 32) does not match connection size (1) for port 'Q'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/REG32_MDR.v(1).
-# 
-#         Region: /datapath_test/DUT/Z
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v(31): [PCDPC] - Port size (1 or 1) does not match connection size (4) for port 'clock'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/REG32_MDR.v(1).
+# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v(33): [PCDPC] - Port size (1 or 1) does not match connection size (4) for port 'clock'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/REG32_MDR.v(1).
 # 
 #         Region: /datapath_test/DUT/HI
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v(32): [PCDPC] - Port size (1 or 1) does not match connection size (4) for port 'clock'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/REG32_MDR.v(1).
+# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v(34): [PCDPC] - Port size (1 or 1) does not match connection size (4) for port 'clock'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/REG32_MDR.v(1).
 # 
 #         Region: /datapath_test/DUT/LO
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v(36): [PCDPC] - Port size (32 or 32) does not match connection size (1) for port 'Q'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/REG32_MDR.v(14).
+# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v(35): [PCDPC] - Port size (1 or 1) does not match connection size (4) for port 'clock'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/REG32_MDR.v(1).
+# 
+#         Region: /datapath_test/DUT/Y
+# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v(36): [PCDPC] - Port size (1 or 1) does not match connection size (4) for port 'clock'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/REG32_MDR.v(13).
+# 
+#         Region: /datapath_test/DUT/Z
+# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v(37): [PCDPC] - Port size (1 or 1) does not match connection size (4) for port 'clock'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/REG32_MDR.v(25).
 # 
 #         Region: /datapath_test/DUT/mdr
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v(36): [PCDPC] - Port size (32 or 32) does not match connection size (1) for port 'mdata_in'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/REG32_MDR.v(14).
-# 
-#         Region: /datapath_test/DUT/mdr
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v(36): [PCDPC] - Port size (1 or 1) does not match connection size (4) for port 'clock'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/REG32_MDR.v(14).
-# 
-#         Region: /datapath_test/DUT/mdr
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/REG32_MDR.v(18): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'Output'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/MD_Mux.v(1).
-# 
-#         Region: /datapath_test/DUT/mdr/MD_mux
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v(37): [PCDPC] - Port size (1 or 1) does not match connection size (4) for port 'clock'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/REG32_MDR.v(1).
-# 
-#         Region: /datapath_test/DUT/IR
 # ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v(38): [PCDPC] - Port size (1 or 1) does not match connection size (4) for port 'clock'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/REG32_MDR.v(1).
 # 
-#         Region: /datapath_test/DUT/PC
+#         Region: /datapath_test/DUT/InPort
 # ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v(39): [PCDPC] - Port size (1 or 1) does not match connection size (4) for port 'clock'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/REG32_MDR.v(1).
 # 
-#         Region: /datapath_test/DUT/R0
+#         Region: /datapath_test/DUT/IR
 # ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v(40): [PCDPC] - Port size (1 or 1) does not match connection size (4) for port 'clock'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/REG32_MDR.v(1).
 # 
-#         Region: /datapath_test/DUT/R1
+#         Region: /datapath_test/DUT/PC
 # ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v(41): [PCDPC] - Port size (1 or 1) does not match connection size (4) for port 'clock'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/REG32_MDR.v(1).
 # 
-#         Region: /datapath_test/DUT/R2
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v(41): [PCDPC] - Port size (1 or 1) does not match connection size (4) for port 'load'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/REG32_MDR.v(1).
-# 
-#         Region: /datapath_test/DUT/R2
+#         Region: /datapath_test/DUT/R0
 # ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v(42): [PCDPC] - Port size (1 or 1) does not match connection size (4) for port 'clock'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/REG32_MDR.v(1).
 # 
-#         Region: /datapath_test/DUT/R3
+#         Region: /datapath_test/DUT/R1
 # ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v(43): [PCDPC] - Port size (1 or 1) does not match connection size (4) for port 'clock'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/REG32_MDR.v(1).
 # 
-#         Region: /datapath_test/DUT/R4
+#         Region: /datapath_test/DUT/R2
 # ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v(43): [PCDPC] - Port size (1 or 1) does not match connection size (4) for port 'load'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/REG32_MDR.v(1).
 # 
-#         Region: /datapath_test/DUT/R4
+#         Region: /datapath_test/DUT/R2
 # ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v(44): [PCDPC] - Port size (1 or 1) does not match connection size (4) for port 'clock'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/REG32_MDR.v(1).
 # 
-#         Region: /datapath_test/DUT/R5
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v(44): [PCDPC] - Port size (1 or 1) does not match connection size (4) for port 'load'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/REG32_MDR.v(1).
-# 
-#         Region: /datapath_test/DUT/R5
+#         Region: /datapath_test/DUT/R3
 # ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v(45): [PCDPC] - Port size (1 or 1) does not match connection size (4) for port 'clock'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/REG32_MDR.v(1).
 # 
-#         Region: /datapath_test/DUT/R6
+#         Region: /datapath_test/DUT/R4
+# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v(45): [PCDPC] - Port size (1 or 1) does not match connection size (4) for port 'load'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/REG32_MDR.v(1).
+# 
+#         Region: /datapath_test/DUT/R4
 # ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v(46): [PCDPC] - Port size (1 or 1) does not match connection size (4) for port 'clock'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/REG32_MDR.v(1).
 # 
-#         Region: /datapath_test/DUT/R7
+#         Region: /datapath_test/DUT/R5
+# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v(46): [PCDPC] - Port size (1 or 1) does not match connection size (4) for port 'load'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/REG32_MDR.v(1).
+# 
+#         Region: /datapath_test/DUT/R5
 # ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v(47): [PCDPC] - Port size (1 or 1) does not match connection size (4) for port 'clock'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/REG32_MDR.v(1).
 # 
-#         Region: /datapath_test/DUT/R8
+#         Region: /datapath_test/DUT/R6
 # ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v(48): [PCDPC] - Port size (1 or 1) does not match connection size (4) for port 'clock'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/REG32_MDR.v(1).
 # 
-#         Region: /datapath_test/DUT/R9
+#         Region: /datapath_test/DUT/R7
 # ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v(49): [PCDPC] - Port size (1 or 1) does not match connection size (4) for port 'clock'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/REG32_MDR.v(1).
 # 
-#         Region: /datapath_test/DUT/R10
+#         Region: /datapath_test/DUT/R8
 # ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v(50): [PCDPC] - Port size (1 or 1) does not match connection size (4) for port 'clock'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/REG32_MDR.v(1).
 # 
-#         Region: /datapath_test/DUT/R11
+#         Region: /datapath_test/DUT/R9
 # ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v(51): [PCDPC] - Port size (1 or 1) does not match connection size (4) for port 'clock'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/REG32_MDR.v(1).
 # 
-#         Region: /datapath_test/DUT/R12
+#         Region: /datapath_test/DUT/R10
 # ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v(52): [PCDPC] - Port size (1 or 1) does not match connection size (4) for port 'clock'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/REG32_MDR.v(1).
 # 
-#         Region: /datapath_test/DUT/R13
+#         Region: /datapath_test/DUT/R11
 # ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v(53): [PCDPC] - Port size (1 or 1) does not match connection size (4) for port 'clock'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/REG32_MDR.v(1).
 # 
-#         Region: /datapath_test/DUT/R14
+#         Region: /datapath_test/DUT/R12
 # ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v(54): [PCDPC] - Port size (1 or 1) does not match connection size (4) for port 'clock'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/REG32_MDR.v(1).
 # 
+#         Region: /datapath_test/DUT/R13
+# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v(55): [PCDPC] - Port size (1 or 1) does not match connection size (4) for port 'clock'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/REG32_MDR.v(1).
+# 
+#         Region: /datapath_test/DUT/R14
+# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v(56): [PCDPC] - Port size (1 or 1) does not match connection size (4) for port 'clock'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/REG32_MDR.v(1).
+# 
 #         Region: /datapath_test/DUT/R15
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v(58): [PCDPC] - Port size (1 or 1) does not match connection size (4) for port 'clk'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/encoder_32_to_5.v(1).
+# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v(61): [PCDPC] - Port size (1 or 1) does not match connection size (4) for port 'clk'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/encoder_32_to_5.v(1).
 # 
 #         Region: /datapath_test/DUT/BusMux_encoder
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v(62): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'R0in'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Mux_32_to_1.v(1).
+# ** Warning: (vsim-3017) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v(66): [TFMPC] - Too few port connections. Expected 34, found 26.
 # 
 #         Region: /datapath_test/DUT/Bus_Mux
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v(62): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'R1in'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Mux_32_to_1.v(1).
+# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v(66): [PCDPC] - Port size (32 or 32) does not match connection size (5) for port 'y'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Mux_32_to_1.v(21).
 # 
 #         Region: /datapath_test/DUT/Bus_Mux
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v(62): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'R2in'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Mux_32_to_1.v(1).
+# ** Warning: (vsim-3722) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v(66): [TFMPC] - Missing connection for port 'z'.
 # 
-#         Region: /datapath_test/DUT/Bus_Mux
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v(62): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'R3in'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Mux_32_to_1.v(1).
+# ** Warning: (vsim-3722) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v(66): [TFMPC] - Missing connection for port 'aa'.
 # 
-#         Region: /datapath_test/DUT/Bus_Mux
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v(62): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'R4in'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Mux_32_to_1.v(1).
+# ** Warning: (vsim-3722) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v(66): [TFMPC] - Missing connection for port 'ab'.
 # 
-#         Region: /datapath_test/DUT/Bus_Mux
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v(62): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'R5in'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Mux_32_to_1.v(2).
+# ** Warning: (vsim-3722) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v(66): [TFMPC] - Missing connection for port 'ac'.
 # 
-#         Region: /datapath_test/DUT/Bus_Mux
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v(62): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'R6in'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Mux_32_to_1.v(2).
+# ** Warning: (vsim-3722) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v(66): [TFMPC] - Missing connection for port 'ad'.
 # 
-#         Region: /datapath_test/DUT/Bus_Mux
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v(62): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'R7in'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Mux_32_to_1.v(2).
+# ** Warning: (vsim-3722) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v(66): [TFMPC] - Missing connection for port 'ae'.
 # 
-#         Region: /datapath_test/DUT/Bus_Mux
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v(62): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'R8in'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Mux_32_to_1.v(2).
+# ** Warning: (vsim-3722) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v(66): [TFMPC] - Missing connection for port 'af'.
 # 
-#         Region: /datapath_test/DUT/Bus_Mux
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v(62): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'R9in'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Mux_32_to_1.v(2).
+# ** Warning: (vsim-3722) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v(66): [TFMPC] - Missing connection for port 'control'.
 # 
-#         Region: /datapath_test/DUT/Bus_Mux
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v(62): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'R10in'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Mux_32_to_1.v(2).
-# 
-#         Region: /datapath_test/DUT/Bus_Mux
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v(62): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'R11in'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Mux_32_to_1.v(2).
-# 
-#         Region: /datapath_test/DUT/Bus_Mux
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v(62): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'R12in'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Mux_32_to_1.v(2).
-# 
-#         Region: /datapath_test/DUT/Bus_Mux
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v(62): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'R13in'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Mux_32_to_1.v(2).
-# 
-#         Region: /datapath_test/DUT/Bus_Mux
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v(62): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'R14in'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Mux_32_to_1.v(2).
-# 
-#         Region: /datapath_test/DUT/Bus_Mux
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v(62): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'R15in'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Mux_32_to_1.v(2).
-# 
-#         Region: /datapath_test/DUT/Bus_Mux
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v(62): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'HIoutin'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Mux_32_to_1.v(3).
-# 
-#         Region: /datapath_test/DUT/Bus_Mux
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v(62): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'LOoutin'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Mux_32_to_1.v(3).
-# 
-#         Region: /datapath_test/DUT/Bus_Mux
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v(62): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'Zhighoutin'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Mux_32_to_1.v(3).
-# 
-#         Region: /datapath_test/DUT/Bus_Mux
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v(62): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'Zlowoutin'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Mux_32_to_1.v(3).
-# 
-#         Region: /datapath_test/DUT/Bus_Mux
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v(62): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'PCoutin'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Mux_32_to_1.v(3).
-# 
-#         Region: /datapath_test/DUT/Bus_Mux
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v(62): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'MDRoutin'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Mux_32_to_1.v(3).
-# 
-#         Region: /datapath_test/DUT/Bus_Mux
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v(62): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'Coutin'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Mux_32_to_1.v(3).
-# 
-#         Region: /datapath_test/DUT/Bus_Mux
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v(64): [PCDPC] - Port size (1 or 1) does not match connection size (4) for port 'Clk'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(203).
+# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v(68): [PCDPC] - Port size (1 or 1) does not match connection size (4) for port 'Clk'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(203).
 # 
 #         Region: /datapath_test/DUT/Alu
 # ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(103): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'c_0'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(84).
 # 
 #         Region: /datapath_test/DUT/Alu/c/ttb
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(49): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'sum'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(7).
-# 
-#         Region: /datapath_test/DUT/Alu/c/ttb/s0/f0
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(49): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'x'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(7).
-# 
-#         Region: /datapath_test/DUT/Alu/c/ttb/s0/f0
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(49): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'y'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(7).
-# 
-#         Region: /datapath_test/DUT/Alu/c/ttb/s0/f0
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(57): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'sum'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(7).
-# 
-#         Region: /datapath_test/DUT/Alu/c/ttb/s0/f1
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(57): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'x'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(7).
-# 
-#         Region: /datapath_test/DUT/Alu/c/ttb/s0/f1
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(57): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'y'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(7).
-# 
-#         Region: /datapath_test/DUT/Alu/c/ttb/s0/f1
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(64): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'sum'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(7).
-# 
-#         Region: /datapath_test/DUT/Alu/c/ttb/s0/f2
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(64): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'x'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(7).
-# 
-#         Region: /datapath_test/DUT/Alu/c/ttb/s0/f2
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(64): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'y'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(7).
-# 
-#         Region: /datapath_test/DUT/Alu/c/ttb/s0/f2
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(72): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'sum'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(7).
-# 
-#         Region: /datapath_test/DUT/Alu/c/ttb/s0/f3
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(72): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'x'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(7).
-# 
-#         Region: /datapath_test/DUT/Alu/c/ttb/s0/f3
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(72): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'y'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(7).
-# 
-#         Region: /datapath_test/DUT/Alu/c/ttb/s0/f3
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(49): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'sum'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(7).
-# 
-#         Region: /datapath_test/DUT/Alu/c/ttb/s1/f0
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(49): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'x'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(7).
-# 
-#         Region: /datapath_test/DUT/Alu/c/ttb/s1/f0
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(49): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'y'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(7).
-# 
-#         Region: /datapath_test/DUT/Alu/c/ttb/s1/f0
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(57): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'sum'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(7).
-# 
-#         Region: /datapath_test/DUT/Alu/c/ttb/s1/f1
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(57): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'x'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(7).
-# 
-#         Region: /datapath_test/DUT/Alu/c/ttb/s1/f1
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(57): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'y'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(7).
-# 
-#         Region: /datapath_test/DUT/Alu/c/ttb/s1/f1
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(64): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'sum'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(7).
-# 
-#         Region: /datapath_test/DUT/Alu/c/ttb/s1/f2
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(64): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'x'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(7).
-# 
-#         Region: /datapath_test/DUT/Alu/c/ttb/s1/f2
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(64): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'y'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(7).
-# 
-#         Region: /datapath_test/DUT/Alu/c/ttb/s1/f2
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(72): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'sum'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(7).
-# 
-#         Region: /datapath_test/DUT/Alu/c/ttb/s1/f3
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(72): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'x'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(7).
-# 
-#         Region: /datapath_test/DUT/Alu/c/ttb/s1/f3
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(72): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'y'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(7).
-# 
-#         Region: /datapath_test/DUT/Alu/c/ttb/s1/f3
 # ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(212): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'c_0'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(84).
 # 
 #         Region: /datapath_test/DUT/Alu/a
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(49): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'sum'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(7).
-# 
-#         Region: /datapath_test/DUT/Alu/a/s0/f0
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(49): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'x'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(7).
-# 
-#         Region: /datapath_test/DUT/Alu/a/s0/f0
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(49): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'y'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(7).
-# 
-#         Region: /datapath_test/DUT/Alu/a/s0/f0
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(57): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'sum'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(7).
-# 
-#         Region: /datapath_test/DUT/Alu/a/s0/f1
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(57): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'x'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(7).
-# 
-#         Region: /datapath_test/DUT/Alu/a/s0/f1
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(57): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'y'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(7).
-# 
-#         Region: /datapath_test/DUT/Alu/a/s0/f1
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(64): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'sum'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(7).
-# 
-#         Region: /datapath_test/DUT/Alu/a/s0/f2
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(64): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'x'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(7).
-# 
-#         Region: /datapath_test/DUT/Alu/a/s0/f2
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(64): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'y'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(7).
-# 
-#         Region: /datapath_test/DUT/Alu/a/s0/f2
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(72): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'sum'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(7).
-# 
-#         Region: /datapath_test/DUT/Alu/a/s0/f3
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(72): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'x'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(7).
-# 
-#         Region: /datapath_test/DUT/Alu/a/s0/f3
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(72): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'y'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(7).
-# 
-#         Region: /datapath_test/DUT/Alu/a/s0/f3
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(49): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'sum'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(7).
-# 
-#         Region: /datapath_test/DUT/Alu/a/s1/f0
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(49): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'x'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(7).
-# 
-#         Region: /datapath_test/DUT/Alu/a/s1/f0
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(49): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'y'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(7).
-# 
-#         Region: /datapath_test/DUT/Alu/a/s1/f0
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(57): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'sum'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(7).
-# 
-#         Region: /datapath_test/DUT/Alu/a/s1/f1
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(57): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'x'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(7).
-# 
-#         Region: /datapath_test/DUT/Alu/a/s1/f1
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(57): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'y'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(7).
-# 
-#         Region: /datapath_test/DUT/Alu/a/s1/f1
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(64): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'sum'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(7).
-# 
-#         Region: /datapath_test/DUT/Alu/a/s1/f2
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(64): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'x'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(7).
-# 
-#         Region: /datapath_test/DUT/Alu/a/s1/f2
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(64): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'y'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(7).
-# 
-#         Region: /datapath_test/DUT/Alu/a/s1/f2
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(72): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'sum'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(7).
-# 
-#         Region: /datapath_test/DUT/Alu/a/s1/f3
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(72): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'x'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(7).
-# 
-#         Region: /datapath_test/DUT/Alu/a/s1/f3
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(72): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'y'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(7).
-# 
-#         Region: /datapath_test/DUT/Alu/a/s1/f3
 # ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(103): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'c_0'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(84).
 # 
 #         Region: /datapath_test/DUT/Alu/s/compliment/ttb
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(49): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'sum'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(7).
-# 
-#         Region: /datapath_test/DUT/Alu/s/compliment/ttb/s0/f0
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(49): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'x'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(7).
-# 
-#         Region: /datapath_test/DUT/Alu/s/compliment/ttb/s0/f0
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(49): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'y'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(7).
-# 
-#         Region: /datapath_test/DUT/Alu/s/compliment/ttb/s0/f0
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(57): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'sum'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(7).
-# 
-#         Region: /datapath_test/DUT/Alu/s/compliment/ttb/s0/f1
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(57): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'x'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(7).
-# 
-#         Region: /datapath_test/DUT/Alu/s/compliment/ttb/s0/f1
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(57): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'y'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(7).
-# 
-#         Region: /datapath_test/DUT/Alu/s/compliment/ttb/s0/f1
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(64): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'sum'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(7).
-# 
-#         Region: /datapath_test/DUT/Alu/s/compliment/ttb/s0/f2
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(64): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'x'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(7).
-# 
-#         Region: /datapath_test/DUT/Alu/s/compliment/ttb/s0/f2
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(64): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'y'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(7).
-# 
-#         Region: /datapath_test/DUT/Alu/s/compliment/ttb/s0/f2
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(72): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'sum'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(7).
-# 
-#         Region: /datapath_test/DUT/Alu/s/compliment/ttb/s0/f3
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(72): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'x'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(7).
-# 
-#         Region: /datapath_test/DUT/Alu/s/compliment/ttb/s0/f3
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(72): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'y'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(7).
-# 
-#         Region: /datapath_test/DUT/Alu/s/compliment/ttb/s0/f3
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(49): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'sum'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(7).
-# 
-#         Region: /datapath_test/DUT/Alu/s/compliment/ttb/s1/f0
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(49): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'x'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(7).
-# 
-#         Region: /datapath_test/DUT/Alu/s/compliment/ttb/s1/f0
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(49): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'y'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(7).
-# 
-#         Region: /datapath_test/DUT/Alu/s/compliment/ttb/s1/f0
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(57): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'sum'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(7).
-# 
-#         Region: /datapath_test/DUT/Alu/s/compliment/ttb/s1/f1
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(57): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'x'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(7).
-# 
-#         Region: /datapath_test/DUT/Alu/s/compliment/ttb/s1/f1
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(57): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'y'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(7).
-# 
-#         Region: /datapath_test/DUT/Alu/s/compliment/ttb/s1/f1
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(64): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'sum'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(7).
-# 
-#         Region: /datapath_test/DUT/Alu/s/compliment/ttb/s1/f2
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(64): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'x'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(7).
-# 
-#         Region: /datapath_test/DUT/Alu/s/compliment/ttb/s1/f2
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(64): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'y'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(7).
-# 
-#         Region: /datapath_test/DUT/Alu/s/compliment/ttb/s1/f2
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(72): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'sum'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(7).
-# 
-#         Region: /datapath_test/DUT/Alu/s/compliment/ttb/s1/f3
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(72): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'x'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(7).
-# 
-#         Region: /datapath_test/DUT/Alu/s/compliment/ttb/s1/f3
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(72): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'y'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(7).
-# 
-#         Region: /datapath_test/DUT/Alu/s/compliment/ttb/s1/f3
 # ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(111): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'c_0'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(84).
 # 
 #         Region: /datapath_test/DUT/Alu/s/sub
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(49): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'sum'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(7).
-# 
-#         Region: /datapath_test/DUT/Alu/s/sub/s0/f0
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(49): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'x'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(7).
-# 
-#         Region: /datapath_test/DUT/Alu/s/sub/s0/f0
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(49): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'y'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(7).
-# 
-#         Region: /datapath_test/DUT/Alu/s/sub/s0/f0
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(57): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'sum'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(7).
-# 
-#         Region: /datapath_test/DUT/Alu/s/sub/s0/f1
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(57): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'x'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(7).
-# 
-#         Region: /datapath_test/DUT/Alu/s/sub/s0/f1
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(57): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'y'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(7).
-# 
-#         Region: /datapath_test/DUT/Alu/s/sub/s0/f1
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(64): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'sum'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(7).
-# 
-#         Region: /datapath_test/DUT/Alu/s/sub/s0/f2
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(64): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'x'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(7).
-# 
-#         Region: /datapath_test/DUT/Alu/s/sub/s0/f2
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(64): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'y'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(7).
-# 
-#         Region: /datapath_test/DUT/Alu/s/sub/s0/f2
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(72): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'sum'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(7).
-# 
-#         Region: /datapath_test/DUT/Alu/s/sub/s0/f3
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(72): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'x'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(7).
-# 
-#         Region: /datapath_test/DUT/Alu/s/sub/s0/f3
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(72): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'y'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(7).
-# 
-#         Region: /datapath_test/DUT/Alu/s/sub/s0/f3
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(49): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'sum'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(7).
-# 
-#         Region: /datapath_test/DUT/Alu/s/sub/s1/f0
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(49): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'x'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(7).
-# 
-#         Region: /datapath_test/DUT/Alu/s/sub/s1/f0
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(49): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'y'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(7).
-# 
-#         Region: /datapath_test/DUT/Alu/s/sub/s1/f0
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(57): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'sum'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(7).
-# 
-#         Region: /datapath_test/DUT/Alu/s/sub/s1/f1
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(57): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'x'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(7).
-# 
-#         Region: /datapath_test/DUT/Alu/s/sub/s1/f1
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(57): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'y'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(7).
-# 
-#         Region: /datapath_test/DUT/Alu/s/sub/s1/f1
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(64): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'sum'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(7).
-# 
-#         Region: /datapath_test/DUT/Alu/s/sub/s1/f2
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(64): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'x'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(7).
-# 
-#         Region: /datapath_test/DUT/Alu/s/sub/s1/f2
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(64): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'y'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(7).
-# 
-#         Region: /datapath_test/DUT/Alu/s/sub/s1/f2
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(72): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'sum'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(7).
-# 
-#         Region: /datapath_test/DUT/Alu/s/sub/s1/f3
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(72): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'x'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(7).
-# 
-#         Region: /datapath_test/DUT/Alu/s/sub/s1/f3
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(72): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'y'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(7).
-# 
-#         Region: /datapath_test/DUT/Alu/s/sub/s1/f3
 # ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(229): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'c_0'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(84).
 # 
 #         Region: /datapath_test/DUT/Alu/a2
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(49): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'sum'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(7).
-# 
-#         Region: /datapath_test/DUT/Alu/a2/s0/f0
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(49): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'x'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(7).
-# 
-#         Region: /datapath_test/DUT/Alu/a2/s0/f0
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(49): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'y'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(7).
-# 
-#         Region: /datapath_test/DUT/Alu/a2/s0/f0
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(57): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'sum'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(7).
-# 
-#         Region: /datapath_test/DUT/Alu/a2/s0/f1
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(57): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'x'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(7).
-# 
-#         Region: /datapath_test/DUT/Alu/a2/s0/f1
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(57): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'y'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(7).
-# 
-#         Region: /datapath_test/DUT/Alu/a2/s0/f1
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(64): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'sum'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(7).
-# 
-#         Region: /datapath_test/DUT/Alu/a2/s0/f2
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(64): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'x'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(7).
-# 
-#         Region: /datapath_test/DUT/Alu/a2/s0/f2
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(64): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'y'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(7).
-# 
-#         Region: /datapath_test/DUT/Alu/a2/s0/f2
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(72): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'sum'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(7).
-# 
-#         Region: /datapath_test/DUT/Alu/a2/s0/f3
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(72): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'x'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(7).
-# 
-#         Region: /datapath_test/DUT/Alu/a2/s0/f3
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(72): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'y'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(7).
-# 
-#         Region: /datapath_test/DUT/Alu/a2/s0/f3
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(49): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'sum'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(7).
-# 
-#         Region: /datapath_test/DUT/Alu/a2/s1/f0
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(49): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'x'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(7).
-# 
-#         Region: /datapath_test/DUT/Alu/a2/s1/f0
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(49): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'y'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(7).
-# 
-#         Region: /datapath_test/DUT/Alu/a2/s1/f0
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(57): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'sum'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(7).
-# 
-#         Region: /datapath_test/DUT/Alu/a2/s1/f1
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(57): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'x'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(7).
-# 
-#         Region: /datapath_test/DUT/Alu/a2/s1/f1
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(57): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'y'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(7).
-# 
-#         Region: /datapath_test/DUT/Alu/a2/s1/f1
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(64): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'sum'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(7).
-# 
-#         Region: /datapath_test/DUT/Alu/a2/s1/f2
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(64): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'x'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(7).
-# 
-#         Region: /datapath_test/DUT/Alu/a2/s1/f2
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(64): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'y'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(7).
-# 
-#         Region: /datapath_test/DUT/Alu/a2/s1/f2
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(72): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'sum'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(7).
-# 
-#         Region: /datapath_test/DUT/Alu/a2/s1/f3
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(72): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'x'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(7).
-# 
-#         Region: /datapath_test/DUT/Alu/a2/s1/f3
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(72): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'y'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(7).
-# 
-#         Region: /datapath_test/DUT/Alu/a2/s1/f3
 # 
 # add wave *
 # view structure

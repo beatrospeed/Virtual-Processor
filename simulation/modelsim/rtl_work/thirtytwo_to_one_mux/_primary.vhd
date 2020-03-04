@@ -1,0 +1,40 @@
+library verilog;
+use verilog.vl_types.all;
+entity thirtytwo_to_one_mux is
+    port(
+        \out\           : out    vl_logic_vector(31 downto 0);
+        a               : in     vl_logic_vector(31 downto 0);
+        b               : in     vl_logic_vector(31 downto 0);
+        c               : in     vl_logic_vector(31 downto 0);
+        d               : in     vl_logic_vector(31 downto 0);
+        e               : in     vl_logic_vector(31 downto 0);
+        f               : in     vl_logic_vector(31 downto 0);
+        g               : in     vl_logic_vector(31 downto 0);
+        h               : in     vl_logic_vector(31 downto 0);
+        i               : in     vl_logic_vector(31 downto 0);
+        j               : in     vl_logic_vector(31 downto 0);
+        k               : in     vl_logic_vector(31 downto 0);
+        l               : in     vl_logic_vector(31 downto 0);
+        m               : in     vl_logic_vector(31 downto 0);
+        n               : in     vl_logic_vector(31 downto 0);
+        o               : in     vl_logic_vector(31 downto 0);
+        p               : in     vl_logic_vector(31 downto 0);
+        q               : in     vl_logic_vector(31 downto 0);
+        r               : in     vl_logic_vector(31 downto 0);
+        s               : in     vl_logic_vector(31 downto 0);
+        t               : in     vl_logic_vector(31 downto 0);
+        u               : in     vl_logic_vector(31 downto 0);
+        v               : in     vl_logic_vector(31 downto 0);
+        w               : in     vl_logic_vector(31 downto 0);
+        x               : in     vl_logic_vector(31 downto 0);
+        y               : in     vl_logic_vector(31 downto 0);
+        z               : in     vl_logic_vector(31 downto 0);
+        aa              : in     vl_logic_vector(31 downto 0);
+        ab              : in     vl_logic_vector(31 downto 0);
+        ac              : in     vl_logic_vector(31 downto 0);
+        ad              : in     vl_logic_vector(31 downto 0);
+        ae              : in     vl_logic_vector(31 downto 0);
+        af              : in     vl_logic_vector(31 downto 0);
+        control         : in     vl_logic_vector(4 downto 0)
+    );
+end thirtytwo_to_one_mux;
