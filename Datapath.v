@@ -3,29 +3,33 @@
 module dataPath(
 
 
-	input PCout,Zlowout, MDRout,R2out,R4out, MARin,Zin, PCin, MDRin,IRin,Yin,IncPc, read, input [3:0] control, R5in, R2in,R4in,clk,
-	input [31:0] Mdatain
+	input PCout,Zlowout, MDRout,R2out,R4out, MARin,Zin,
+	PCin, MDRin,IRin,Yin,IncPc, read, R5in, R2in,R4in,clk,
+	input [3:0] control,
+	input [31:0] Mdatain,
+	input R0out, R1out, R3out, R5out, R6out, R7out, R8out, R9out,
+	R10out, R11out, R12out, R13out, R14out, R15out,HIout, LOout,
+	InPortout, OutPortout,Cout, Zhighout,
+	R0in, R1in, R3in, R6in, R7in, R8in,
+	R9in, R10in, R11in, R12in, R13in, R14in, R15in, HIin, LOin,
+	Zhighin, Zlowin, InPortin, Cin, reset,
+	output wire [31:0] R0Val,R1Val,R2Val,R3Val,R4Val,R5Val,R6Val,R7Val,R8Val,R9Val,R10Val,R11Val,R12Val,R13Val,R14Val,R15Val,bus
 	
 );
 	
-	wire R0out, R1out, R3out, R5out, R6out, R7out, R8out, R9out,
-	R10out, R11out, R12out, R13out, R14out, R15out,HIout, LOout,
-	InPortout, OutPortout,Cout, Zhighout,
-
-	R0in, R1in, R3in, R6in, R7in, R8in,
-	R9in, R10in, R11in, R12in, R13in, R14in, R15in, HIin, LOin,
-	Zhighin, Zlowin, InPortin, Cin, reset; 
+	
 
 
 	 
 	 
-	wire [31:0] R0Val,R1Val,R2Val,R3Val,R4Val,R5Val,R6Val,R7Val,R8Val,R9Val,R10Val,R11Val,R12Val,R13Val,R14Val,R15Val,bus;
+	
+	
 	
 	 
 	wire [63:0] ZVal;
 	wire [31:0] IRval, MDRval,HIval, LOval;
 	wire [4:0] Select_D; 
-	wire [31:0] YVal, InPort_D, OutPort_D, MAR_D, PCVal,CVal; 
+	wire [31:0] YVal, InPort_D, OutPort_D, MAR_D, PCVal,CVal, mux_data_out; 
 	wire [63:0] ALUVal_D; 
 	
 	
@@ -34,7 +38,9 @@ module dataPath(
    Reg32 LO(bus, clk, reset, LOin, LOval);
    Reg32 Y(bus, clk, reset, Yin, YVal);
    Reg64 Z(ALUVal_D, clk, reset, Zin, ZVal);
-   mdr_reg mdr(bus,Mdatain,read,clk,reset,MDRin, MDRval);
+   
+	MD_Mux md_mux(mux_data_out, bus, Mdatain, read);
+	Reg32  mdrReg(mux_data_out,clk,reset,MDRin, MDRval);
 	Reg32 InPort(32'b0, clk, reset, InPortin, InPort_D);
    Reg32 IR(bus, clk, reset, IRin, IRval);
    Reg32 PC(bus, clk, reset, PCin, PCVal);

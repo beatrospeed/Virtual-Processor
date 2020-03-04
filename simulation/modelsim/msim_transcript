@@ -24,13 +24,10 @@
 # 	encoder_32_to_5
 # vlog -vlog01compat -work work +incdir+C:/Users/Christopher\ Masloub/Documents/GitHub/Virtual-Processor {C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Mux_32_to_1.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module two_to_one_mux
-# -- Compiling module four_to_one_mux
-# -- Compiling module thirtytwo_to_one_mux
+# -- Compiling module Mux_32_to_1
 # 
 # Top level modules:
-# 	two_to_one_mux
-# 	thirtytwo_to_one_mux
+# 	Mux_32_to_1
 # vlog -vlog01compat -work work +incdir+C:/Users/Christopher\ Masloub/Documents/GitHub/Virtual-Processor {C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module bit_stage_cell
@@ -74,11 +71,9 @@
 # Loading work.dataPath
 # Loading work.Reg32
 # Loading work.Reg64
-# Loading work.mdr_reg
 # Loading work.MD_Mux
 # Loading work.encoder_32_to_5
-# Loading work.thirtytwo_to_one_mux
-# Loading work.four_to_one_mux
+# Loading work.Mux_32_to_1
 # Loading work.alu
 # Loading work.thirtytwo_bit_twos_complement
 # Loading work.thirtytwo_bit_carry_adder
@@ -88,127 +83,84 @@
 # Loading work.thirtytwo_bit_subtractor
 # Loading work.thirtytwo_bit_booth_algorithm
 # Loading work.nonrestoring_divison_algo
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/datapath_test.v(22): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'R5in'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v(6).
+# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/datapath_test.v(37): [PCDPC] - Port size (1 or 1) does not match connection size (4) for port 'R5in'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v(7).
 # 
 #         Region: /datapath_test/DUT
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/datapath_test.v(22): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'R2in'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v(6).
+# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/datapath_test.v(37): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'control'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v(8).
 # 
 #         Region: /datapath_test/DUT
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/datapath_test.v(22): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'R4in'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v(6).
-# 
-#         Region: /datapath_test/DUT
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/datapath_test.v(22): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'clk'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v(6).
-# 
-#         Region: /datapath_test/DUT
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v(33): [PCDPC] - Port size (1 or 1) does not match connection size (4) for port 'clock'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/REG32_MDR.v(1).
-# 
-#         Region: /datapath_test/DUT/HI
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v(34): [PCDPC] - Port size (1 or 1) does not match connection size (4) for port 'clock'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/REG32_MDR.v(1).
-# 
-#         Region: /datapath_test/DUT/LO
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v(35): [PCDPC] - Port size (1 or 1) does not match connection size (4) for port 'clock'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/REG32_MDR.v(1).
-# 
-#         Region: /datapath_test/DUT/Y
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v(36): [PCDPC] - Port size (1 or 1) does not match connection size (4) for port 'clock'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/REG32_MDR.v(13).
-# 
-#         Region: /datapath_test/DUT/Z
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v(37): [PCDPC] - Port size (1 or 1) does not match connection size (4) for port 'clock'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/REG32_MDR.v(25).
-# 
-#         Region: /datapath_test/DUT/mdr
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v(38): [PCDPC] - Port size (1 or 1) does not match connection size (4) for port 'clock'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/REG32_MDR.v(1).
-# 
-#         Region: /datapath_test/DUT/InPort
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v(39): [PCDPC] - Port size (1 or 1) does not match connection size (4) for port 'clock'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/REG32_MDR.v(1).
-# 
-#         Region: /datapath_test/DUT/IR
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v(40): [PCDPC] - Port size (1 or 1) does not match connection size (4) for port 'clock'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/REG32_MDR.v(1).
-# 
-#         Region: /datapath_test/DUT/PC
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v(41): [PCDPC] - Port size (1 or 1) does not match connection size (4) for port 'clock'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/REG32_MDR.v(1).
-# 
-#         Region: /datapath_test/DUT/R0
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v(42): [PCDPC] - Port size (1 or 1) does not match connection size (4) for port 'clock'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/REG32_MDR.v(1).
-# 
-#         Region: /datapath_test/DUT/R1
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v(43): [PCDPC] - Port size (1 or 1) does not match connection size (4) for port 'clock'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/REG32_MDR.v(1).
-# 
-#         Region: /datapath_test/DUT/R2
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v(43): [PCDPC] - Port size (1 or 1) does not match connection size (4) for port 'load'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/REG32_MDR.v(1).
-# 
-#         Region: /datapath_test/DUT/R2
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v(44): [PCDPC] - Port size (1 or 1) does not match connection size (4) for port 'clock'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/REG32_MDR.v(1).
-# 
-#         Region: /datapath_test/DUT/R3
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v(45): [PCDPC] - Port size (1 or 1) does not match connection size (4) for port 'clock'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/REG32_MDR.v(1).
-# 
-#         Region: /datapath_test/DUT/R4
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v(45): [PCDPC] - Port size (1 or 1) does not match connection size (4) for port 'load'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/REG32_MDR.v(1).
-# 
-#         Region: /datapath_test/DUT/R4
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v(46): [PCDPC] - Port size (1 or 1) does not match connection size (4) for port 'clock'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/REG32_MDR.v(1).
-# 
-#         Region: /datapath_test/DUT/R5
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v(46): [PCDPC] - Port size (1 or 1) does not match connection size (4) for port 'load'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/REG32_MDR.v(1).
-# 
-#         Region: /datapath_test/DUT/R5
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v(47): [PCDPC] - Port size (1 or 1) does not match connection size (4) for port 'clock'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/REG32_MDR.v(1).
-# 
-#         Region: /datapath_test/DUT/R6
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v(48): [PCDPC] - Port size (1 or 1) does not match connection size (4) for port 'clock'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/REG32_MDR.v(1).
-# 
-#         Region: /datapath_test/DUT/R7
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v(49): [PCDPC] - Port size (1 or 1) does not match connection size (4) for port 'clock'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/REG32_MDR.v(1).
-# 
-#         Region: /datapath_test/DUT/R8
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v(50): [PCDPC] - Port size (1 or 1) does not match connection size (4) for port 'clock'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/REG32_MDR.v(1).
-# 
-#         Region: /datapath_test/DUT/R9
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v(51): [PCDPC] - Port size (1 or 1) does not match connection size (4) for port 'clock'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/REG32_MDR.v(1).
-# 
-#         Region: /datapath_test/DUT/R10
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v(52): [PCDPC] - Port size (1 or 1) does not match connection size (4) for port 'clock'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/REG32_MDR.v(1).
-# 
-#         Region: /datapath_test/DUT/R11
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v(53): [PCDPC] - Port size (1 or 1) does not match connection size (4) for port 'clock'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/REG32_MDR.v(1).
-# 
-#         Region: /datapath_test/DUT/R12
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v(54): [PCDPC] - Port size (1 or 1) does not match connection size (4) for port 'clock'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/REG32_MDR.v(1).
-# 
-#         Region: /datapath_test/DUT/R13
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v(55): [PCDPC] - Port size (1 or 1) does not match connection size (4) for port 'clock'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/REG32_MDR.v(1).
-# 
-#         Region: /datapath_test/DUT/R14
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v(56): [PCDPC] - Port size (1 or 1) does not match connection size (4) for port 'clock'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/REG32_MDR.v(1).
-# 
-#         Region: /datapath_test/DUT/R15
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v(61): [PCDPC] - Port size (1 or 1) does not match connection size (4) for port 'clk'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/encoder_32_to_5.v(1).
-# 
-#         Region: /datapath_test/DUT/BusMux_encoder
-# ** Warning: (vsim-3017) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v(66): [TFMPC] - Too few port connections. Expected 34, found 26.
+# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v(72): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'R0in'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Mux_32_to_1.v(1).
 # 
 #         Region: /datapath_test/DUT/Bus_Mux
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v(66): [PCDPC] - Port size (32 or 32) does not match connection size (5) for port 'y'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Mux_32_to_1.v(21).
+# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v(72): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'R1in'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Mux_32_to_1.v(1).
 # 
 #         Region: /datapath_test/DUT/Bus_Mux
-# ** Warning: (vsim-3722) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v(66): [TFMPC] - Missing connection for port 'z'.
+# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v(72): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'R2in'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Mux_32_to_1.v(1).
 # 
-# ** Warning: (vsim-3722) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v(66): [TFMPC] - Missing connection for port 'aa'.
+#         Region: /datapath_test/DUT/Bus_Mux
+# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v(72): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'R3in'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Mux_32_to_1.v(1).
 # 
-# ** Warning: (vsim-3722) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v(66): [TFMPC] - Missing connection for port 'ab'.
+#         Region: /datapath_test/DUT/Bus_Mux
+# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v(72): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'R4in'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Mux_32_to_1.v(1).
 # 
-# ** Warning: (vsim-3722) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v(66): [TFMPC] - Missing connection for port 'ac'.
+#         Region: /datapath_test/DUT/Bus_Mux
+# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v(72): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'R5in'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Mux_32_to_1.v(2).
 # 
-# ** Warning: (vsim-3722) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v(66): [TFMPC] - Missing connection for port 'ad'.
+#         Region: /datapath_test/DUT/Bus_Mux
+# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v(72): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'R6in'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Mux_32_to_1.v(2).
 # 
-# ** Warning: (vsim-3722) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v(66): [TFMPC] - Missing connection for port 'ae'.
+#         Region: /datapath_test/DUT/Bus_Mux
+# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v(72): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'R7in'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Mux_32_to_1.v(2).
 # 
-# ** Warning: (vsim-3722) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v(66): [TFMPC] - Missing connection for port 'af'.
+#         Region: /datapath_test/DUT/Bus_Mux
+# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v(72): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'R8in'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Mux_32_to_1.v(2).
 # 
-# ** Warning: (vsim-3722) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v(66): [TFMPC] - Missing connection for port 'control'.
+#         Region: /datapath_test/DUT/Bus_Mux
+# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v(72): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'R9in'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Mux_32_to_1.v(2).
 # 
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v(68): [PCDPC] - Port size (1 or 1) does not match connection size (4) for port 'Clk'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(203).
+#         Region: /datapath_test/DUT/Bus_Mux
+# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v(72): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'R10in'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Mux_32_to_1.v(2).
 # 
-#         Region: /datapath_test/DUT/Alu
+#         Region: /datapath_test/DUT/Bus_Mux
+# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v(72): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'R11in'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Mux_32_to_1.v(2).
+# 
+#         Region: /datapath_test/DUT/Bus_Mux
+# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v(72): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'R12in'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Mux_32_to_1.v(2).
+# 
+#         Region: /datapath_test/DUT/Bus_Mux
+# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v(72): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'R13in'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Mux_32_to_1.v(2).
+# 
+#         Region: /datapath_test/DUT/Bus_Mux
+# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v(72): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'R14in'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Mux_32_to_1.v(2).
+# 
+#         Region: /datapath_test/DUT/Bus_Mux
+# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v(72): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'R15in'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Mux_32_to_1.v(2).
+# 
+#         Region: /datapath_test/DUT/Bus_Mux
+# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v(72): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'HIoutin'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Mux_32_to_1.v(3).
+# 
+#         Region: /datapath_test/DUT/Bus_Mux
+# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v(72): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'LOoutin'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Mux_32_to_1.v(3).
+# 
+#         Region: /datapath_test/DUT/Bus_Mux
+# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v(72): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'Zhighoutin'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Mux_32_to_1.v(3).
+# 
+#         Region: /datapath_test/DUT/Bus_Mux
+# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v(72): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'Zlowoutin'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Mux_32_to_1.v(3).
+# 
+#         Region: /datapath_test/DUT/Bus_Mux
+# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v(72): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'PCoutin'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Mux_32_to_1.v(3).
+# 
+#         Region: /datapath_test/DUT/Bus_Mux
+# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v(72): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'MDRoutin'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Mux_32_to_1.v(3).
+# 
+#         Region: /datapath_test/DUT/Bus_Mux
+# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v(72): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'In_Portoutin'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Mux_32_to_1.v(3).
+# 
+#         Region: /datapath_test/DUT/Bus_Mux
+# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v(72): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'Coutin'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Mux_32_to_1.v(3).
+# 
+#         Region: /datapath_test/DUT/Bus_Mux
 # ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(103): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'c_0'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(84).
 # 
 #         Region: /datapath_test/DUT/Alu/c/ttb
@@ -231,3 +183,5 @@
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run 500 ns
+# WARNING: No extended dataflow license exists
+# WARNING: No extended dataflow license exists

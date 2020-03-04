@@ -9,7 +9,14 @@ reg R5in, R2in, R4in;
 reg Clock;   
 reg [3:0] control;
 reg [31:0] Mdatain;
+reg R0out, R1out, R3out, R5out, R6out, R7out, R8out, R9out,
+	R10out, R11out, R12out, R13out, R14out, R15out,HIout, LOout,
+	InPortout, OutPortout,Cout, Zhighout,
+	R0in, R1in, R3in, R6in, R7in, R8in,
+	R9in, R10in, R11in, R12in, R13in, R14in, R15in, HIin, LOin,
+	Zhighin, Zlowin, InPortin, Cin, reset; 
 
+wire [31:0] R0Val,R1Val,R2Val,R3Val,R4Val,R5Val,R6Val,R7Val,R8Val,R9Val,R10Val,R11Val,R12Val,R13Val,R14Val,R15Val,bus;
 	 
 	 
 	 
@@ -19,7 +26,15 @@ Reg_load2a = 4'b0011,Reg_load2b = 4'b0100, Reg_load3a = 4'b0101,
  T3 = 4'b1010, T4 = 4'b1011, T5 = 4'b1100;     
  reg  [3:0] Present_state = Default; 
  
-dataPath DUT(PCout, Zlowout, MDRout, R2out, R4out, MARin, Zin, PCin, MDRin, IRin, Yin, IncPC, Read, control, R5in, R2in, R4in, Clock, Mdatain);
+dataPath DUT(PCout, Zlowout, MDRout, R2out, R4out, MARin, Zin, PCin, MDRin, IRin, Yin, IncPC, Read, control, R5in, R2in, R4in, Clock, Mdatain
+	,R0out, R1out, R3out, R5out, R6out, R7out, R8out, R9out,
+	R10out, R11out, R12out, R13out, R14out, R15out,HIout, LOout,
+	InPortout, OutPortout,Cout, Zhighout,
+	R0in, R1in, R3in, R6in, R7in, R8in,
+	R9in, R10in, R11in, R12in, R13in, R14in, R15in, HIin, LOin,
+	Zhighin, Zlowin, InPortin, Cin, reset,
+	R0Val,R1Val,R2Val,R3Val,R4Val,R5Val,R6Val,R7Val,R8Val,R9Val,R10Val,R11Val,R12Val,R13Val,R14Val,R15Val,bus
+);
  
  
 // add test logic here 
