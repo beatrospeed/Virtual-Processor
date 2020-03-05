@@ -1,5 +1,5 @@
 module MD_Mux (output reg [31:0] Output, input [31:0] A, input [31:0] B, input Select);
-	always @(Select, A, B)
+	always@(A,B,Select) begin
 	if(Select == 0)
 		begin
 		Output <= A;
@@ -8,5 +8,5 @@ module MD_Mux (output reg [31:0] Output, input [31:0] A, input [31:0] B, input S
 		begin
 		Output <= B;
 		end
-endmodule 	
-	
+	end
+endmodule 

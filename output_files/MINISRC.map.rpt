@@ -1,5 +1,5 @@
 Analysis & Elaboration report for MINISRC
-Wed Mar 04 20:48:15 2020
+Thu Mar 05 01:33:03 2020
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -44,7 +44,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                                       ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Elaboration Status      ; Successful - Wed Mar 04 20:48:15 2020           ;
+; Analysis & Elaboration Status      ; Successful - Thu Mar 05 01:33:03 2020           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; MINISRC                                         ;
 ; Top-level Entity Name              ; dataPath                                        ;
@@ -67,7 +67,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 ; Processors                 ; Number ;
 +----------------------------+--------+
-; Number detected on machine ; 8      ;
+; Number detected on machine ; 12     ;
 ; Maximum allowed            ; 1      ;
 +----------------------------+--------+
 
@@ -237,7 +237,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Elaboration
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Wed Mar 04 20:48:13 2020
+    Info: Processing started: Thu Mar 05 01:33:02 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off MINISRC -c MINISRC --analysis_and_elaboration
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file md_mux.v
@@ -264,6 +264,39 @@ Info (12021): Found 1 design units, including 1 entities, in source file datapat
     Info (12023): Found entity 1: dataPath
 Info (12127): Elaborating entity "dataPath" for the top level hierarchy
 Info (12128): Elaborating entity "Reg32" for hierarchy "Reg32:HI"
+Warning (10240): Verilog HDL Always Construct warning at REG32_MDR.v(3): inferring latch(es) for variable "Q", which holds its previous value in one or more paths through the always construct
+Info (10041): Inferred latch for "Q[0]" at REG32_MDR.v(3)
+Info (10041): Inferred latch for "Q[1]" at REG32_MDR.v(3)
+Info (10041): Inferred latch for "Q[2]" at REG32_MDR.v(3)
+Info (10041): Inferred latch for "Q[3]" at REG32_MDR.v(3)
+Info (10041): Inferred latch for "Q[4]" at REG32_MDR.v(3)
+Info (10041): Inferred latch for "Q[5]" at REG32_MDR.v(3)
+Info (10041): Inferred latch for "Q[6]" at REG32_MDR.v(3)
+Info (10041): Inferred latch for "Q[7]" at REG32_MDR.v(3)
+Info (10041): Inferred latch for "Q[8]" at REG32_MDR.v(3)
+Info (10041): Inferred latch for "Q[9]" at REG32_MDR.v(3)
+Info (10041): Inferred latch for "Q[10]" at REG32_MDR.v(3)
+Info (10041): Inferred latch for "Q[11]" at REG32_MDR.v(3)
+Info (10041): Inferred latch for "Q[12]" at REG32_MDR.v(3)
+Info (10041): Inferred latch for "Q[13]" at REG32_MDR.v(3)
+Info (10041): Inferred latch for "Q[14]" at REG32_MDR.v(3)
+Info (10041): Inferred latch for "Q[15]" at REG32_MDR.v(3)
+Info (10041): Inferred latch for "Q[16]" at REG32_MDR.v(3)
+Info (10041): Inferred latch for "Q[17]" at REG32_MDR.v(3)
+Info (10041): Inferred latch for "Q[18]" at REG32_MDR.v(3)
+Info (10041): Inferred latch for "Q[19]" at REG32_MDR.v(3)
+Info (10041): Inferred latch for "Q[20]" at REG32_MDR.v(3)
+Info (10041): Inferred latch for "Q[21]" at REG32_MDR.v(3)
+Info (10041): Inferred latch for "Q[22]" at REG32_MDR.v(3)
+Info (10041): Inferred latch for "Q[23]" at REG32_MDR.v(3)
+Info (10041): Inferred latch for "Q[24]" at REG32_MDR.v(3)
+Info (10041): Inferred latch for "Q[25]" at REG32_MDR.v(3)
+Info (10041): Inferred latch for "Q[26]" at REG32_MDR.v(3)
+Info (10041): Inferred latch for "Q[27]" at REG32_MDR.v(3)
+Info (10041): Inferred latch for "Q[28]" at REG32_MDR.v(3)
+Info (10041): Inferred latch for "Q[29]" at REG32_MDR.v(3)
+Info (10041): Inferred latch for "Q[30]" at REG32_MDR.v(3)
+Info (10041): Inferred latch for "Q[31]" at REG32_MDR.v(3)
 Info (12128): Elaborating entity "Reg64" for hierarchy "Reg64:Z"
 Info (12128): Elaborating entity "MD_Mux" for hierarchy "MD_Mux:md_mux"
 Info (12128): Elaborating entity "encoder_32_to_5" for hierarchy "encoder_32_to_5:BusMux_encoder"
@@ -319,17 +352,17 @@ Warning (10240): Verilog HDL Always Construct warning at ALU.v(122): inferring l
 Info (12128): Elaborating entity "nonrestoring_divison_algo" for hierarchy "alu:Alu|nonrestoring_divison_algo:d"
 Warning (12020): Port "ordered port 3" on the entity instantiation of "ttb" is connected to a signal of width 32. The formal width of the signal in the module is 1.  The extra bits will be ignored.
 Warning (12241): 4 hierarchies have connectivity warnings - see the Connectivity Checks report folder
-Info (144001): Generated suppressed messages file C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/output_files/MINISRC.map.smsg
-Info: Quartus II 64-Bit Analysis & Elaboration was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 4587 megabytes
-    Info: Processing ended: Wed Mar 04 20:48:15 2020
-    Info: Elapsed time: 00:00:02
-    Info: Total CPU time (on all processors): 00:00:02
+Info (144001): Generated suppressed messages file D:/Elec_374/Virtual-Processor/output_files/MINISRC.map.smsg
+Info: Quartus II 64-Bit Analysis & Elaboration was successful. 0 errors, 7 warnings
+    Info: Peak virtual memory: 4593 megabytes
+    Info: Processing ended: Thu Mar 05 01:33:03 2020
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
 
 
 +--------------------------------------------+
 ; Analysis & Elaboration Suppressed Messages ;
 +--------------------------------------------+
-The suppressed messages can be found in C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/output_files/MINISRC.map.smsg.
+The suppressed messages can be found in D:/Elec_374/Virtual-Processor/output_files/MINISRC.map.smsg.
 
 

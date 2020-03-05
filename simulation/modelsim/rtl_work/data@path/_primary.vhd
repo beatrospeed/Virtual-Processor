@@ -78,6 +78,7 @@ entity dataPath is
         R14Val          : out    vl_logic_vector(31 downto 0);
         R15Val          : out    vl_logic_vector(31 downto 0);
         \bus\           : out    vl_logic_vector(31 downto 0);
-        MDRval          : out    vl_logic_vector(31 downto 0)
+        MDRval          : out    vl_logic_vector(31 downto 0);
+        mux_data_out    : out    vl_logic_vector(31 downto 0)
     );
 end dataPath;

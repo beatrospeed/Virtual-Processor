@@ -18,7 +18,7 @@ reg R0out, R1out, R3out, R5out, R6out, R7out, R8out, R9out,
 	R9in, R10in, R11in, R12in, R13in, R14in, R15in, HIin, LOin,
 	Zhighin, Zlowin, InPortin, Cin, reset; 
 
-wire [31:0] R0Val,R1Val,R2Val,R3Val,R4Val,R5Val,R6Val,R7Val,R8Val,R9Val,R10Val,R11Val,R12Val,R13Val,R14Val,R15Val,bus,MDRval;
+wire [31:0] R0Val,R1Val,R2Val,R3Val,R4Val,R5Val,R6Val,R7Val,R8Val,R9Val,R10Val,R11Val,R12Val,R13Val,R14Val,R15Val,bus,MDRval,mux_data_out;
 	 
 parameter  Default = 4'b0000, Reg_load1a = 4'b0001, Reg_load1b = 4'b0010, 
 Reg_load2a = 4'b0011,Reg_load2b = 4'b0100, Reg_load3a = 4'b0101,
@@ -33,7 +33,7 @@ dataPath DUT(PCout, Zlowout, MDRout, R2out, R4out, MARin, Zin, PCin, MDRin, IRin
 	R0in, R1in, R3in, R6in, R7in, R8in,
 	R9in, R10in, R11in, R12in, R13in, R14in, R15in, HIin, LOin,
 	Zhighin, Zlowin, InPortin, Cin, reset,
-	R0Val,R1Val,R2Val,R3Val,R4Val,R5Val,R6Val,R7Val,R8Val,R9Val,R10Val,R11Val,R12Val,R13Val,R14Val,R15Val,bus,MDRval
+	R0Val,R1Val,R2Val,R3Val,R4Val,R5Val,R6Val,R7Val,R8Val,R9Val,R10Val,R11Val,R12Val,R13Val,R14Val,R15Val,bus,MDRval,mux_data_out
 );
  
  
@@ -48,10 +48,13 @@ initial
 begin
 	reset <= 1;
 	#5 reset <= 0;
-	Mdatain <= 32'h00000022;
-	#10 Read <= 1; MDRin <= 1;
-	#15 Read <= 0; MDRin <= 0; MDRout <= 1;
+	Mdatain <= 32'b1;
+	#20 Read <= 1;
+	#5 MDRin <= 1;
+	#5 MDRout <= 1;
 	#20 R2in <= 1;
+	#35 Read <= 0; 
+	#5 MDRin <= 0;
 	
 end
 
