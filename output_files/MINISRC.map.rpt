@@ -1,5 +1,5 @@
 Analysis & Elaboration report for MINISRC
-Wed Mar 04 16:21:01 2020
+Wed Mar 04 20:48:15 2020
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -15,16 +15,10 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   7. Port Connectivity Checks: "alu:Alu|thirtytwo_bit_carry_adder:a"
   8. Port Connectivity Checks: "alu:Alu|thirtytwo_bit_twos_complement:c|thirtytwo_bit_carry_adder:ttb|sixteen_bit_carry_adder:s1"
   9. Port Connectivity Checks: "alu:Alu|thirtytwo_bit_twos_complement:c|thirtytwo_bit_carry_adder:ttb"
- 10. Port Connectivity Checks: "Mux_32_to_1:Bus_Mux"
- 11. Port Connectivity Checks: "Reg32:PC"
- 12. Port Connectivity Checks: "Reg32:IR"
- 13. Port Connectivity Checks: "Reg32:InPort"
- 14. Port Connectivity Checks: "Reg32:mdrReg"
- 15. Port Connectivity Checks: "Reg64:Z"
- 16. Port Connectivity Checks: "Reg32:LO"
- 17. Port Connectivity Checks: "Reg32:HI"
- 18. Analysis & Elaboration Messages
- 19. Analysis & Elaboration Suppressed Messages
+ 10. Port Connectivity Checks: "Reg32:IR"
+ 11. Port Connectivity Checks: "Reg32:InPort"
+ 12. Analysis & Elaboration Messages
+ 13. Analysis & Elaboration Suppressed Messages
 
 
 
@@ -50,7 +44,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                                       ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Elaboration Status      ; Successful - Wed Mar 04 16:21:01 2020           ;
+; Analysis & Elaboration Status      ; Successful - Wed Mar 04 20:48:15 2020           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; MINISRC                                         ;
 ; Top-level Entity Name              ; dataPath                                        ;
@@ -219,47 +213,6 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "Mux_32_to_1:Bus_Mux"                                                                                                                                                                      ;
-+--------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port         ; Type  ; Severity ; Details                                                                                                                                                                            ;
-+--------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; R0in         ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; R1in         ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; R2in         ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; R3in         ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; R4in         ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; R5in         ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; R6in         ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; R7in         ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; R8in         ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; R9in         ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; R10in        ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; R11in        ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; R12in        ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; R13in        ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; R14in        ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; R15in        ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; HIoutin      ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; LOoutin      ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; Zhighoutin   ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; Zlowoutin    ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; PCoutin      ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; MDRoutin     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; In_Portoutin ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; Coutin       ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-+--------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-
-
-+--------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "Reg32:PC"                                                                               ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
-; Port     ; Type   ; Severity ; Details                                                                             ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
-; Q[31..1] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
-
-
 +----------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "Reg32:IR"                                                                           ;
 +------+--------+----------+-------------------------------------------------------------------------------------+
@@ -269,51 +222,13 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "Reg32:InPort"                                                                           ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
-; Port     ; Type   ; Severity ; Details                                                                             ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
-; D        ; Input  ; Info     ; Stuck at GND                                                                        ;
-; Q[31..1] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+--------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "Reg32:mdrReg"                                                                           ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
-; Port     ; Type   ; Severity ; Details                                                                             ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
-; Q[31..1] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+---------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "Reg64:Z"                                                                                 ;
-+-----------+--------+----------+-------------------------------------------------------------------------------------+
-; Port      ; Type   ; Severity ; Details                                                                             ;
-+-----------+--------+----------+-------------------------------------------------------------------------------------+
-; Q[63..33] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; Q[31..1]  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+-----------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+--------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "Reg32:LO"                                                                               ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
-; Port     ; Type   ; Severity ; Details                                                                             ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
-; Q[31..1] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+--------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "Reg32:HI"                                                                               ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
-; Port     ; Type   ; Severity ; Details                                                                             ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
-; Q[31..1] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
++------------------------------------------+
+; Port Connectivity Checks: "Reg32:InPort" ;
++------+-------+----------+----------------+
+; Port ; Type  ; Severity ; Details        ;
++------+-------+----------+----------------+
+; D    ; Input ; Info     ; Stuck at GND   ;
++------+-------+----------+----------------+
 
 
 +---------------------------------+
@@ -322,7 +237,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Elaboration
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Wed Mar 04 16:20:58 2020
+    Info: Processing started: Wed Mar 04 20:48:13 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off MINISRC -c MINISRC --analysis_and_elaboration
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file md_mux.v
@@ -403,12 +318,12 @@ Info (12128): Elaborating entity "thirtytwo_bit_booth_algorithm" for hierarchy "
 Warning (10240): Verilog HDL Always Construct warning at ALU.v(122): inferring latch(es) for variable "temp", which holds its previous value in one or more paths through the always construct
 Info (12128): Elaborating entity "nonrestoring_divison_algo" for hierarchy "alu:Alu|nonrestoring_divison_algo:d"
 Warning (12020): Port "ordered port 3" on the entity instantiation of "ttb" is connected to a signal of width 32. The formal width of the signal in the module is 1.  The extra bits will be ignored.
-Warning (12241): 5 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (12241): 4 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info (144001): Generated suppressed messages file C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/output_files/MINISRC.map.smsg
 Info: Quartus II 64-Bit Analysis & Elaboration was successful. 0 errors, 6 warnings
     Info: Peak virtual memory: 4587 megabytes
-    Info: Processing ended: Wed Mar 04 16:21:01 2020
-    Info: Elapsed time: 00:00:03
+    Info: Processing ended: Wed Mar 04 20:48:15 2020
+    Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:02
 
 

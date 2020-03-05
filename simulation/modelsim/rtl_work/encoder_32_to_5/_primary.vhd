@@ -3,7 +3,6 @@ use verilog.vl_types.all;
 entity encoder_32_to_5 is
     port(
         SelectOut       : out    vl_logic_vector(4 downto 0);
-        clk             : in     vl_logic;
         R0out           : in     vl_logic;
         R1out           : in     vl_logic;
         R2out           : in     vl_logic;

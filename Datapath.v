@@ -13,7 +13,7 @@ module dataPath(
 	R0in, R1in, R3in, R6in, R7in, R8in,
 	R9in, R10in, R11in, R12in, R13in, R14in, R15in, HIin, LOin,
 	Zhighin, Zlowin, InPortin, Cin, reset,
-	output wire [31:0] R0Val,R1Val,R2Val,R3Val,R4Val,R5Val,R6Val,R7Val,R8Val,R9Val,R10Val,R11Val,R12Val,R13Val,R14Val,R15Val,bus
+	output wire [31:0] R0Val,R1Val,R2Val,R3Val,R4Val,R5Val,R6Val,R7Val,R8Val,R9Val,R10Val,R11Val,R12Val,R13Val,R14Val,R15Val,bus,MDRval
 	
 );
 	
@@ -27,7 +27,7 @@ module dataPath(
 	
 	 
 	wire [63:0] ZVal;
-	wire [31:0] IRval, MDRval,HIval, LOval;
+	wire [31:0] IRval,HIval, LOval;
 	wire [4:0] Select_D; 
 	wire [31:0] YVal, InPort_D, OutPort_D, MAR_D, PCVal,CVal, mux_data_out; 
 	wire [63:0] ALUVal_D; 
@@ -62,7 +62,7 @@ module dataPath(
    Reg32 R15(bus, clk, reset, R15in, R15Val); 	
 
    
-	encoder_32_to_5 BusMux_encoder(.SelectOut(Select_D), .clk(clk) , .R0out(R0out), .R1out(R1out), .R2out(R2out), .R3out(R3out), .R4out(R4out),.R5out(R5out),
+	encoder_32_to_5 BusMux_encoder(.SelectOut(Select_D), .R0out(R0out), .R1out(R1out), .R2out(R2out), .R3out(R3out), .R4out(R4out),.R5out(R5out),
 	.R6out(R6out), .R7out(R7out), .R8out(R8out), .R9out(R9out), .R10out(R10out), .R11out(R11out), .R12out(R12out), .R13out(R13out), .R14out(R14out), .R15out(R15out),
    	.HIout(HIout), .LOout(LOout),.Zhighout(Zhighout),.Zlowout(Zlowout),.PCout(PCout), .MDRout(MDRout), .In_Portout(InPortout),.Cout(Cout));
 

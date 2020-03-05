@@ -1,6 +1,6 @@
-module Mux_32_to_1(output reg [31:0] BusMuxOut,input R0in,input R1in,input R2in,input R3in,input R4in
-,input R5in,input R6in,input R7in,input R8in,input R9in,input R10in,input R11in,input R12in,input R13in,input R14in,input R15in,
-input HIoutin,input LOoutin,input Zhighoutin,input Zlowoutin,input PCoutin,input MDRoutin,input In_Portoutin,input Coutin,
+module Mux_32_to_1(output reg [31:0] BusMuxOut,input [31:0] R0in,input [31:0] R1in,input[31:0] R2in,input [31:0] R3in,input [31:0] R4in
+,input [31:0] R5in,input [31:0] R6in,input [31:0] R7in,input [31:0] R8in,input [31:0] R9in,input [31:0] R10in,input [31:0] R11in,input [31:0] R12in,input [31:0] R13in,input [31:0] R14in,input [31:0] R15in,
+input [31:0] HIoutin,input [31:0] LOoutin,input [31:0] Zhighoutin,input [31:0] Zlowoutin,input [31:0] PCoutin,input [31:0] MDRoutin,input [31:0] In_Portoutin,input [31:0] Coutin,
 input [4:0] Selectin);
 
 always@(*)
