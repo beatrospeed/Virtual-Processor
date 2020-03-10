@@ -1,5 +1,5 @@
 Analysis & Elaboration report for MINISRC
-Thu Mar 05 01:33:03 2020
+Mon Mar 09 21:50:33 2020
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -44,7 +44,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                                       ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Elaboration Status      ; Successful - Thu Mar 05 01:33:03 2020           ;
+; Analysis & Elaboration Status      ; Successful - Mon Mar 09 21:50:33 2020           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; MINISRC                                         ;
 ; Top-level Entity Name              ; dataPath                                        ;
@@ -237,7 +237,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Elaboration
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Thu Mar 05 01:33:02 2020
+    Info: Processing started: Mon Mar 09 21:50:32 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off MINISRC -c MINISRC --analysis_and_elaboration
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file md_mux.v
@@ -307,39 +307,40 @@ Info (10041): Inferred latch for "SelectOut[2]" at encoder_32_to_5.v(6)
 Info (10041): Inferred latch for "SelectOut[3]" at encoder_32_to_5.v(6)
 Info (10041): Inferred latch for "SelectOut[4]" at encoder_32_to_5.v(6)
 Info (12128): Elaborating entity "Mux_32_to_1" for hierarchy "Mux_32_to_1:Bus_Mux"
-Warning (10240): Verilog HDL Always Construct warning at Mux_32_to_1.v(8): inferring latch(es) for variable "BusMuxOut", which holds its previous value in one or more paths through the always construct
-Info (10041): Inferred latch for "BusMuxOut[0]" at Mux_32_to_1.v(9)
-Info (10041): Inferred latch for "BusMuxOut[1]" at Mux_32_to_1.v(9)
-Info (10041): Inferred latch for "BusMuxOut[2]" at Mux_32_to_1.v(9)
-Info (10041): Inferred latch for "BusMuxOut[3]" at Mux_32_to_1.v(9)
-Info (10041): Inferred latch for "BusMuxOut[4]" at Mux_32_to_1.v(9)
-Info (10041): Inferred latch for "BusMuxOut[5]" at Mux_32_to_1.v(9)
-Info (10041): Inferred latch for "BusMuxOut[6]" at Mux_32_to_1.v(9)
-Info (10041): Inferred latch for "BusMuxOut[7]" at Mux_32_to_1.v(9)
-Info (10041): Inferred latch for "BusMuxOut[8]" at Mux_32_to_1.v(9)
-Info (10041): Inferred latch for "BusMuxOut[9]" at Mux_32_to_1.v(9)
-Info (10041): Inferred latch for "BusMuxOut[10]" at Mux_32_to_1.v(9)
-Info (10041): Inferred latch for "BusMuxOut[11]" at Mux_32_to_1.v(9)
-Info (10041): Inferred latch for "BusMuxOut[12]" at Mux_32_to_1.v(9)
-Info (10041): Inferred latch for "BusMuxOut[13]" at Mux_32_to_1.v(9)
-Info (10041): Inferred latch for "BusMuxOut[14]" at Mux_32_to_1.v(9)
-Info (10041): Inferred latch for "BusMuxOut[15]" at Mux_32_to_1.v(9)
-Info (10041): Inferred latch for "BusMuxOut[16]" at Mux_32_to_1.v(9)
-Info (10041): Inferred latch for "BusMuxOut[17]" at Mux_32_to_1.v(9)
-Info (10041): Inferred latch for "BusMuxOut[18]" at Mux_32_to_1.v(9)
-Info (10041): Inferred latch for "BusMuxOut[19]" at Mux_32_to_1.v(9)
-Info (10041): Inferred latch for "BusMuxOut[20]" at Mux_32_to_1.v(9)
-Info (10041): Inferred latch for "BusMuxOut[21]" at Mux_32_to_1.v(9)
-Info (10041): Inferred latch for "BusMuxOut[22]" at Mux_32_to_1.v(9)
-Info (10041): Inferred latch for "BusMuxOut[23]" at Mux_32_to_1.v(9)
-Info (10041): Inferred latch for "BusMuxOut[24]" at Mux_32_to_1.v(9)
-Info (10041): Inferred latch for "BusMuxOut[25]" at Mux_32_to_1.v(9)
-Info (10041): Inferred latch for "BusMuxOut[26]" at Mux_32_to_1.v(9)
-Info (10041): Inferred latch for "BusMuxOut[27]" at Mux_32_to_1.v(9)
-Info (10041): Inferred latch for "BusMuxOut[28]" at Mux_32_to_1.v(9)
-Info (10041): Inferred latch for "BusMuxOut[29]" at Mux_32_to_1.v(9)
-Info (10041): Inferred latch for "BusMuxOut[30]" at Mux_32_to_1.v(9)
-Info (10041): Inferred latch for "BusMuxOut[31]" at Mux_32_to_1.v(9)
+Warning (10270): Verilog HDL Case Statement warning at Mux_32_to_1.v(7): incomplete case statement has no default case item
+Warning (10240): Verilog HDL Always Construct warning at Mux_32_to_1.v(7): inferring latch(es) for variable "BusMuxOut", which holds its previous value in one or more paths through the always construct
+Info (10041): Inferred latch for "BusMuxOut[0]" at Mux_32_to_1.v(7)
+Info (10041): Inferred latch for "BusMuxOut[1]" at Mux_32_to_1.v(7)
+Info (10041): Inferred latch for "BusMuxOut[2]" at Mux_32_to_1.v(7)
+Info (10041): Inferred latch for "BusMuxOut[3]" at Mux_32_to_1.v(7)
+Info (10041): Inferred latch for "BusMuxOut[4]" at Mux_32_to_1.v(7)
+Info (10041): Inferred latch for "BusMuxOut[5]" at Mux_32_to_1.v(7)
+Info (10041): Inferred latch for "BusMuxOut[6]" at Mux_32_to_1.v(7)
+Info (10041): Inferred latch for "BusMuxOut[7]" at Mux_32_to_1.v(7)
+Info (10041): Inferred latch for "BusMuxOut[8]" at Mux_32_to_1.v(7)
+Info (10041): Inferred latch for "BusMuxOut[9]" at Mux_32_to_1.v(7)
+Info (10041): Inferred latch for "BusMuxOut[10]" at Mux_32_to_1.v(7)
+Info (10041): Inferred latch for "BusMuxOut[11]" at Mux_32_to_1.v(7)
+Info (10041): Inferred latch for "BusMuxOut[12]" at Mux_32_to_1.v(7)
+Info (10041): Inferred latch for "BusMuxOut[13]" at Mux_32_to_1.v(7)
+Info (10041): Inferred latch for "BusMuxOut[14]" at Mux_32_to_1.v(7)
+Info (10041): Inferred latch for "BusMuxOut[15]" at Mux_32_to_1.v(7)
+Info (10041): Inferred latch for "BusMuxOut[16]" at Mux_32_to_1.v(7)
+Info (10041): Inferred latch for "BusMuxOut[17]" at Mux_32_to_1.v(7)
+Info (10041): Inferred latch for "BusMuxOut[18]" at Mux_32_to_1.v(7)
+Info (10041): Inferred latch for "BusMuxOut[19]" at Mux_32_to_1.v(7)
+Info (10041): Inferred latch for "BusMuxOut[20]" at Mux_32_to_1.v(7)
+Info (10041): Inferred latch for "BusMuxOut[21]" at Mux_32_to_1.v(7)
+Info (10041): Inferred latch for "BusMuxOut[22]" at Mux_32_to_1.v(7)
+Info (10041): Inferred latch for "BusMuxOut[23]" at Mux_32_to_1.v(7)
+Info (10041): Inferred latch for "BusMuxOut[24]" at Mux_32_to_1.v(7)
+Info (10041): Inferred latch for "BusMuxOut[25]" at Mux_32_to_1.v(7)
+Info (10041): Inferred latch for "BusMuxOut[26]" at Mux_32_to_1.v(7)
+Info (10041): Inferred latch for "BusMuxOut[27]" at Mux_32_to_1.v(7)
+Info (10041): Inferred latch for "BusMuxOut[28]" at Mux_32_to_1.v(7)
+Info (10041): Inferred latch for "BusMuxOut[29]" at Mux_32_to_1.v(7)
+Info (10041): Inferred latch for "BusMuxOut[30]" at Mux_32_to_1.v(7)
+Info (10041): Inferred latch for "BusMuxOut[31]" at Mux_32_to_1.v(7)
 Info (12128): Elaborating entity "alu" for hierarchy "alu:Alu"
 Info (12128): Elaborating entity "thirtytwo_bit_twos_complement" for hierarchy "alu:Alu|thirtytwo_bit_twos_complement:c"
 Info (12128): Elaborating entity "thirtytwo_bit_carry_adder" for hierarchy "alu:Alu|thirtytwo_bit_twos_complement:c|thirtytwo_bit_carry_adder:ttb"
@@ -353,9 +354,9 @@ Info (12128): Elaborating entity "nonrestoring_divison_algo" for hierarchy "alu:
 Warning (12020): Port "ordered port 3" on the entity instantiation of "ttb" is connected to a signal of width 32. The formal width of the signal in the module is 1.  The extra bits will be ignored.
 Warning (12241): 4 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info (144001): Generated suppressed messages file D:/Elec_374/Virtual-Processor/output_files/MINISRC.map.smsg
-Info: Quartus II 64-Bit Analysis & Elaboration was successful. 0 errors, 7 warnings
+Info: Quartus II 64-Bit Analysis & Elaboration was successful. 0 errors, 8 warnings
     Info: Peak virtual memory: 4593 megabytes
-    Info: Processing ended: Thu Mar 05 01:33:03 2020
+    Info: Processing ended: Mon Mar 09 21:50:33 2020
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 

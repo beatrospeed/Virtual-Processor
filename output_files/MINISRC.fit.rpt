@@ -1,5 +1,5 @@
 Fitter report for MINISRC
-Thu Mar 05 01:32:54 2020
+Mon Mar 09 21:50:26 2020
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -55,15 +55,15 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Fitter Summary                                                                       ;
 +------------------------------------+-------------------------------------------------+
-; Fitter Status                      ; Failed - Thu Mar 05 01:32:54 2020               ;
+; Fitter Status                      ; Failed - Mon Mar 09 21:50:26 2020               ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; MINISRC                                         ;
 ; Top-level Entity Name              ; dataPath                                        ;
 ; Family                             ; Cyclone III                                     ;
 ; Device                             ; EP3C16F484C6                                    ;
 ; Timing Models                      ; Final                                           ;
-; Total logic elements               ; 13,690 / 15,408 ( 89 % )                        ;
-;     Total combinational functions  ; 13,690 / 15,408 ( 89 % )                        ;
+; Total logic elements               ; 13,691 / 15,408 ( 89 % )                        ;
+;     Total combinational functions  ; 13,691 / 15,408 ( 89 % )                        ;
 ;     Dedicated logic registers      ; 128 / 15,408 ( < 1 % )                          ;
 ; Total registers                    ; 128                                             ;
 ; Total pins                         ; 701 / 347 ( 202 % )                             ;
@@ -816,35 +816,35 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; R14in            ; Incomplete set of assignments ;
 ; R15in            ; Incomplete set of assignments ;
 ; MDRin            ; Incomplete set of assignments ;
-; PCin             ; Incomplete set of assignments ;
+; clk              ; Incomplete set of assignments ;
+; Zin              ; Incomplete set of assignments ;
 ; R15out           ; Incomplete set of assignments ;
+; PCout            ; Incomplete set of assignments ;
+; MDRout           ; Incomplete set of assignments ;
+; InPortout        ; Incomplete set of assignments ;
+; Cout             ; Incomplete set of assignments ;
+; R12out           ; Incomplete set of assignments ;
+; R13out           ; Incomplete set of assignments ;
+; R6out            ; Incomplete set of assignments ;
+; R7out            ; Incomplete set of assignments ;
 ; R4out            ; Incomplete set of assignments ;
 ; R5out            ; Incomplete set of assignments ;
 ; R2out            ; Incomplete set of assignments ;
 ; R3out            ; Incomplete set of assignments ;
 ; R0out            ; Incomplete set of assignments ;
 ; R1out            ; Incomplete set of assignments ;
-; R6out            ; Incomplete set of assignments ;
-; R7out            ; Incomplete set of assignments ;
 ; R10out           ; Incomplete set of assignments ;
 ; R11out           ; Incomplete set of assignments ;
 ; R8out            ; Incomplete set of assignments ;
 ; R9out            ; Incomplete set of assignments ;
-; R12out           ; Incomplete set of assignments ;
-; R13out           ; Incomplete set of assignments ;
 ; R14out           ; Incomplete set of assignments ;
-; PCout            ; Incomplete set of assignments ;
-; MDRout           ; Incomplete set of assignments ;
-; InPortout        ; Incomplete set of assignments ;
-; Cout             ; Incomplete set of assignments ;
 ; Zlowout          ; Incomplete set of assignments ;
 ; Zhighout         ; Incomplete set of assignments ;
 ; HIout            ; Incomplete set of assignments ;
 ; LOout            ; Incomplete set of assignments ;
-; clk              ; Incomplete set of assignments ;
-; Zin              ; Incomplete set of assignments ;
 ; LOin             ; Incomplete set of assignments ;
 ; HIin             ; Incomplete set of assignments ;
+; PCin             ; Incomplete set of assignments ;
 ; control[0]       ; Incomplete set of assignments ;
 ; control[1]       ; Incomplete set of assignments ;
 ; control[2]       ; Incomplete set of assignments ;
@@ -884,19 +884,19 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+--------------------------+
 ; Resource                                    ; Usage                    ;
 +---------------------------------------------+--------------------------+
-; Total logic elements                        ; 13,690 / 15,408 ( 89 % ) ;
-;     -- Combinational with no register       ; 13562                    ;
+; Total logic elements                        ; 13,691 / 15,408 ( 89 % ) ;
+;     -- Combinational with no register       ; 13563                    ;
 ;     -- Register only                        ; 0                        ;
 ;     -- Combinational with a register        ; 128                      ;
 ;                                             ;                          ;
 ; Logic element usage by number of LUT inputs ;                          ;
-;     -- 4 input functions                    ; 2254                     ;
-;     -- 3 input functions                    ; 10164                    ;
-;     -- <=2 input functions                  ; 1272                     ;
+;     -- 4 input functions                    ; 2320                     ;
+;     -- 3 input functions                    ; 10095                    ;
+;     -- <=2 input functions                  ; 1276                     ;
 ;     -- Register only                        ; 0                        ;
 ;                                             ;                          ;
 ; Logic elements by mode                      ;                          ;
-;     -- normal mode                          ; 7785                     ;
+;     -- normal mode                          ; 7786                     ;
 ;     -- arithmetic mode                      ; 5905                     ;
 ;                                             ;                          ;
 ; Total registers*                            ; 128 / 17,068 ( < 1 % )   ;
@@ -922,8 +922,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Impedance control blocks                    ; 0 / 4 ( 0 % )            ;
 ; Maximum fan-out                             ; 737                      ;
 ; Highest non-global fan-out                  ; 737                      ;
-; Total fan-out                               ; 43590                    ;
-; Average fan-out                             ; 2.86                     ;
+; Total fan-out                               ; 43653                    ;
+; Average fan-out                             ; 2.87                     ;
 +---------------------------------------------+--------------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
 
@@ -941,7 +941,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; IRin        ; Unassigned ; --       ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
 ; InPortin    ; Unassigned ; --       ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
 ; InPortout   ; Unassigned ; --       ; 2                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; IncPc       ; Unassigned ; --       ; 62                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; IncPc       ; Unassigned ; --       ; 68                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
 ; LOin        ; Unassigned ; --       ; 32                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
 ; LOout       ; Unassigned ; --       ; 3                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
 ; MARin       ; Unassigned ; --       ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
@@ -983,7 +983,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; PCin        ; Unassigned ; --       ; 32                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
 ; PCout       ; Unassigned ; --       ; 3                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
 ; R0in        ; Unassigned ; --       ; 32                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; R0out       ; Unassigned ; --       ; 5                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; R0out       ; Unassigned ; --       ; 4                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
 ; R10in       ; Unassigned ; --       ; 32                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
 ; R10out      ; Unassigned ; --       ; 3                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
 ; R11in       ; Unassigned ; --       ; 32                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
@@ -997,7 +997,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; R15in       ; Unassigned ; --       ; 32                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
 ; R15out      ; Unassigned ; --       ; 8                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
 ; R1in        ; Unassigned ; --       ; 32                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; R1out       ; Unassigned ; --       ; 4                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; R1out       ; Unassigned ; --       ; 3                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
 ; R2in        ; Unassigned ; --       ; 32                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
 ; R2out       ; Unassigned ; --       ; 3                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
 ; R3in        ; Unassigned ; --       ; 32                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
@@ -1007,9 +1007,9 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; R5in        ; Unassigned ; --       ; 32                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
 ; R5out       ; Unassigned ; --       ; 3                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
 ; R6in        ; Unassigned ; --       ; 32                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; R6out       ; Unassigned ; --       ; 4                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; R6out       ; Unassigned ; --       ; 3                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
 ; R7in        ; Unassigned ; --       ; 32                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; R7out       ; Unassigned ; --       ; 4                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; R7out       ; Unassigned ; --       ; 3                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
 ; R8in        ; Unassigned ; --       ; 32                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
 ; R8out       ; Unassigned ; --       ; 3                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
 ; R9in        ; Unassigned ; --       ; 32                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
@@ -1021,10 +1021,10 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Zlowin      ; Unassigned ; --       ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
 ; Zlowout     ; Unassigned ; --       ; 3                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
 ; clk         ; Unassigned ; --       ; 128                   ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; control[0]  ; Unassigned ; --       ; 179                   ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; control[1]  ; Unassigned ; --       ; 159                   ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; control[2]  ; Unassigned ; --       ; 53                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; control[3]  ; Unassigned ; --       ; 53                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; control[0]  ; Unassigned ; --       ; 181                   ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; control[1]  ; Unassigned ; --       ; 167                   ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; control[2]  ; Unassigned ; --       ; 55                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; control[3]  ; Unassigned ; --       ; 55                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
 ; read        ; Unassigned ; --       ; 32                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
 ; reset       ; Unassigned ; --       ; 737                   ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
 +-------------+------------+----------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+
@@ -2214,7 +2214,9 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 ;             |four_bit_adder:f1|                     ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |dataPath|alu:Alu|thirtytwo_bit_carry_adder:a2|sixteen_bit_carry_adder:s1|four_bit_adder:f1                                                                                        ; work         ;
 ;                |bit_stage_cell:b3|                  ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |dataPath|alu:Alu|thirtytwo_bit_carry_adder:a2|sixteen_bit_carry_adder:s1|four_bit_adder:f1|bit_stage_cell:b3                                                                      ; work         ;
 ;             |four_bit_adder:f2|                     ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |dataPath|alu:Alu|thirtytwo_bit_carry_adder:a2|sixteen_bit_carry_adder:s1|four_bit_adder:f2                                                                                        ; work         ;
-;                |bit_stage_cell:b3|                  ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |dataPath|alu:Alu|thirtytwo_bit_carry_adder:a2|sixteen_bit_carry_adder:s1|four_bit_adder:f2|bit_stage_cell:b3                                                                      ; work         ;
+;                |bit_stage_cell:b2|                  ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |dataPath|alu:Alu|thirtytwo_bit_carry_adder:a2|sixteen_bit_carry_adder:s1|four_bit_adder:f2|bit_stage_cell:b2                                                                      ; work         ;
+;             |four_bit_adder:f3|                     ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |dataPath|alu:Alu|thirtytwo_bit_carry_adder:a2|sixteen_bit_carry_adder:s1|four_bit_adder:f3                                                                                        ; work         ;
+;                |bit_stage_cell:b2|                  ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |dataPath|alu:Alu|thirtytwo_bit_carry_adder:a2|sixteen_bit_carry_adder:s1|four_bit_adder:f3|bit_stage_cell:b2                                                                      ; work         ;
 ;       |thirtytwo_bit_carry_adder:a|                 ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |dataPath|alu:Alu|thirtytwo_bit_carry_adder:a                                                                                                                                      ; work         ;
 ;          |sixteen_bit_carry_adder:s0|               ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |dataPath|alu:Alu|thirtytwo_bit_carry_adder:a|sixteen_bit_carry_adder:s0                                                                                                           ; work         ;
 ;             |four_bit_adder:f0|                     ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |dataPath|alu:Alu|thirtytwo_bit_carry_adder:a|sixteen_bit_carry_adder:s0|four_bit_adder:f0                                                                                         ; work         ;
@@ -2249,6 +2251,7 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 ;                |bit_stage_cell:b0|                  ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |dataPath|alu:Alu|thirtytwo_bit_carry_adder:a|sixteen_bit_carry_adder:s1|four_bit_adder:f2|bit_stage_cell:b0                                                                       ; work         ;
 ;                |bit_stage_cell:b1|                  ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |dataPath|alu:Alu|thirtytwo_bit_carry_adder:a|sixteen_bit_carry_adder:s1|four_bit_adder:f2|bit_stage_cell:b1                                                                       ; work         ;
 ;                |bit_stage_cell:b2|                  ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |dataPath|alu:Alu|thirtytwo_bit_carry_adder:a|sixteen_bit_carry_adder:s1|four_bit_adder:f2|bit_stage_cell:b2                                                                       ; work         ;
+;                |bit_stage_cell:b3|                  ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |dataPath|alu:Alu|thirtytwo_bit_carry_adder:a|sixteen_bit_carry_adder:s1|four_bit_adder:f2|bit_stage_cell:b3                                                                       ; work         ;
 ;             |four_bit_adder:f3|                     ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |dataPath|alu:Alu|thirtytwo_bit_carry_adder:a|sixteen_bit_carry_adder:s1|four_bit_adder:f3                                                                                         ; work         ;
 ;                |bit_stage_cell:b0|                  ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |dataPath|alu:Alu|thirtytwo_bit_carry_adder:a|sixteen_bit_carry_adder:s1|four_bit_adder:f3|bit_stage_cell:b0                                                                       ; work         ;
 ;                |bit_stage_cell:b2|                  ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |dataPath|alu:Alu|thirtytwo_bit_carry_adder:a|sixteen_bit_carry_adder:s1|four_bit_adder:f3|bit_stage_cell:b2                                                                       ; work         ;
@@ -2304,8 +2307,6 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 ;                   |four_bit_adder:f3|               ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |dataPath|alu:Alu|thirtytwo_bit_subtractor:s|thirtytwo_bit_twos_complement:compliment|thirtytwo_bit_carry_adder:ttb|sixteen_bit_carry_adder:s0|four_bit_adder:f3                   ; work         ;
 ;                |sixteen_bit_carry_adder:s1|         ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |dataPath|alu:Alu|thirtytwo_bit_subtractor:s|thirtytwo_bit_twos_complement:compliment|thirtytwo_bit_carry_adder:ttb|sixteen_bit_carry_adder:s1                                     ; work         ;
 ;                   |four_bit_adder:f0|               ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |dataPath|alu:Alu|thirtytwo_bit_subtractor:s|thirtytwo_bit_twos_complement:compliment|thirtytwo_bit_carry_adder:ttb|sixteen_bit_carry_adder:s1|four_bit_adder:f0                   ; work         ;
-;                      |bit_stage_cell:b0|            ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |dataPath|alu:Alu|thirtytwo_bit_subtractor:s|thirtytwo_bit_twos_complement:compliment|thirtytwo_bit_carry_adder:ttb|sixteen_bit_carry_adder:s1|four_bit_adder:f0|bit_stage_cell:b0 ; work         ;
-;                      |bit_stage_cell:b2|            ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |dataPath|alu:Alu|thirtytwo_bit_subtractor:s|thirtytwo_bit_twos_complement:compliment|thirtytwo_bit_carry_adder:ttb|sixteen_bit_carry_adder:s1|four_bit_adder:f0|bit_stage_cell:b2 ; work         ;
 ;                   |four_bit_adder:f1|               ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |dataPath|alu:Alu|thirtytwo_bit_subtractor:s|thirtytwo_bit_twos_complement:compliment|thirtytwo_bit_carry_adder:ttb|sixteen_bit_carry_adder:s1|four_bit_adder:f1                   ; work         ;
 ;                      |bit_stage_cell:b0|            ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |dataPath|alu:Alu|thirtytwo_bit_subtractor:s|thirtytwo_bit_twos_complement:compliment|thirtytwo_bit_carry_adder:ttb|sixteen_bit_carry_adder:s1|four_bit_adder:f1|bit_stage_cell:b0 ; work         ;
 ;                      |bit_stage_cell:b2|            ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |dataPath|alu:Alu|thirtytwo_bit_subtractor:s|thirtytwo_bit_twos_complement:compliment|thirtytwo_bit_carry_adder:ttb|sixteen_bit_carry_adder:s1|four_bit_adder:f1|bit_stage_cell:b2 ; work         ;
@@ -2987,35 +2988,35 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; R14in            ; Input    ; 0             ; --            ; --                    ; --  ; --   ;
 ; R15in            ; Input    ; 0             ; --            ; --                    ; --  ; --   ;
 ; MDRin            ; Input    ; 0             ; --            ; --                    ; --  ; --   ;
-; PCin             ; Input    ; 0             ; --            ; --                    ; --  ; --   ;
+; clk              ; Input    ; 0             ; --            ; --                    ; --  ; --   ;
+; Zin              ; Input    ; 0             ; --            ; --                    ; --  ; --   ;
 ; R15out           ; Input    ; 0             ; --            ; --                    ; --  ; --   ;
+; PCout            ; Input    ; 0             ; --            ; --                    ; --  ; --   ;
+; MDRout           ; Input    ; 0             ; --            ; --                    ; --  ; --   ;
+; InPortout        ; Input    ; 0             ; --            ; --                    ; --  ; --   ;
+; Cout             ; Input    ; 0             ; --            ; --                    ; --  ; --   ;
+; R12out           ; Input    ; 0             ; --            ; --                    ; --  ; --   ;
+; R13out           ; Input    ; 0             ; --            ; --                    ; --  ; --   ;
+; R6out            ; Input    ; 0             ; --            ; --                    ; --  ; --   ;
+; R7out            ; Input    ; 0             ; --            ; --                    ; --  ; --   ;
 ; R4out            ; Input    ; 0             ; --            ; --                    ; --  ; --   ;
 ; R5out            ; Input    ; 0             ; --            ; --                    ; --  ; --   ;
 ; R2out            ; Input    ; 0             ; --            ; --                    ; --  ; --   ;
 ; R3out            ; Input    ; 0             ; --            ; --                    ; --  ; --   ;
 ; R0out            ; Input    ; 0             ; --            ; --                    ; --  ; --   ;
 ; R1out            ; Input    ; 0             ; --            ; --                    ; --  ; --   ;
-; R6out            ; Input    ; 0             ; --            ; --                    ; --  ; --   ;
-; R7out            ; Input    ; 0             ; --            ; --                    ; --  ; --   ;
 ; R10out           ; Input    ; 0             ; --            ; --                    ; --  ; --   ;
 ; R11out           ; Input    ; 0             ; --            ; --                    ; --  ; --   ;
 ; R8out            ; Input    ; 0             ; --            ; --                    ; --  ; --   ;
 ; R9out            ; Input    ; 0             ; --            ; --                    ; --  ; --   ;
-; R12out           ; Input    ; 0             ; --            ; --                    ; --  ; --   ;
-; R13out           ; Input    ; 0             ; --            ; --                    ; --  ; --   ;
 ; R14out           ; Input    ; 0             ; --            ; --                    ; --  ; --   ;
-; PCout            ; Input    ; 0             ; --            ; --                    ; --  ; --   ;
-; MDRout           ; Input    ; 0             ; --            ; --                    ; --  ; --   ;
-; InPortout        ; Input    ; 0             ; --            ; --                    ; --  ; --   ;
-; Cout             ; Input    ; 0             ; --            ; --                    ; --  ; --   ;
 ; Zlowout          ; Input    ; 0             ; --            ; --                    ; --  ; --   ;
 ; Zhighout         ; Input    ; 0             ; --            ; --                    ; --  ; --   ;
 ; HIout            ; Input    ; 0             ; --            ; --                    ; --  ; --   ;
 ; LOout            ; Input    ; 0             ; --            ; --                    ; --  ; --   ;
-; clk              ; Input    ; 0             ; --            ; --                    ; --  ; --   ;
-; Zin              ; Input    ; 0             ; --            ; --                    ; --  ; --   ;
 ; LOin             ; Input    ; 0             ; --            ; --                    ; --  ; --   ;
 ; HIin             ; Input    ; 0             ; --            ; --                    ; --  ; --   ;
+; PCin             ; Input    ; 0             ; --            ; --                    ; --  ; --   ;
 ; control[0]       ; Input    ; 0             ; --            ; --                    ; --  ; --   ;
 ; control[1]       ; Input    ; 0             ; --            ; --                    ; --  ; --   ;
 ; control[2]       ; Input    ; 0             ; --            ; --                    ; --  ; --   ;
@@ -3088,35 +3089,35 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; R14in               ;                   ;         ;
 ; R15in               ;                   ;         ;
 ; MDRin               ;                   ;         ;
-; PCin                ;                   ;         ;
+; clk                 ;                   ;         ;
+; Zin                 ;                   ;         ;
 ; R15out              ;                   ;         ;
+; PCout               ;                   ;         ;
+; MDRout              ;                   ;         ;
+; InPortout           ;                   ;         ;
+; Cout                ;                   ;         ;
+; R12out              ;                   ;         ;
+; R13out              ;                   ;         ;
+; R6out               ;                   ;         ;
+; R7out               ;                   ;         ;
 ; R4out               ;                   ;         ;
 ; R5out               ;                   ;         ;
 ; R2out               ;                   ;         ;
 ; R3out               ;                   ;         ;
 ; R0out               ;                   ;         ;
 ; R1out               ;                   ;         ;
-; R6out               ;                   ;         ;
-; R7out               ;                   ;         ;
 ; R10out              ;                   ;         ;
 ; R11out              ;                   ;         ;
 ; R8out               ;                   ;         ;
 ; R9out               ;                   ;         ;
-; R12out              ;                   ;         ;
-; R13out              ;                   ;         ;
 ; R14out              ;                   ;         ;
-; PCout               ;                   ;         ;
-; MDRout              ;                   ;         ;
-; InPortout           ;                   ;         ;
-; Cout                ;                   ;         ;
 ; Zlowout             ;                   ;         ;
 ; Zhighout            ;                   ;         ;
 ; HIout               ;                   ;         ;
 ; LOout               ;                   ;         ;
-; clk                 ;                   ;         ;
-; Zin                 ;                   ;         ;
 ; LOin                ;                   ;         ;
 ; HIin                ;                   ;         ;
+; PCin                ;                   ;         ;
 ; control[0]          ;                   ;         ;
 ; control[1]          ;                   ;         ;
 ; control[2]          ;                   ;         ;
@@ -3126,36 +3127,36 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------+-------------------+---------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Control Signals                                                                                                                                           ;
-+--------------------------------------+------------+---------+--------------+--------+----------------------+------------------+---------------------------+
-; Name                                 ; Location   ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
-+--------------------------------------+------------+---------+--------------+--------+----------------------+------------------+---------------------------+
-; HIin                                 ; Unassigned ; 32      ; Latch enable ; no     ; --                   ; --               ; --                        ;
-; LOin                                 ; Unassigned ; 32      ; Latch enable ; no     ; --                   ; --               ; --                        ;
-; MDRin                                ; Unassigned ; 32      ; Latch enable ; no     ; --                   ; --               ; --                        ;
-; Mux_32_to_1:Bus_Mux|BusMuxOut[31]~17 ; Unassigned ; 32      ; Latch enable ; no     ; --                   ; --               ; --                        ;
-; PCin                                 ; Unassigned ; 32      ; Latch enable ; no     ; --                   ; --               ; --                        ;
-; R0in                                 ; Unassigned ; 32      ; Latch enable ; no     ; --                   ; --               ; --                        ;
-; R10in                                ; Unassigned ; 32      ; Latch enable ; no     ; --                   ; --               ; --                        ;
-; R11in                                ; Unassigned ; 32      ; Latch enable ; no     ; --                   ; --               ; --                        ;
-; R12in                                ; Unassigned ; 32      ; Latch enable ; no     ; --                   ; --               ; --                        ;
-; R13in                                ; Unassigned ; 32      ; Latch enable ; no     ; --                   ; --               ; --                        ;
-; R14in                                ; Unassigned ; 32      ; Latch enable ; no     ; --                   ; --               ; --                        ;
-; R15in                                ; Unassigned ; 32      ; Latch enable ; no     ; --                   ; --               ; --                        ;
-; R1in                                 ; Unassigned ; 32      ; Latch enable ; no     ; --                   ; --               ; --                        ;
-; R2in                                 ; Unassigned ; 32      ; Latch enable ; no     ; --                   ; --               ; --                        ;
-; R3in                                 ; Unassigned ; 32      ; Latch enable ; no     ; --                   ; --               ; --                        ;
-; R4in                                 ; Unassigned ; 32      ; Latch enable ; no     ; --                   ; --               ; --                        ;
-; R5in                                 ; Unassigned ; 32      ; Latch enable ; no     ; --                   ; --               ; --                        ;
-; R6in                                 ; Unassigned ; 32      ; Latch enable ; no     ; --                   ; --               ; --                        ;
-; R7in                                 ; Unassigned ; 32      ; Latch enable ; no     ; --                   ; --               ; --                        ;
-; R8in                                 ; Unassigned ; 32      ; Latch enable ; no     ; --                   ; --               ; --                        ;
-; R9in                                 ; Unassigned ; 32      ; Latch enable ; no     ; --                   ; --               ; --                        ;
-; Reg64:Z|Q[24]~1                      ; Unassigned ; 64      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; Yin                                  ; Unassigned ; 32      ; Latch enable ; no     ; --                   ; --               ; --                        ;
-; clk                                  ; Unassigned ; 128     ; Clock        ; no     ; --                   ; --               ; --                        ;
-+--------------------------------------+------------+---------+--------------+--------+----------------------+------------------+---------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------+
+; Control Signals                                                                                                                                  ;
++-----------------------------+------------+---------+--------------+--------+----------------------+------------------+---------------------------+
+; Name                        ; Location   ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
++-----------------------------+------------+---------+--------------+--------+----------------------+------------------+---------------------------+
+; HIin                        ; Unassigned ; 32      ; Latch enable ; no     ; --                   ; --               ; --                        ;
+; LOin                        ; Unassigned ; 32      ; Latch enable ; no     ; --                   ; --               ; --                        ;
+; MDRin                       ; Unassigned ; 32      ; Latch enable ; no     ; --                   ; --               ; --                        ;
+; Mux_32_to_1:Bus_Mux|Mux32~0 ; Unassigned ; 32      ; Latch enable ; no     ; --                   ; --               ; --                        ;
+; PCin                        ; Unassigned ; 32      ; Latch enable ; no     ; --                   ; --               ; --                        ;
+; R0in                        ; Unassigned ; 32      ; Latch enable ; no     ; --                   ; --               ; --                        ;
+; R10in                       ; Unassigned ; 32      ; Latch enable ; no     ; --                   ; --               ; --                        ;
+; R11in                       ; Unassigned ; 32      ; Latch enable ; no     ; --                   ; --               ; --                        ;
+; R12in                       ; Unassigned ; 32      ; Latch enable ; no     ; --                   ; --               ; --                        ;
+; R13in                       ; Unassigned ; 32      ; Latch enable ; no     ; --                   ; --               ; --                        ;
+; R14in                       ; Unassigned ; 32      ; Latch enable ; no     ; --                   ; --               ; --                        ;
+; R15in                       ; Unassigned ; 32      ; Latch enable ; no     ; --                   ; --               ; --                        ;
+; R1in                        ; Unassigned ; 32      ; Latch enable ; no     ; --                   ; --               ; --                        ;
+; R2in                        ; Unassigned ; 32      ; Latch enable ; no     ; --                   ; --               ; --                        ;
+; R3in                        ; Unassigned ; 32      ; Latch enable ; no     ; --                   ; --               ; --                        ;
+; R4in                        ; Unassigned ; 32      ; Latch enable ; no     ; --                   ; --               ; --                        ;
+; R5in                        ; Unassigned ; 32      ; Latch enable ; no     ; --                   ; --               ; --                        ;
+; R6in                        ; Unassigned ; 32      ; Latch enable ; no     ; --                   ; --               ; --                        ;
+; R7in                        ; Unassigned ; 32      ; Latch enable ; no     ; --                   ; --               ; --                        ;
+; R8in                        ; Unassigned ; 32      ; Latch enable ; no     ; --                   ; --               ; --                        ;
+; R9in                        ; Unassigned ; 32      ; Latch enable ; no     ; --                   ; --               ; --                        ;
+; Reg64:Z|Q[24]~1             ; Unassigned ; 64      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; Yin                         ; Unassigned ; 32      ; Latch enable ; no     ; --                   ; --               ; --                        ;
+; clk                         ; Unassigned ; 128     ; Clock        ; no     ; --                   ; --               ; --                        ;
++-----------------------------+------------+---------+--------------+--------+----------------------+------------------+---------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -3164,186 +3165,183 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Name                                                                                                                                                                         ; Fan-Out ;
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
 ; reset~input                                                                                                                                                                  ; 737     ;
-; Mux_32_to_1:Bus_Mux|BusMuxOut[1]                                                                                                                                             ; 234     ;
-; Mux_32_to_1:Bus_Mux|BusMuxOut[0]                                                                                                                                             ; 212     ;
-; control[0]~input                                                                                                                                                             ; 179     ;
+; Mux_32_to_1:Bus_Mux|BusMuxOut[1]                                                                                                                                             ; 229     ;
+; Mux_32_to_1:Bus_Mux|BusMuxOut[0]                                                                                                                                             ; 215     ;
+; control[0]~input                                                                                                                                                             ; 181     ;
 ; encoder_32_to_5:BusMux_encoder|SelectOut[1]                                                                                                                                  ; 179     ;
+; encoder_32_to_5:BusMux_encoder|SelectOut[2]                                                                                                                                  ; 177     ;
 ; Mux_32_to_1:Bus_Mux|BusMuxOut[5]                                                                                                                                             ; 176     ;
-; Reg32:Y|Q[0]                                                                                                                                                                 ; 175     ;
+; Reg32:Y|Q[0]                                                                                                                                                                 ; 174     ;
 ; Reg32:Y|Q[21]                                                                                                                                                                ; 173     ;
 ; Reg32:Y|Q[31]                                                                                                                                                                ; 172     ;
 ; Reg32:Y|Q[4]                                                                                                                                                                 ; 172     ;
 ; Reg32:Y|Q[9]                                                                                                                                                                 ; 172     ;
 ; Reg32:Y|Q[16]                                                                                                                                                                ; 172     ;
-; Reg32:Y|Q[17]                                                                                                                                                                ; 172     ;
 ; Reg32:Y|Q[25]                                                                                                                                                                ; 172     ;
-; Reg32:Y|Q[1]                                                                                                                                                                 ; 172     ;
 ; Reg32:Y|Q[2]                                                                                                                                                                 ; 171     ;
 ; Reg32:Y|Q[5]                                                                                                                                                                 ; 171     ;
 ; Reg32:Y|Q[6]                                                                                                                                                                 ; 171     ;
 ; Reg32:Y|Q[8]                                                                                                                                                                 ; 171     ;
 ; Reg32:Y|Q[10]                                                                                                                                                                ; 171     ;
 ; Reg32:Y|Q[13]                                                                                                                                                                ; 171     ;
+; Reg32:Y|Q[17]                                                                                                                                                                ; 171     ;
 ; Reg32:Y|Q[18]                                                                                                                                                                ; 171     ;
 ; Reg32:Y|Q[20]                                                                                                                                                                ; 171     ;
 ; Reg32:Y|Q[22]                                                                                                                                                                ; 171     ;
 ; Reg32:Y|Q[24]                                                                                                                                                                ; 171     ;
 ; Reg32:Y|Q[26]                                                                                                                                                                ; 171     ;
+; Reg32:Y|Q[1]                                                                                                                                                                 ; 171     ;
+; Reg32:Y|Q[3]                                                                                                                                                                 ; 170     ;
 ; Reg32:Y|Q[12]                                                                                                                                                                ; 170     ;
 ; Reg32:Y|Q[14]                                                                                                                                                                ; 170     ;
+; Reg32:Y|Q[15]                                                                                                                                                                ; 170     ;
 ; Reg32:Y|Q[29]                                                                                                                                                                ; 170     ;
 ; Reg32:Y|Q[30]                                                                                                                                                                ; 170     ;
-; Reg32:Y|Q[3]                                                                                                                                                                 ; 169     ;
 ; Reg32:Y|Q[11]                                                                                                                                                                ; 169     ;
-; Reg32:Y|Q[15]                                                                                                                                                                ; 169     ;
 ; Reg32:Y|Q[23]                                                                                                                                                                ; 169     ;
 ; Reg32:Y|Q[27]                                                                                                                                                                ; 169     ;
 ; Reg32:Y|Q[7]                                                                                                                                                                 ; 168     ;
 ; Reg32:Y|Q[19]                                                                                                                                                                ; 168     ;
 ; Reg32:Y|Q[28]                                                                                                                                                                ; 168     ;
-; control[1]~input                                                                                                                                                             ; 159     ;
+; control[1]~input                                                                                                                                                             ; 167     ;
 ; encoder_32_to_5:BusMux_encoder|SelectOut[0]                                                                                                                                  ; 147     ;
-; encoder_32_to_5:BusMux_encoder|SelectOut[3]                                                                                                                                  ; 146     ;
-; encoder_32_to_5:BusMux_encoder|SelectOut[2]                                                                                                                                  ; 146     ;
+; encoder_32_to_5:BusMux_encoder|SelectOut[3]                                                                                                                                  ; 145     ;
+; Mux_32_to_1:Bus_Mux|BusMuxOut[3]                                                                                                                                             ; 145     ;
 ; clk~input                                                                                                                                                                    ; 128     ;
-; Mux_32_to_1:Bus_Mux|BusMuxOut[2]                                                                                                                                             ; 119     ;
-; Mux_32_to_1:Bus_Mux|BusMuxOut[3]                                                                                                                                             ; 108     ;
-; Mux_32_to_1:Bus_Mux|BusMuxOut[4]                                                                                                                                             ; 103     ;
-; Mux_32_to_1:Bus_Mux|BusMuxOut[25]~0                                                                                                                                          ; 96      ;
-; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~9                                                                                                                            ; 94      ;
-; Mux_32_to_1:Bus_Mux|BusMuxOut[31]                                                                                                                                            ; 68      ;
-; alu:Alu|Add0~8                                                                                                                                                               ; 67      ;
+; Mux_32_to_1:Bus_Mux|BusMuxOut[2]                                                                                                                                             ; 118     ;
+; Mux_32_to_1:Bus_Mux|BusMuxOut[4]                                                                                                                                             ; 104     ;
+; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~6                                                                                                                            ; 94      ;
+; Mux_32_to_1:Bus_Mux|BusMuxOut[31]                                                                                                                                            ; 69      ;
+; IncPc~input                                                                                                                                                                  ; 68      ;
+; alu:Alu|Add0~8                                                                                                                                                               ; 66      ;
 ; alu:Alu|Add0~6                                                                                                                                                               ; 65      ;
 ; Reg64:Z|Q[24]~1                                                                                                                                                              ; 64      ;
-; IncPc~input                                                                                                                                                                  ; 62      ;
 ; alu:Alu|Add0~2                                                                                                                                                               ; 61      ;
+; Mux_32_to_1:Bus_Mux|BusMuxOut[25]                                                                                                                                            ; 57      ;
+; Mux_32_to_1:Bus_Mux|BusMuxOut[21]                                                                                                                                            ; 57      ;
 ; alu:Alu|ShiftLeft1~23                                                                                                                                                        ; 57      ;
-; Mux_32_to_1:Bus_Mux|BusMuxOut[21]                                                                                                                                            ; 56      ;
-; Mux_32_to_1:Bus_Mux|BusMuxOut[17]                                                                                                                                            ; 56      ;
-; Mux_32_to_1:Bus_Mux|BusMuxOut[25]                                                                                                                                            ; 55      ;
+; control[3]~input                                                                                                                                                             ; 55      ;
+; control[2]~input                                                                                                                                                             ; 55      ;
+; Mux_32_to_1:Bus_Mux|BusMuxOut[17]                                                                                                                                            ; 55      ;
 ; Mux_32_to_1:Bus_Mux|BusMuxOut[9]                                                                                                                                             ; 55      ;
-; alu:Alu|ShiftLeft0~9                                                                                                                                                         ; 55      ;
+; alu:Alu|Add0~4                                                                                                                                                               ; 55      ;
 ; Mux_32_to_1:Bus_Mux|BusMuxOut[13]                                                                                                                                            ; 54      ;
-; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~31                                                                                                                           ; 54      ;
-; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~30                                                                                                                           ; 54      ;
-; alu:Alu|Add0~4                                                                                                                                                               ; 54      ;
-; control[3]~input                                                                                                                                                             ; 53      ;
-; control[2]~input                                                                                                                                                             ; 53      ;
-; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~29                                                                                                                           ; 53      ;
-; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~12                                                                                                                           ; 53      ;
-; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~37                                                                                                                           ; 52      ;
-; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~36                                                                                                                           ; 52      ;
+; alu:Alu|ShiftLeft0~9                                                                                                                                                         ; 54      ;
+; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~28                                                                                                                           ; 54      ;
+; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~27                                                                                                                           ; 54      ;
+; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~26                                                                                                                           ; 53      ;
+; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~9                                                                                                                            ; 53      ;
+; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~34                                                                                                                           ; 52      ;
 ; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~33                                                                                                                           ; 52      ;
-; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~32                                                                                                                           ; 52      ;
-; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~28                                                                                                                           ; 52      ;
-; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~27                                                                                                                           ; 52      ;
+; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~30                                                                                                                           ; 52      ;
+; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~29                                                                                                                           ; 52      ;
 ; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~25                                                                                                                           ; 52      ;
-; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~35                                                                                                                           ; 51      ;
-; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~34                                                                                                                           ; 51      ;
-; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~26                                                                                                                           ; 51      ;
-; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~24                                                                                                                           ; 51      ;
-; Mux_32_to_1:Bus_Mux|BusMuxOut[16]                                                                                                                                            ; 50      ;
-; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~43                                                                                                                           ; 50      ;
-; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~42                                                                                                                           ; 50      ;
+; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~24                                                                                                                           ; 52      ;
+; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~22                                                                                                                           ; 52      ;
+; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~32                                                                                                                           ; 51      ;
+; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~31                                                                                                                           ; 51      ;
+; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~23                                                                                                                           ; 51      ;
+; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~21                                                                                                                           ; 51      ;
+; Mux_32_to_1:Bus_Mux|BusMuxOut[29]                                                                                                                                            ; 50      ;
+; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~40                                                                                                                           ; 50      ;
 ; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~39                                                                                                                           ; 50      ;
-; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~38                                                                                                                           ; 50      ;
-; Mux_32_to_1:Bus_Mux|BusMuxOut[20]                                                                                                                                            ; 49      ;
-; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~41                                                                                                                           ; 49      ;
-; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~40                                                                                                                           ; 49      ;
-; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~23                                                                                                                           ; 49      ;
-; Mux_32_to_1:Bus_Mux|BusMuxOut[29]                                                                                                                                            ; 48      ;
-; Mux_32_to_1:Bus_Mux|BusMuxOut[27]                                                                                                                                            ; 48      ;
-; Mux_32_to_1:Bus_Mux|BusMuxOut[24]                                                                                                                                            ; 48      ;
+; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~36                                                                                                                           ; 50      ;
+; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~35                                                                                                                           ; 50      ;
+; Mux_32_to_1:Bus_Mux|BusMuxOut[27]                                                                                                                                            ; 49      ;
+; Mux_32_to_1:Bus_Mux|BusMuxOut[24]                                                                                                                                            ; 49      ;
+; Mux_32_to_1:Bus_Mux|BusMuxOut[15]                                                                                                                                            ; 49      ;
+; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~38                                                                                                                           ; 49      ;
+; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~37                                                                                                                           ; 49      ;
+; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~20                                                                                                                           ; 49      ;
+; Mux_32_to_1:Bus_Mux|Mux25~2                                                                                                                                                  ; 49      ;
 ; Mux_32_to_1:Bus_Mux|BusMuxOut[23]                                                                                                                                            ; 48      ;
-; Mux_32_to_1:Bus_Mux|BusMuxOut[15]                                                                                                                                            ; 48      ;
+; Mux_32_to_1:Bus_Mux|BusMuxOut[20]                                                                                                                                            ; 48      ;
 ; Mux_32_to_1:Bus_Mux|BusMuxOut[12]                                                                                                                                            ; 48      ;
 ; Mux_32_to_1:Bus_Mux|BusMuxOut[11]                                                                                                                                            ; 48      ;
 ; Mux_32_to_1:Bus_Mux|BusMuxOut[7]                                                                                                                                             ; 48      ;
-; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~49                                                                                                                           ; 48      ;
-; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~48                                                                                                                           ; 48      ;
+; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~46                                                                                                                           ; 48      ;
 ; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~45                                                                                                                           ; 48      ;
-; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~44                                                                                                                           ; 48      ;
-; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~22                                                                                                                           ; 48      ;
-; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~21                                                                                                                           ; 48      ;
+; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~42                                                                                                                           ; 48      ;
+; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~41                                                                                                                           ; 48      ;
 ; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~19                                                                                                                           ; 48      ;
+; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~18                                                                                                                           ; 48      ;
+; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~16                                                                                                                           ; 48      ;
 ; alu:Alu|Equal0~0                                                                                                                                                             ; 48      ;
+; Mux_32_to_1:Bus_Mux|BusMuxOut[26]                                                                                                                                            ; 47      ;
 ; Mux_32_to_1:Bus_Mux|BusMuxOut[19]                                                                                                                                            ; 47      ;
+; Mux_32_to_1:Bus_Mux|BusMuxOut[16]                                                                                                                                            ; 47      ;
 ; Mux_32_to_1:Bus_Mux|BusMuxOut[8]                                                                                                                                             ; 47      ;
-; alu:Alu|Equal0~1                                                                                                                                                             ; 47      ;
-; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~47                                                                                                                           ; 47      ;
-; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~46                                                                                                                           ; 47      ;
-; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~20                                                                                                                           ; 47      ;
-; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~18                                                                                                                           ; 47      ;
-; alu:Alu|z_Output[51]~26                                                                                                                                                      ; 47      ;
+; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~44                                                                                                                           ; 47      ;
+; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~43                                                                                                                           ; 47      ;
+; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~17                                                                                                                           ; 47      ;
+; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~15                                                                                                                           ; 47      ;
+; alu:Alu|z_Output[51]~28                                                                                                                                                      ; 47      ;
+; Mux_32_to_1:Bus_Mux|Mux25~3                                                                                                                                                  ; 47      ;
+; Mux_32_to_1:Bus_Mux|BusMuxOut[28]                                                                                                                                            ; 46      ;
 ; Mux_32_to_1:Bus_Mux|BusMuxOut[6]                                                                                                                                             ; 46      ;
-; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~55                                                                                                                           ; 46      ;
-; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~54                                                                                                                           ; 46      ;
+; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~52                                                                                                                           ; 46      ;
 ; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~51                                                                                                                           ; 46      ;
-; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~50                                                                                                                           ; 46      ;
-; Mux_32_to_1:Bus_Mux|BusMuxOut[28]                                                                                                                                            ; 45      ;
-; Mux_32_to_1:Bus_Mux|BusMuxOut[26]                                                                                                                                            ; 45      ;
+; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~48                                                                                                                           ; 46      ;
+; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~47                                                                                                                           ; 46      ;
+; Mux_32_to_1:Bus_Mux|BusMuxOut[22]                                                                                                                                            ; 45      ;
+; Mux_32_to_1:Bus_Mux|BusMuxOut[18]                                                                                                                                            ; 45      ;
 ; Mux_32_to_1:Bus_Mux|BusMuxOut[10]                                                                                                                                            ; 45      ;
-; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~53                                                                                                                           ; 45      ;
-; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~52                                                                                                                           ; 45      ;
-; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~17                                                                                                                           ; 45      ;
-; Mux_32_to_1:Bus_Mux|BusMuxOut[22]                                                                                                                                            ; 44      ;
-; Mux_32_to_1:Bus_Mux|BusMuxOut[18]                                                                                                                                            ; 44      ;
+; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~50                                                                                                                           ; 45      ;
+; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~49                                                                                                                           ; 45      ;
+; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~14                                                                                                                           ; 45      ;
 ; Mux_32_to_1:Bus_Mux|BusMuxOut[14]                                                                                                                                            ; 44      ;
-; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~61                                                                                                                           ; 44      ;
-; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~60                                                                                                                           ; 44      ;
+; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~58                                                                                                                           ; 44      ;
 ; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~57                                                                                                                           ; 44      ;
-; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~56                                                                                                                           ; 44      ;
-; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~16                                                                                                                           ; 44      ;
-; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~15                                                                                                                           ; 44      ;
+; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~54                                                                                                                           ; 44      ;
+; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~53                                                                                                                           ; 44      ;
 ; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~13                                                                                                                           ; 44      ;
-; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~59                                                                                                                           ; 43      ;
-; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~58                                                                                                                           ; 43      ;
-; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~14                                                                                                                           ; 43      ;
-; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~67                                                                                                                           ; 42      ;
-; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~66                                                                                                                           ; 42      ;
+; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~12                                                                                                                           ; 44      ;
+; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~10                                                                                                                           ; 44      ;
+; alu:Alu|thirtytwo_bit_subtractor:s|thirtytwo_bit_twos_complement:compliment|thirtytwo_bit_carry_adder:ttb|sixteen_bit_carry_adder:s0|four_bit_adder:f0|WideAnd2~0            ; 44      ;
+; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~56                                                                                                                           ; 43      ;
+; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~55                                                                                                                           ; 43      ;
+; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~11                                                                                                                           ; 43      ;
+; Mux_32_to_1:Bus_Mux|BusMuxOut[30]                                                                                                                                            ; 42      ;
+; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~64                                                                                                                           ; 42      ;
 ; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~63                                                                                                                           ; 42      ;
-; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~62                                                                                                                           ; 42      ;
-; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~65                                                                                                                           ; 41      ;
-; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~64                                                                                                                           ; 41      ;
-; Mux_32_to_1:Bus_Mux|BusMuxOut[30]                                                                                                                                            ; 40      ;
-; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~73                                                                                                                           ; 40      ;
-; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~72                                                                                                                           ; 40      ;
+; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~60                                                                                                                           ; 42      ;
+; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~59                                                                                                                           ; 42      ;
+; alu:Alu|Equal0~1                                                                                                                                                             ; 41      ;
+; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~62                                                                                                                           ; 41      ;
+; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~61                                                                                                                           ; 41      ;
+; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~70                                                                                                                           ; 40      ;
 ; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~69                                                                                                                           ; 40      ;
-; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~68                                                                                                                           ; 40      ;
-; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~11                                                                                                                           ; 40      ;
-; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~10                                                                                                                           ; 40      ;
+; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~66                                                                                                                           ; 40      ;
+; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~65                                                                                                                           ; 40      ;
 ; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~8                                                                                                                            ; 40      ;
-; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~71                                                                                                                           ; 39      ;
-; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~70                                                                                                                           ; 39      ;
-; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~7                                                                                                                            ; 39      ;
-; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~79                                                                                                                           ; 38      ;
-; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~78                                                                                                                           ; 38      ;
+; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~7                                                                                                                            ; 40      ;
+; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~5                                                                                                                            ; 40      ;
+; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~68                                                                                                                           ; 39      ;
+; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~67                                                                                                                           ; 39      ;
+; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~4                                                                                                                            ; 39      ;
+; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~76                                                                                                                           ; 38      ;
 ; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~75                                                                                                                           ; 38      ;
-; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~74                                                                                                                           ; 38      ;
-; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~77                                                                                                                           ; 37      ;
-; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~76                                                                                                                           ; 37      ;
-; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~6                                                                                                                            ; 37      ;
-; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~85                                                                                                                           ; 36      ;
-; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~84                                                                                                                           ; 36      ;
+; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~72                                                                                                                           ; 38      ;
+; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~71                                                                                                                           ; 38      ;
+; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~74                                                                                                                           ; 37      ;
+; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~73                                                                                                                           ; 37      ;
+; encoder_32_to_5:BusMux_encoder|SelectOut[4]                                                                                                                                  ; 36      ;
+; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~82                                                                                                                           ; 36      ;
 ; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~81                                                                                                                           ; 36      ;
-; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~80                                                                                                                           ; 36      ;
-; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~5                                                                                                                            ; 36      ;
-; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~4                                                                                                                            ; 36      ;
-; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~90                                                                                                                           ; 35      ;
-; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~83                                                                                                                           ; 35      ;
-; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~82                                                                                                                           ; 35      ;
-; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~3                                                                                                                            ; 35      ;
-; alu:Alu|nonrestoring_divison_algo:d|Add60~62                                                                                                                                 ; 35      ;
-; alu:Alu|nonrestoring_divison_algo:d|Add42~84                                                                                                                                 ; 35      ;
-; alu:Alu|nonrestoring_divison_algo:d|Add38~82                                                                                                                                 ; 35      ;
-; alu:Alu|nonrestoring_divison_algo:d|Add36~81                                                                                                                                 ; 35      ;
-; alu:Alu|nonrestoring_divison_algo:d|Add34~80                                                                                                                                 ; 35      ;
-; alu:Alu|nonrestoring_divison_algo:d|Add26~76                                                                                                                                 ; 35      ;
-; alu:Alu|nonrestoring_divison_algo:d|Add24~75                                                                                                                                 ; 35      ;
+; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~78                                                                                                                           ; 36      ;
+; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~77                                                                                                                           ; 36      ;
+; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~3                                                                                                                            ; 36      ;
+; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~2                                                                                                                            ; 36      ;
+; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~87                                                                                                                           ; 35      ;
+; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~80                                                                                                                           ; 35      ;
+; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~79                                                                                                                           ; 35      ;
+; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~1                                                                                                                            ; 35      ;
+; alu:Alu|nonrestoring_divison_algo:d|Add28~77                                                                                                                                 ; 35      ;
 ; alu:Alu|nonrestoring_divison_algo:d|Add22~74                                                                                                                                 ; 35      ;
-; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~89                                                                                                                           ; 34      ;
-; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~87                                                                                                                           ; 34      ;
 ; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~86                                                                                                                           ; 34      ;
+; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~84                                                                                                                           ; 34      ;
+; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~83                                                                                                                           ; 34      ;
+; alu:Alu|nonrestoring_divison_algo:d|Add60~62                                                                                                                                 ; 34      ;
 ; alu:Alu|nonrestoring_divison_algo:d|Add58~92                                                                                                                                 ; 34      ;
 ; alu:Alu|nonrestoring_divison_algo:d|Add56~91                                                                                                                                 ; 34      ;
 ; alu:Alu|nonrestoring_divison_algo:d|Add54~90                                                                                                                                 ; 34      ;
@@ -3352,10 +3350,15 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; alu:Alu|nonrestoring_divison_algo:d|Add48~87                                                                                                                                 ; 34      ;
 ; alu:Alu|nonrestoring_divison_algo:d|Add46~86                                                                                                                                 ; 34      ;
 ; alu:Alu|nonrestoring_divison_algo:d|Add44~85                                                                                                                                 ; 34      ;
+; alu:Alu|nonrestoring_divison_algo:d|Add42~84                                                                                                                                 ; 34      ;
 ; alu:Alu|nonrestoring_divison_algo:d|Add40~83                                                                                                                                 ; 34      ;
+; alu:Alu|nonrestoring_divison_algo:d|Add38~82                                                                                                                                 ; 34      ;
+; alu:Alu|nonrestoring_divison_algo:d|Add36~81                                                                                                                                 ; 34      ;
+; alu:Alu|nonrestoring_divison_algo:d|Add34~80                                                                                                                                 ; 34      ;
 ; alu:Alu|nonrestoring_divison_algo:d|Add32~79                                                                                                                                 ; 34      ;
 ; alu:Alu|nonrestoring_divison_algo:d|Add30~78                                                                                                                                 ; 34      ;
-; alu:Alu|nonrestoring_divison_algo:d|Add28~77                                                                                                                                 ; 34      ;
+; alu:Alu|nonrestoring_divison_algo:d|Add26~76                                                                                                                                 ; 34      ;
+; alu:Alu|nonrestoring_divison_algo:d|Add24~75                                                                                                                                 ; 34      ;
 ; alu:Alu|nonrestoring_divison_algo:d|Add20~73                                                                                                                                 ; 34      ;
 ; alu:Alu|nonrestoring_divison_algo:d|Add18~72                                                                                                                                 ; 34      ;
 ; alu:Alu|nonrestoring_divison_algo:d|Add16~71                                                                                                                                 ; 34      ;
@@ -3367,11 +3370,11 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; alu:Alu|nonrestoring_divison_algo:d|Add4~65                                                                                                                                  ; 34      ;
 ; alu:Alu|nonrestoring_divison_algo:d|Add2~64                                                                                                                                  ; 34      ;
 ; alu:Alu|nonrestoring_divison_algo:d|Add0~60                                                                                                                                  ; 34      ;
-; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~88                                                                                                                           ; 33      ;
+; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~85                                                                                                                           ; 33      ;
 ; Yin~input                                                                                                                                                                    ; 32      ;
+; PCin~input                                                                                                                                                                   ; 32      ;
 ; HIin~input                                                                                                                                                                   ; 32      ;
 ; LOin~input                                                                                                                                                                   ; 32      ;
-; PCin~input                                                                                                                                                                   ; 32      ;
 ; MDRin~input                                                                                                                                                                  ; 32      ;
 ; R15in~input                                                                                                                                                                  ; 32      ;
 ; R14in~input                                                                                                                                                                  ; 32      ;
@@ -3390,42 +3393,38 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; R1in~input                                                                                                                                                                   ; 32      ;
 ; R0in~input                                                                                                                                                                   ; 32      ;
 ; read~input                                                                                                                                                                   ; 32      ;
-; Mux_32_to_1:Bus_Mux|BusMuxOut[31]~17                                                                                                                                         ; 32      ;
-; Mux_32_to_1:Bus_Mux|BusMuxOut[25]~13                                                                                                                                         ; 32      ;
-; alu:Alu|ShiftRight0~134                                                                                                                                                      ; 21      ;
+; Mux_32_to_1:Bus_Mux|Mux32~0                                                                                                                                                  ; 32      ;
+; alu:Alu|ShiftRight0~136                                                                                                                                                      ; 20      ;
 ; alu:Alu|thirtytwo_bit_subtractor:s|thirtytwo_bit_twos_complement:compliment|thirtytwo_bit_carry_adder:ttb|sixteen_bit_carry_adder:s1|p1c1                                    ; 12      ;
 ; alu:Alu|thirtytwo_bit_subtractor:s|thirtytwo_bit_twos_complement:compliment|thirtytwo_bit_carry_adder:ttb|sixteen_bit_carry_adder:s0|p1c1~0                                  ; 12      ;
 ; alu:Alu|Equal0~3                                                                                                                                                             ; 12      ;
+; alu:Alu|ShiftRight1~48                                                                                                                                                       ; 12      ;
 ; alu:Alu|ShiftRight1~47                                                                                                                                                       ; 12      ;
-; alu:Alu|ShiftRight1~46                                                                                                                                                       ; 12      ;
-; alu:Alu|ShiftLeft1~31                                                                                                                                                        ; 12      ;
+; alu:Alu|ShiftLeft1~33                                                                                                                                                        ; 12      ;
 ; alu:Alu|ShiftLeft0~12                                                                                                                                                        ; 11      ;
 ; alu:Alu|thirtytwo_bit_subtractor:s|thirtytwo_bit_twos_complement:compliment|thirtytwo_bit_carry_adder:ttb|sixteen_bit_carry_adder:s0|four_bit_adder:f1|p0c0~0                ; 10      ;
-; alu:Alu|thirtytwo_bit_subtractor:s|thirtytwo_bit_twos_complement:compliment|thirtytwo_bit_carry_adder:ttb|sixteen_bit_carry_adder:s0|four_bit_adder:f0|WideAnd2              ; 10      ;
-; alu:Alu|thirtytwo_bit_subtractor:s|thirtytwo_bit_twos_complement:compliment|thirtytwo_bit_carry_adder:ttb|sixteen_bit_carry_adder:s0|WideAnd2~3                              ; 9       ;
-; alu:Alu|ShiftLeft0~17                                                                                                                                                        ; 9       ;
-; alu:Alu|thirtytwo_bit_subtractor:s|thirtytwo_bit_twos_complement:compliment|thirtytwo_bit_carry_adder:ttb|sixteen_bit_carry_adder:s0|four_bit_adder:f0|WideAnd2~0            ; 9       ;
+; alu:Alu|thirtytwo_bit_subtractor:s|thirtytwo_bit_twos_complement:compliment|thirtytwo_bit_carry_adder:ttb|sixteen_bit_carry_adder:s0|four_bit_adder:f0|WideAnd2~1            ; 9       ;
 ; alu:Alu|ShiftLeft0~14                                                                                                                                                        ; 9       ;
-; alu:Alu|ShiftRight0~44                                                                                                                                                       ; 9       ;
+; alu:Alu|ShiftRight0~45                                                                                                                                                       ; 9       ;
 ; R15out~input                                                                                                                                                                 ; 8       ;
-; alu:Alu|ShiftLeft0~18                                                                                                                                                        ; 8       ;
-; alu:Alu|ShiftRight0~82                                                                                                                                                       ; 8       ;
-; alu:Alu|Equal0~2                                                                                                                                                             ; 8       ;
+; alu:Alu|thirtytwo_bit_subtractor:s|thirtytwo_bit_twos_complement:compliment|thirtytwo_bit_carry_adder:ttb|sixteen_bit_carry_adder:s0|WideAnd2~3                              ; 8       ;
+; alu:Alu|ShiftLeft0~19                                                                                                                                                        ; 8       ;
+; alu:Alu|ShiftLeft0~17                                                                                                                                                        ; 8       ;
+; alu:Alu|ShiftLeft1~27                                                                                                                                                        ; 8       ;
+; alu:Alu|ShiftRight0~85                                                                                                                                                       ; 8       ;
+; alu:Alu|ShiftLeft0~10                                                                                                                                                        ; 8       ;
 ; encoder_32_to_5:BusMux_encoder|SelectOut[4]~8                                                                                                                                ; 8       ;
 ; alu:Alu|ShiftLeft0~11                                                                                                                                                        ; 7       ;
-; alu:Alu|ShiftLeft0~10                                                                                                                                                        ; 7       ;
-; alu:Alu|thirtytwo_bit_subtractor:s|thirtytwo_bit_twos_complement:compliment|thirtytwo_bit_carry_adder:ttb|sixteen_bit_carry_adder:s0|WideAnd2~2                              ; 7       ;
 ; alu:Alu|ShiftRight0~27                                                                                                                                                       ; 7       ;
-; alu:Alu|ShiftRight0~25                                                                                                                                                       ; 7       ;
+; alu:Alu|thirtytwo_bit_carry_adder:a2|sixteen_bit_carry_adder:s1|p2c2                                                                                                         ; 6       ;
 ; alu:Alu|thirtytwo_bit_subtractor:s|thirtytwo_bit_twos_complement:compliment|thirtytwo_bit_carry_adder:ttb|sixteen_bit_carry_adder:s0|four_bit_adder:f3|p0c0                  ; 6       ;
 ; alu:Alu|thirtytwo_bit_carry_adder:a2|sixteen_bit_carry_adder:s0|WideAnd2~0                                                                                                   ; 6       ;
 ; alu:Alu|thirtytwo_bit_subtractor:s|thirtytwo_bit_twos_complement:compliment|thirtytwo_bit_carry_adder:ttb|sixteen_bit_carry_adder:s1|p0c0~2                                  ; 6       ;
+; alu:Alu|thirtytwo_bit_subtractor:s|thirtytwo_bit_twos_complement:compliment|thirtytwo_bit_carry_adder:ttb|sixteen_bit_carry_adder:s0|WideAnd2~2                              ; 6       ;
 ; alu:Alu|thirtytwo_bit_subtractor:s|thirtytwo_bit_twos_complement:compliment|thirtytwo_bit_carry_adder:ttb|sixteen_bit_carry_adder:s0|p2c2~0                                  ; 6       ;
-; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~1                                                                                                                            ; 6       ;
-; R0out~input                                                                                                                                                                  ; 5       ;
 ; alu:Alu|thirtytwo_bit_subtractor:s|thirtytwo_bit_twos_complement:compliment|thirtytwo_bit_carry_adder:ttb|sixteen_bit_carry_adder:s1|p0c0                                    ; 5       ;
-; alu:Alu|thirtytwo_bit_carry_adder:a2|sixteen_bit_carry_adder:s1|p2c2                                                                                                         ; 5       ;
 ; alu:Alu|ShiftLeft0~82                                                                                                                                                        ; 5       ;
+; alu:Alu|thirtytwo_bit_carry_adder:a2|sixteen_bit_carry_adder:s1|p1c1~0                                                                                                       ; 5       ;
 ; alu:Alu|ShiftLeft0~77                                                                                                                                                        ; 5       ;
 ; alu:Alu|ShiftLeft0~71                                                                                                                                                        ; 5       ;
 ; alu:Alu|ShiftLeft0~68                                                                                                                                                        ; 5       ;
@@ -3436,35 +3435,32 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; alu:Alu|ShiftLeft0~31                                                                                                                                                        ; 5       ;
 ; alu:Alu|ShiftLeft0~28                                                                                                                                                        ; 5       ;
 ; alu:Alu|ShiftLeft0~25                                                                                                                                                        ; 5       ;
-; alu:Alu|ShiftLeft0~21                                                                                                                                                        ; 5       ;
-; alu:Alu|ShiftLeft1~30                                                                                                                                                        ; 5       ;
-; alu:Alu|ShiftLeft0~19                                                                                                                                                        ; 5       ;
-; alu:Alu|thirtytwo_bit_subtractor:s|thirtytwo_bit_twos_complement:compliment|thirtytwo_bit_carry_adder:ttb|sixteen_bit_carry_adder:s0|four_bit_adder:f0|WideAnd2~1            ; 5       ;
+; alu:Alu|ShiftLeft0~22                                                                                                                                                        ; 5       ;
+; alu:Alu|Equal0~2                                                                                                                                                             ; 5       ;
+; alu:Alu|ShiftLeft1~32                                                                                                                                                        ; 5       ;
+; alu:Alu|ShiftLeft0~20                                                                                                                                                        ; 5       ;
+; alu:Alu|ShiftLeft1~29                                                                                                                                                        ; 5       ;
 ; alu:Alu|ShiftLeft0~15                                                                                                                                                        ; 5       ;
+; alu:Alu|ShiftRight0~75                                                                                                                                                       ; 5       ;
 ; alu:Alu|ShiftRight0~73                                                                                                                                                       ; 5       ;
 ; alu:Alu|ShiftRight0~72                                                                                                                                                       ; 5       ;
-; alu:Alu|ShiftRight0~70                                                                                                                                                       ; 5       ;
-; alu:Alu|ShiftRight0~69                                                                                                                                                       ; 5       ;
-; alu:Alu|ShiftRight0~67                                                                                                                                                       ; 5       ;
+; alu:Alu|ShiftRight0~66                                                                                                                                                       ; 5       ;
 ; alu:Alu|ShiftRight0~65                                                                                                                                                       ; 5       ;
-; alu:Alu|ShiftRight0~64                                                                                                                                                       ; 5       ;
-; alu:Alu|ShiftRight0~54                                                                                                                                                       ; 5       ;
+; alu:Alu|ShiftRight0~55                                                                                                                                                       ; 5       ;
 ; alu:Alu|thirtytwo_bit_subtractor:s|thirtytwo_bit_twos_complement:compliment|thirtytwo_bit_carry_adder:ttb|sixteen_bit_carry_adder:s1|p2c2~0                                  ; 5       ;
 ; alu:Alu|ShiftRight0~46                                                                                                                                                       ; 5       ;
-; alu:Alu|ShiftRight0~45                                                                                                                                                       ; 5       ;
+; alu:Alu|ShiftRight0~43                                                                                                                                                       ; 5       ;
 ; alu:Alu|ShiftRight0~42                                                                                                                                                       ; 5       ;
-; alu:Alu|ShiftRight0~41                                                                                                                                                       ; 5       ;
+; alu:Alu|ShiftRight0~36                                                                                                                                                       ; 5       ;
 ; alu:Alu|ShiftRight0~35                                                                                                                                                       ; 5       ;
-; alu:Alu|ShiftRight0~34                                                                                                                                                       ; 5       ;
-; alu:Alu|ShiftRight0~22                                                                                                                                                       ; 5       ;
-; encoder_32_to_5:BusMux_encoder|SelectOut[4]~5                                                                                                                                ; 5       ;
+; alu:Alu|ShiftRight0~24                                                                                                                                                       ; 5       ;
+; alu:Alu|nonrestoring_divison_algo:d|Add62~65                                                                                                                                 ; 5       ;
+; encoder_32_to_5:BusMux_encoder|SelectOut[4]~6                                                                                                                                ; 5       ;
 ; R14out~input                                                                                                                                                                 ; 4       ;
-; R7out~input                                                                                                                                                                  ; 4       ;
-; R6out~input                                                                                                                                                                  ; 4       ;
-; R1out~input                                                                                                                                                                  ; 4       ;
-; encoder_32_to_5:BusMux_encoder|SelectOut[4]                                                                                                                                  ; 4       ;
-; alu:Alu|ShiftLeft1~135                                                                                                                                                       ; 4       ;
-; alu:Alu|ShiftRight0~162                                                                                                                                                      ; 4       ;
+; R0out~input                                                                                                                                                                  ; 4       ;
+; alu:Alu|thirtytwo_bit_booth_algorithm:m|Add2~174                                                                                                                             ; 4       ;
+; alu:Alu|ShiftLeft1~137                                                                                                                                                       ; 4       ;
+; alu:Alu|ShiftRight1~69                                                                                                                                                       ; 4       ;
 ; alu:Alu|thirtytwo_bit_subtractor:s|thirtytwo_bit_twos_complement:compliment|thirtytwo_bit_carry_adder:ttb|sixteen_bit_carry_adder:s1|four_bit_adder:f3|p1c1                  ; 4       ;
 ; alu:Alu|thirtytwo_bit_booth_algorithm:m|Add29~155                                                                                                                            ; 4       ;
 ; alu:Alu|ShiftLeft0~103                                                                                                                                                       ; 4       ;
@@ -3478,6 +3474,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; alu:Alu|thirtytwo_bit_subtractor:s|thirtytwo_bit_twos_complement:compliment|thirtytwo_bit_carry_adder:ttb|sixteen_bit_carry_adder:s1|four_bit_adder:f2|p0c0                  ; 4       ;
 ; alu:Alu|ShiftLeft0~88                                                                                                                                                        ; 4       ;
 ; alu:Alu|thirtytwo_bit_booth_algorithm:m|Add24~146                                                                                                                            ; 4       ;
+; alu:Alu|thirtytwo_bit_carry_adder:a2|sixteen_bit_carry_adder:s1|p1c1                                                                                                         ; 4       ;
 ; alu:Alu|ShiftLeft0~84                                                                                                                                                        ; 4       ;
 ; alu:Alu|thirtytwo_bit_booth_algorithm:m|Add23~143                                                                                                                            ; 4       ;
 ; alu:Alu|thirtytwo_bit_booth_algorithm:m|Add22~143                                                                                                                            ; 4       ;
@@ -3489,6 +3486,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; alu:Alu|thirtytwo_bit_booth_algorithm:m|Add18~134                                                                                                                            ; 4       ;
 ; alu:Alu|thirtytwo_bit_booth_algorithm:m|Add17~131                                                                                                                            ; 4       ;
 ; alu:Alu|thirtytwo_bit_carry_adder:a2|sixteen_bit_carry_adder:s1|p0c0~0                                                                                                       ; 4       ;
+; alu:Alu|thirtytwo_bit_subtractor:s|thirtytwo_bit_twos_complement:compliment|thirtytwo_bit_carry_adder:ttb|sixteen_bit_carry_adder:s1|four_bit_adder:f0|p0c0                  ; 4       ;
 ; alu:Alu|thirtytwo_bit_booth_algorithm:m|Add16~131                                                                                                                            ; 4       ;
 ; alu:Alu|thirtytwo_bit_booth_algorithm:m|Add15~128                                                                                                                            ; 4       ;
 ; alu:Alu|thirtytwo_bit_booth_algorithm:m|Add14~131                                                                                                                            ; 4       ;
@@ -3496,7 +3494,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; alu:Alu|ShiftLeft0~53                                                                                                                                                        ; 4       ;
 ; alu:Alu|thirtytwo_bit_booth_algorithm:m|Add12~122                                                                                                                            ; 4       ;
 ; alu:Alu|ShiftLeft0~50                                                                                                                                                        ; 4       ;
-; alu:Alu|ShiftRight0~142                                                                                                                                                      ; 4       ;
+; alu:Alu|ShiftRight0~144                                                                                                                                                      ; 4       ;
 ; alu:Alu|thirtytwo_bit_booth_algorithm:m|Add11~119                                                                                                                            ; 4       ;
 ; alu:Alu|ShiftLeft0~46                                                                                                                                                        ; 4       ;
 ; alu:Alu|thirtytwo_bit_booth_algorithm:m|Add10~119                                                                                                                            ; 4       ;
@@ -3512,51 +3510,56 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; alu:Alu|thirtytwo_bit_booth_algorithm:m|Add6~110                                                                                                                             ; 4       ;
 ; alu:Alu|ShiftLeft0~30                                                                                                                                                        ; 4       ;
 ; alu:Alu|thirtytwo_bit_booth_algorithm:m|Add5~107                                                                                                                             ; 4       ;
-; alu:Alu|ShiftLeft1~36                                                                                                                                                        ; 4       ;
+; alu:Alu|ShiftLeft1~38                                                                                                                                                        ; 4       ;
 ; alu:Alu|thirtytwo_bit_booth_algorithm:m|Add4~107                                                                                                                             ; 4       ;
 ; alu:Alu|thirtytwo_bit_carry_adder:a2|sixteen_bit_carry_adder:s0|four_bit_adder:f0|WideAnd2                                                                                   ; 4       ;
-; alu:Alu|ShiftLeft1~33                                                                                                                                                        ; 4       ;
+; alu:Alu|ShiftLeft1~35                                                                                                                                                        ; 4       ;
 ; alu:Alu|thirtytwo_bit_booth_algorithm:m|Add3~104                                                                                                                             ; 4       ;
-; alu:Alu|ShiftLeft1~28                                                                                                                                                        ; 4       ;
-; alu:Alu|ShiftLeft0~20                                                                                                                                                        ; 4       ;
-; alu:Alu|ShiftRight0~91                                                                                                                                                       ; 4       ;
-; alu:Alu|thirtytwo_bit_booth_algorithm:m|out~327                                                                                                                              ; 4       ;
+; alu:Alu|ShiftLeft1~30                                                                                                                                                        ; 4       ;
+; alu:Alu|ShiftLeft0~21                                                                                                                                                        ; 4       ;
+; alu:Alu|ShiftRight0~94                                                                                                                                                       ; 4       ;
 ; alu:Alu|ShiftLeft0~16                                                                                                                                                        ; 4       ;
-; alu:Alu|ShiftRight0~78                                                                                                                                                       ; 4       ;
-; alu:Alu|ShiftRight1~15                                                                                                                                                       ; 4       ;
-; alu:Alu|ShiftRight1~13                                                                                                                                                       ; 4       ;
+; alu:Alu|ShiftRight0~81                                                                                                                                                       ; 4       ;
+; alu:Alu|ShiftRight1~17                                                                                                                                                       ; 4       ;
+; alu:Alu|ShiftRight0~76                                                                                                                                                       ; 4       ;
+; alu:Alu|ShiftRight0~69                                                                                                                                                       ; 4       ;
+; alu:Alu|ShiftRight0~68                                                                                                                                                       ; 4       ;
+; alu:Alu|ShiftRight0~61                                                                                                                                                       ; 4       ;
 ; alu:Alu|ShiftRight0~60                                                                                                                                                       ; 4       ;
-; alu:Alu|ShiftRight0~59                                                                                                                                                       ; 4       ;
-; alu:Alu|ShiftRight0~57                                                                                                                                                       ; 4       ;
-; alu:Alu|ShiftRight0~53                                                                                                                                                       ; 4       ;
+; alu:Alu|ShiftRight0~58                                                                                                                                                       ; 4       ;
+; alu:Alu|ShiftRight0~54                                                                                                                                                       ; 4       ;
+; alu:Alu|ShiftRight0~52                                                                                                                                                       ; 4       ;
 ; alu:Alu|ShiftRight0~51                                                                                                                                                       ; 4       ;
-; alu:Alu|ShiftRight0~50                                                                                                                                                       ; 4       ;
+; alu:Alu|ShiftRight1~6                                                                                                                                                        ; 4       ;
 ; alu:Alu|ShiftRight1~4                                                                                                                                                        ; 4       ;
-; alu:Alu|ShiftRight1~2                                                                                                                                                        ; 4       ;
+; alu:Alu|ShiftRight0~48                                                                                                                                                       ; 4       ;
+; alu:Alu|ShiftRight0~47                                                                                                                                                       ; 4       ;
+; alu:Alu|ShiftRight0~39                                                                                                                                                       ; 4       ;
 ; alu:Alu|ShiftRight0~38                                                                                                                                                       ; 4       ;
-; alu:Alu|ShiftRight0~37                                                                                                                                                       ; 4       ;
+; alu:Alu|ShiftRight0~31                                                                                                                                                       ; 4       ;
 ; alu:Alu|ShiftRight0~30                                                                                                                                                       ; 4       ;
-; alu:Alu|ShiftRight0~29                                                                                                                                                       ; 4       ;
-; alu:Alu|ShiftRight0~26                                                                                                                                                       ; 4       ;
+; alu:Alu|ShiftRight0~28                                                                                                                                                       ; 4       ;
+; alu:Alu|ShiftRight0~23                                                                                                                                                       ; 4       ;
 ; alu:Alu|ShiftRight0~21                                                                                                                                                       ; 4       ;
-; alu:Alu|ShiftRight0~19                                                                                                                                                       ; 4       ;
-; alu:Alu|ShiftRight0~18                                                                                                                                                       ; 4       ;
+; alu:Alu|ShiftRight0~20                                                                                                                                                       ; 4       ;
 ; alu:Alu|thirtytwo_bit_booth_algorithm:m|always0~0                                                                                                                            ; 4       ;
-; alu:Alu|thirtytwo_bit_booth_algorithm:m|Add1~66                                                                                                                              ; 4       ;
 ; LOout~input                                                                                                                                                                  ; 3       ;
 ; HIout~input                                                                                                                                                                  ; 3       ;
 ; Zhighout~input                                                                                                                                                               ; 3       ;
 ; Zlowout~input                                                                                                                                                                ; 3       ;
-; MDRout~input                                                                                                                                                                 ; 3       ;
-; PCout~input                                                                                                                                                                  ; 3       ;
 ; R9out~input                                                                                                                                                                  ; 3       ;
 ; R8out~input                                                                                                                                                                  ; 3       ;
 ; R11out~input                                                                                                                                                                 ; 3       ;
 ; R10out~input                                                                                                                                                                 ; 3       ;
+; R1out~input                                                                                                                                                                  ; 3       ;
 ; R3out~input                                                                                                                                                                  ; 3       ;
 ; R2out~input                                                                                                                                                                  ; 3       ;
 ; R5out~input                                                                                                                                                                  ; 3       ;
 ; R4out~input                                                                                                                                                                  ; 3       ;
+; R7out~input                                                                                                                                                                  ; 3       ;
+; R6out~input                                                                                                                                                                  ; 3       ;
+; MDRout~input                                                                                                                                                                 ; 3       ;
+; PCout~input                                                                                                                                                                  ; 3       ;
 ; Reg32:mdrReg|Q[31]                                                                                                                                                           ; 3       ;
 ; Reg32:mdrReg|Q[30]                                                                                                                                                           ; 3       ;
 ; Reg32:mdrReg|Q[29]                                                                                                                                                           ; 3       ;
@@ -4101,7 +4104,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Reg32:R0|Q[2]                                                                                                                                                                ; 3       ;
 ; Reg32:R0|Q[1]                                                                                                                                                                ; 3       ;
 ; Reg32:R0|Q[0]                                                                                                                                                                ; 3       ;
-; alu:Alu|thirtytwo_bit_subtractor:s|thirtytwo_bit_twos_complement:compliment|thirtytwo_bit_carry_adder:ttb|sixteen_bit_carry_adder:s1|four_bit_adder:f0|p0c0                  ; 3       ;
 ; alu:Alu|thirtytwo_bit_booth_algorithm:m|Add90~98                                                                                                                             ; 3       ;
 ; alu:Alu|thirtytwo_bit_carry_adder:a|sixteen_bit_carry_adder:s1|four_bit_adder:f3|c_1~0                                                                                       ; 3       ;
 ; alu:Alu|thirtytwo_bit_subtractor:s|thirtytwo_bit_twos_complement:compliment|thirtytwo_bit_carry_adder:ttb|sixteen_bit_carry_adder:s1|four_bit_adder:f3|p0c0                  ; 3       ;
@@ -4110,59 +4112,58 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; alu:Alu|thirtytwo_bit_carry_adder:a2|sixteen_bit_carry_adder:s1|p2c2~0                                                                                                       ; 3       ;
 ; alu:Alu|thirtytwo_bit_carry_adder:a|sixteen_bit_carry_adder:s1|four_bit_adder:f2|c_1~0                                                                                       ; 3       ;
 ; alu:Alu|thirtytwo_bit_subtractor:s|thirtytwo_bit_carry_adder:sub|sixteen_bit_carry_adder:s1|c_2~3                                                                            ; 3       ;
-; alu:Alu|thirtytwo_bit_carry_adder:a2|sixteen_bit_carry_adder:s1|p1c1                                                                                                         ; 3       ;
 ; alu:Alu|thirtytwo_bit_carry_adder:a|sixteen_bit_carry_adder:s1|p1c1                                                                                                          ; 3       ;
 ; alu:Alu|thirtytwo_bit_carry_adder:a|sixteen_bit_carry_adder:s1|four_bit_adder:f1|WideOr0~2                                                                                   ; 3       ;
 ; alu:Alu|thirtytwo_bit_subtractor:s|thirtytwo_bit_twos_complement:compliment|thirtytwo_bit_carry_adder:ttb|sixteen_bit_carry_adder:s1|four_bit_adder:f1|p2c2                  ; 3       ;
 ; alu:Alu|thirtytwo_bit_subtractor:s|thirtytwo_bit_twos_complement:compliment|thirtytwo_bit_carry_adder:ttb|sixteen_bit_carry_adder:s1|four_bit_adder:f1|bit_stage_cell:b2|sum ; 3       ;
-; alu:Alu|thirtytwo_bit_carry_adder:a2|sixteen_bit_carry_adder:s1|p1c1~0                                                                                                       ; 3       ;
 ; alu:Alu|thirtytwo_bit_carry_adder:a|sixteen_bit_carry_adder:s1|four_bit_adder:f1|c_1~0                                                                                       ; 3       ;
 ; alu:Alu|thirtytwo_bit_subtractor:s|thirtytwo_bit_twos_complement:compliment|thirtytwo_bit_carry_adder:ttb|sixteen_bit_carry_adder:s1|four_bit_adder:f1|p0c0                  ; 3       ;
 ; alu:Alu|thirtytwo_bit_subtractor:s|thirtytwo_bit_carry_adder:sub|sixteen_bit_carry_adder:s1|c_1~3                                                                            ; 3       ;
-; alu:Alu|thirtytwo_bit_carry_adder:a2|sixteen_bit_carry_adder:s1|p0c0                                                                                                         ; 3       ;
 ; alu:Alu|thirtytwo_bit_carry_adder:a|sixteen_bit_carry_adder:s1|p0c0                                                                                                          ; 3       ;
 ; alu:Alu|thirtytwo_bit_carry_adder:a|sixteen_bit_carry_adder:s1|four_bit_adder:f0|WideOr0~2                                                                                   ; 3       ;
 ; alu:Alu|thirtytwo_bit_subtractor:s|thirtytwo_bit_twos_complement:compliment|thirtytwo_bit_carry_adder:ttb|sixteen_bit_carry_adder:s1|four_bit_adder:f1|bit_stage_cell:b0|sum ; 3       ;
+; alu:Alu|thirtytwo_bit_carry_adder:a|sixteen_bit_carry_adder:s1|four_bit_adder:f0|bit_stage_cell:b3|p                                                                         ; 3       ;
 ; alu:Alu|thirtytwo_bit_subtractor:s|thirtytwo_bit_twos_complement:compliment|thirtytwo_bit_carry_adder:ttb|sixteen_bit_carry_adder:s1|four_bit_adder:f0|p2c2                  ; 3       ;
-; alu:Alu|thirtytwo_bit_subtractor:s|thirtytwo_bit_twos_complement:compliment|thirtytwo_bit_carry_adder:ttb|sixteen_bit_carry_adder:s1|four_bit_adder:f0|bit_stage_cell:b2|sum ; 3       ;
+; alu:Alu|thirtytwo_bit_subtractor:s|thirtytwo_bit_twos_complement:compliment|thirtytwo_bit_carry_adder:ttb|sixteen_bit_carry_adder:s1|four_bit_adder:f0|p1c1                  ; 3       ;
 ; alu:Alu|thirtytwo_bit_subtractor:s|thirtytwo_bit_carry_adder:sub|sixteen_bit_carry_adder:s0|WideOr0~3                                                                        ; 3       ;
-; alu:Alu|z_Output~315                                                                                                                                                         ; 3       ;
-; alu:Alu|thirtytwo_bit_carry_adder:a|sixteen_bit_carry_adder:s0|WideOr0~3                                                                                                     ; 3       ;
+; alu:Alu|thirtytwo_bit_carry_adder:a|sixteen_bit_carry_adder:s0|WideOr0~2                                                                                                     ; 3       ;
 ; alu:Alu|thirtytwo_bit_subtractor:s|thirtytwo_bit_twos_complement:compliment|thirtytwo_bit_carry_adder:ttb|sixteen_bit_carry_adder:s0|four_bit_adder:f3|p2c2                  ; 3       ;
-; alu:Alu|ShiftLeft1~67                                                                                                                                                        ; 3       ;
+; alu:Alu|ShiftLeft1~69                                                                                                                                                        ; 3       ;
 ; alu:Alu|ShiftLeft0~61                                                                                                                                                        ; 3       ;
 ; alu:Alu|thirtytwo_bit_subtractor:s|thirtytwo_bit_twos_complement:compliment|thirtytwo_bit_carry_adder:ttb|sixteen_bit_carry_adder:s0|four_bit_adder:f3|p1c1                  ; 3       ;
-; alu:Alu|ShiftLeft1~64                                                                                                                                                        ; 3       ;
+; alu:Alu|ShiftLeft1~66                                                                                                                                                        ; 3       ;
 ; alu:Alu|ShiftLeft0~58                                                                                                                                                        ; 3       ;
 ; alu:Alu|thirtytwo_bit_carry_adder:a|sixteen_bit_carry_adder:s0|four_bit_adder:f3|c_1~0                                                                                       ; 3       ;
-; alu:Alu|ShiftLeft1~62                                                                                                                                                        ; 3       ;
-; alu:Alu|ShiftLeft1~61                                                                                                                                                        ; 3       ;
+; alu:Alu|ShiftLeft1~64                                                                                                                                                        ; 3       ;
+; alu:Alu|ShiftLeft1~63                                                                                                                                                        ; 3       ;
 ; alu:Alu|thirtytwo_bit_subtractor:s|thirtytwo_bit_carry_adder:sub|sixteen_bit_carry_adder:s0|c_3~3                                                                            ; 3       ;
 ; alu:Alu|thirtytwo_bit_subtractor:s|thirtytwo_bit_twos_complement:compliment|thirtytwo_bit_carry_adder:ttb|sixteen_bit_carry_adder:s0|p2c2~1                                  ; 3       ;
 ; alu:Alu|thirtytwo_bit_carry_adder:a|sixteen_bit_carry_adder:s0|p2c2                                                                                                          ; 3       ;
 ; alu:Alu|thirtytwo_bit_carry_adder:a|sixteen_bit_carry_adder:s0|four_bit_adder:f2|WideOr0~2                                                                                   ; 3       ;
-; alu:Alu|ShiftLeft1~59                                                                                                                                                        ; 3       ;
-; alu:Alu|ShiftLeft1~58                                                                                                                                                        ; 3       ;
+; alu:Alu|ShiftLeft1~61                                                                                                                                                        ; 3       ;
+; alu:Alu|ShiftLeft1~60                                                                                                                                                        ; 3       ;
 ; alu:Alu|thirtytwo_bit_subtractor:s|thirtytwo_bit_twos_complement:compliment|thirtytwo_bit_carry_adder:ttb|sixteen_bit_carry_adder:s0|four_bit_adder:f2|p2c2                  ; 3       ;
-; alu:Alu|ShiftLeft1~57                                                                                                                                                        ; 3       ;
+; alu:Alu|ShiftLeft1~59                                                                                                                                                        ; 3       ;
 ; alu:Alu|thirtytwo_bit_subtractor:s|thirtytwo_bit_twos_complement:compliment|thirtytwo_bit_carry_adder:ttb|sixteen_bit_carry_adder:s0|four_bit_adder:f2|p1c1                  ; 3       ;
-; alu:Alu|ShiftLeft1~54                                                                                                                                                        ; 3       ;
+; alu:Alu|ShiftLeft1~56                                                                                                                                                        ; 3       ;
 ; alu:Alu|thirtytwo_bit_carry_adder:a|sixteen_bit_carry_adder:s0|four_bit_adder:f2|c_1~0                                                                                       ; 3       ;
-; alu:Alu|ShiftLeft1~51                                                                                                                                                        ; 3       ;
+; alu:Alu|ShiftLeft1~53                                                                                                                                                        ; 3       ;
 ; alu:Alu|thirtytwo_bit_subtractor:s|thirtytwo_bit_carry_adder:sub|sixteen_bit_carry_adder:s0|c_2~3                                                                            ; 3       ;
 ; alu:Alu|thirtytwo_bit_carry_adder:a|sixteen_bit_carry_adder:s0|p1c1                                                                                                          ; 3       ;
 ; alu:Alu|thirtytwo_bit_carry_adder:a|sixteen_bit_carry_adder:s0|four_bit_adder:f1|WideOr0~2                                                                                   ; 3       ;
-; alu:Alu|ShiftLeft1~47                                                                                                                                                        ; 3       ;
-; alu:Alu|thirtytwo_bit_carry_adder:a|sixteen_bit_carry_adder:s0|four_bit_adder:f1|bit_stage_cell:b3|p                                                                         ; 3       ;
+; alu:Alu|ShiftLeft1~49                                                                                                                                                        ; 3       ;
 ; alu:Alu|thirtytwo_bit_subtractor:s|thirtytwo_bit_twos_complement:compliment|thirtytwo_bit_carry_adder:ttb|sixteen_bit_carry_adder:s0|four_bit_adder:f1|p2c2                  ; 3       ;
-; alu:Alu|ShiftRight0~130                                                                                                                                                      ; 3       ;
-; alu:Alu|ShiftRight1~64                                                                                                                                                       ; 3       ;
-; alu:Alu|ShiftLeft1~42                                                                                                                                                        ; 3       ;
+; alu:Alu|ShiftRight0~132                                                                                                                                                      ; 3       ;
+; alu:Alu|ShiftRight1~65                                                                                                                                                       ; 3       ;
+; alu:Alu|ShiftLeft1~44                                                                                                                                                        ; 3       ;
 ; alu:Alu|thirtytwo_bit_subtractor:s|thirtytwo_bit_twos_complement:compliment|thirtytwo_bit_carry_adder:ttb|sixteen_bit_carry_adder:s0|four_bit_adder:f1|p1c1                  ; 3       ;
-; alu:Alu|ShiftRight0~124                                                                                                                                                      ; 3       ;
-; alu:Alu|ShiftLeft1~39                                                                                                                                                        ; 3       ;
+; alu:Alu|thirtytwo_bit_carry_adder:a2|sixteen_bit_carry_adder:s0|four_bit_adder:f1|p0c0~0                                                                                     ; 3       ;
+; alu:Alu|ShiftRight0~126                                                                                                                                                      ; 3       ;
+; alu:Alu|ShiftLeft1~41                                                                                                                                                        ; 3       ;
 ; alu:Alu|ShiftLeft0~27                                                                                                                                                        ; 3       ;
-; alu:Alu|ShiftRight0~118                                                                                                                                                      ; 3       ;
+; alu:Alu|ShiftRight0~120                                                                                                                                                      ; 3       ;
+; alu:Alu|thirtytwo_bit_subtractor:s|thirtytwo_bit_carry_adder:sub|sixteen_bit_carry_adder:s0|four_bit_adder:f0|WideOr0~2                                                      ; 3       ;
+; alu:Alu|thirtytwo_bit_carry_adder:a|sixteen_bit_carry_adder:s0|four_bit_adder:f0|WideOr0~1                                                                                   ; 3       ;
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
 
 
@@ -4893,35 +4894,35 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; R14in              ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Unchecked ; Inapplicable ; Inapplicable ; Unchecked ; Unchecked ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Unchecked    ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Unchecked ; Inapplicable ; Inapplicable ;
 ; R15in              ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Unchecked ; Inapplicable ; Inapplicable ; Unchecked ; Unchecked ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Unchecked    ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Unchecked ; Inapplicable ; Inapplicable ;
 ; MDRin              ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Unchecked ; Inapplicable ; Inapplicable ; Unchecked ; Unchecked ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Unchecked    ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Unchecked ; Inapplicable ; Inapplicable ;
-; PCin               ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Unchecked ; Inapplicable ; Inapplicable ; Unchecked ; Unchecked ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Unchecked    ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Unchecked ; Inapplicable ; Inapplicable ;
+; clk                ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Unchecked ; Inapplicable ; Inapplicable ; Unchecked ; Unchecked ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Unchecked    ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Unchecked ; Inapplicable ; Inapplicable ;
+; Zin                ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Unchecked ; Inapplicable ; Inapplicable ; Unchecked ; Unchecked ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Unchecked    ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Unchecked ; Inapplicable ; Inapplicable ;
 ; R15out             ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Unchecked ; Inapplicable ; Inapplicable ; Unchecked ; Unchecked ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Unchecked    ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Unchecked ; Inapplicable ; Inapplicable ;
+; PCout              ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Unchecked ; Inapplicable ; Inapplicable ; Unchecked ; Unchecked ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Unchecked    ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Unchecked ; Inapplicable ; Inapplicable ;
+; MDRout             ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Unchecked ; Inapplicable ; Inapplicable ; Unchecked ; Unchecked ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Unchecked    ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Unchecked ; Inapplicable ; Inapplicable ;
+; InPortout          ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Unchecked ; Inapplicable ; Inapplicable ; Unchecked ; Unchecked ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Unchecked    ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Unchecked ; Inapplicable ; Inapplicable ;
+; Cout               ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Unchecked ; Inapplicable ; Inapplicable ; Unchecked ; Unchecked ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Unchecked    ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Unchecked ; Inapplicable ; Inapplicable ;
+; R12out             ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Unchecked ; Inapplicable ; Inapplicable ; Unchecked ; Unchecked ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Unchecked    ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Unchecked ; Inapplicable ; Inapplicable ;
+; R13out             ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Unchecked ; Inapplicable ; Inapplicable ; Unchecked ; Unchecked ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Unchecked    ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Unchecked ; Inapplicable ; Inapplicable ;
+; R6out              ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Unchecked ; Inapplicable ; Inapplicable ; Unchecked ; Unchecked ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Unchecked    ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Unchecked ; Inapplicable ; Inapplicable ;
+; R7out              ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Unchecked ; Inapplicable ; Inapplicable ; Unchecked ; Unchecked ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Unchecked    ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Unchecked ; Inapplicable ; Inapplicable ;
 ; R4out              ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Unchecked ; Inapplicable ; Inapplicable ; Unchecked ; Unchecked ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Unchecked    ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Unchecked ; Inapplicable ; Inapplicable ;
 ; R5out              ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Unchecked ; Inapplicable ; Inapplicable ; Unchecked ; Unchecked ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Unchecked    ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Unchecked ; Inapplicable ; Inapplicable ;
 ; R2out              ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Unchecked ; Inapplicable ; Inapplicable ; Unchecked ; Unchecked ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Unchecked    ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Unchecked ; Inapplicable ; Inapplicable ;
 ; R3out              ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Unchecked ; Inapplicable ; Inapplicable ; Unchecked ; Unchecked ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Unchecked    ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Unchecked ; Inapplicable ; Inapplicable ;
 ; R0out              ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Unchecked ; Inapplicable ; Inapplicable ; Unchecked ; Unchecked ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Unchecked    ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Unchecked ; Inapplicable ; Inapplicable ;
 ; R1out              ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Unchecked ; Inapplicable ; Inapplicable ; Unchecked ; Unchecked ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Unchecked    ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Unchecked ; Inapplicable ; Inapplicable ;
-; R6out              ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Unchecked ; Inapplicable ; Inapplicable ; Unchecked ; Unchecked ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Unchecked    ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Unchecked ; Inapplicable ; Inapplicable ;
-; R7out              ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Unchecked ; Inapplicable ; Inapplicable ; Unchecked ; Unchecked ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Unchecked    ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Unchecked ; Inapplicable ; Inapplicable ;
 ; R10out             ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Unchecked ; Inapplicable ; Inapplicable ; Unchecked ; Unchecked ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Unchecked    ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Unchecked ; Inapplicable ; Inapplicable ;
 ; R11out             ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Unchecked ; Inapplicable ; Inapplicable ; Unchecked ; Unchecked ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Unchecked    ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Unchecked ; Inapplicable ; Inapplicable ;
 ; R8out              ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Unchecked ; Inapplicable ; Inapplicable ; Unchecked ; Unchecked ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Unchecked    ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Unchecked ; Inapplicable ; Inapplicable ;
 ; R9out              ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Unchecked ; Inapplicable ; Inapplicable ; Unchecked ; Unchecked ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Unchecked    ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Unchecked ; Inapplicable ; Inapplicable ;
-; R12out             ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Unchecked ; Inapplicable ; Inapplicable ; Unchecked ; Unchecked ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Unchecked    ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Unchecked ; Inapplicable ; Inapplicable ;
-; R13out             ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Unchecked ; Inapplicable ; Inapplicable ; Unchecked ; Unchecked ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Unchecked    ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Unchecked ; Inapplicable ; Inapplicable ;
 ; R14out             ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Unchecked ; Inapplicable ; Inapplicable ; Unchecked ; Unchecked ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Unchecked    ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Unchecked ; Inapplicable ; Inapplicable ;
-; PCout              ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Unchecked ; Inapplicable ; Inapplicable ; Unchecked ; Unchecked ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Unchecked    ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Unchecked ; Inapplicable ; Inapplicable ;
-; MDRout             ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Unchecked ; Inapplicable ; Inapplicable ; Unchecked ; Unchecked ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Unchecked    ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Unchecked ; Inapplicable ; Inapplicable ;
-; InPortout          ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Unchecked ; Inapplicable ; Inapplicable ; Unchecked ; Unchecked ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Unchecked    ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Unchecked ; Inapplicable ; Inapplicable ;
-; Cout               ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Unchecked ; Inapplicable ; Inapplicable ; Unchecked ; Unchecked ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Unchecked    ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Unchecked ; Inapplicable ; Inapplicable ;
 ; Zlowout            ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Unchecked ; Inapplicable ; Inapplicable ; Unchecked ; Unchecked ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Unchecked    ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Unchecked ; Inapplicable ; Inapplicable ;
 ; Zhighout           ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Unchecked ; Inapplicable ; Inapplicable ; Unchecked ; Unchecked ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Unchecked    ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Unchecked ; Inapplicable ; Inapplicable ;
 ; HIout              ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Unchecked ; Inapplicable ; Inapplicable ; Unchecked ; Unchecked ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Unchecked    ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Unchecked ; Inapplicable ; Inapplicable ;
 ; LOout              ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Unchecked ; Inapplicable ; Inapplicable ; Unchecked ; Unchecked ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Unchecked    ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Unchecked ; Inapplicable ; Inapplicable ;
-; clk                ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Unchecked ; Inapplicable ; Inapplicable ; Unchecked ; Unchecked ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Unchecked    ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Unchecked ; Inapplicable ; Inapplicable ;
-; Zin                ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Unchecked ; Inapplicable ; Inapplicable ; Unchecked ; Unchecked ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Unchecked    ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Unchecked ; Inapplicable ; Inapplicable ;
 ; LOin               ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Unchecked ; Inapplicable ; Inapplicable ; Unchecked ; Unchecked ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Unchecked    ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Unchecked ; Inapplicable ; Inapplicable ;
 ; HIin               ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Unchecked ; Inapplicable ; Inapplicable ; Unchecked ; Unchecked ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Unchecked    ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Unchecked ; Inapplicable ; Inapplicable ;
+; PCin               ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Unchecked ; Inapplicable ; Inapplicable ; Unchecked ; Unchecked ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Unchecked    ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Unchecked ; Inapplicable ; Inapplicable ;
 ; control[0]         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Unchecked ; Inapplicable ; Inapplicable ; Unchecked ; Unchecked ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Unchecked    ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Unchecked ; Inapplicable ; Inapplicable ;
 ; control[1]         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Unchecked ; Inapplicable ; Inapplicable ; Unchecked ; Unchecked ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Unchecked    ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Unchecked ; Inapplicable ; Inapplicable ;
 ; control[2]         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Unchecked ; Inapplicable ; Inapplicable ; Unchecked ; Unchecked ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Unchecked    ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Unchecked ; Inapplicable ; Inapplicable ;
@@ -5656,35 +5657,35 @@ Critical Warning (169085): No exact pin location assignment(s) for 701 pins of 7
     Info (169086): Pin R14in not assigned to an exact location on the device
     Info (169086): Pin R15in not assigned to an exact location on the device
     Info (169086): Pin MDRin not assigned to an exact location on the device
-    Info (169086): Pin PCin not assigned to an exact location on the device
+    Info (169086): Pin clk not assigned to an exact location on the device
+    Info (169086): Pin Zin not assigned to an exact location on the device
     Info (169086): Pin R15out not assigned to an exact location on the device
+    Info (169086): Pin PCout not assigned to an exact location on the device
+    Info (169086): Pin MDRout not assigned to an exact location on the device
+    Info (169086): Pin InPortout not assigned to an exact location on the device
+    Info (169086): Pin Cout not assigned to an exact location on the device
+    Info (169086): Pin R12out not assigned to an exact location on the device
+    Info (169086): Pin R13out not assigned to an exact location on the device
+    Info (169086): Pin R6out not assigned to an exact location on the device
+    Info (169086): Pin R7out not assigned to an exact location on the device
     Info (169086): Pin R4out not assigned to an exact location on the device
     Info (169086): Pin R5out not assigned to an exact location on the device
     Info (169086): Pin R2out not assigned to an exact location on the device
     Info (169086): Pin R3out not assigned to an exact location on the device
     Info (169086): Pin R0out not assigned to an exact location on the device
     Info (169086): Pin R1out not assigned to an exact location on the device
-    Info (169086): Pin R6out not assigned to an exact location on the device
-    Info (169086): Pin R7out not assigned to an exact location on the device
     Info (169086): Pin R10out not assigned to an exact location on the device
     Info (169086): Pin R11out not assigned to an exact location on the device
     Info (169086): Pin R8out not assigned to an exact location on the device
     Info (169086): Pin R9out not assigned to an exact location on the device
-    Info (169086): Pin R12out not assigned to an exact location on the device
-    Info (169086): Pin R13out not assigned to an exact location on the device
     Info (169086): Pin R14out not assigned to an exact location on the device
-    Info (169086): Pin PCout not assigned to an exact location on the device
-    Info (169086): Pin MDRout not assigned to an exact location on the device
-    Info (169086): Pin InPortout not assigned to an exact location on the device
-    Info (169086): Pin Cout not assigned to an exact location on the device
     Info (169086): Pin Zlowout not assigned to an exact location on the device
     Info (169086): Pin Zhighout not assigned to an exact location on the device
     Info (169086): Pin HIout not assigned to an exact location on the device
     Info (169086): Pin LOout not assigned to an exact location on the device
-    Info (169086): Pin clk not assigned to an exact location on the device
-    Info (169086): Pin Zin not assigned to an exact location on the device
     Info (169086): Pin LOin not assigned to an exact location on the device
     Info (169086): Pin HIin not assigned to an exact location on the device
+    Info (169086): Pin PCin not assigned to an exact location on the device
     Info (169086): Pin control[0] not assigned to an exact location on the device
     Info (169086): Pin control[1] not assigned to an exact location on the device
     Info (169086): Pin control[2] not assigned to an exact location on the device
@@ -5696,8 +5697,8 @@ Info (171121): Fitter preparation operations ending: elapsed time is 00:00:01
 Error (171000): Can't fit design in device
 Error: Quartus II 64-Bit Fitter was unsuccessful. 2 errors, 4 warnings
     Error: Peak virtual memory: 4788 megabytes
-    Error: Processing ended: Thu Mar 05 01:32:54 2020
-    Error: Elapsed time: 00:00:07
+    Error: Processing ended: Mon Mar 09 21:50:26 2020
+    Error: Elapsed time: 00:00:06
     Error: Total CPU time (on all processors): 00:00:06
 
 

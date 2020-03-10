@@ -7,14 +7,14 @@ valu
 I]Ym0UVS3KdHWM5MA;gbP22
 VO8KgDLZD[[enjJE]DMSoJ3
 Z1 dD:\Elec_374\Virtual-Processor\simulation\modelsim
-Z2 w1583382941
+Z2 w1583386541
 Z3 8D:/Elec_374/Virtual-Processor/ALU.v
 Z4 FD:/Elec_374/Virtual-Processor/ALU.v
 L0 203
 Z5 OV;L;10.1d;51
 r1
 31
-Z6 !s108 1583390259.721000
+Z6 !s108 1583805042.885000
 Z7 !s107 D:/Elec_374/Virtual-Processor/ALU.v|
 Z8 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Elec_374/Virtual-Processor|D:/Elec_374/Virtual-Processor/ALU.v|
 Z9 o-vlog01compat -work work -O0
@@ -47,7 +47,7 @@ vdataPath
 I]`GWQ3MLA`n7@5enFG6BU3
 V;FRz2hm^]1WB?ogFU9:1f2
 R1
-w1583388372
+w1583801696
 8D:/Elec_374/Virtual-Processor/Datapath.v
 FD:/Elec_374/Virtual-Processor/Datapath.v
 L0 3
@@ -60,25 +60,25 @@ ndata@path
 !i10b 1
 !s100 Ozn:O>N><XS4beBFD5`XG0
 !s85 0
-!s108 1583390259.998000
+!s108 1583805043.143000
 !s107 D:/Elec_374/Virtual-Processor/Datapath.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Elec_374/Virtual-Processor|D:/Elec_374/Virtual-Processor/Datapath.v|
 !s101 -O0
 vdatapath_test
 !i10b 1
-!s100 [cBZWFF71iZXX`fjZ;FIO0
-IZ<IaKh57;F6DgmkBn_OfP0
+!s100 ?QBjT<gR^V8j=j^@2Z7O]3
+I<Aj9lLOzPzo0Acj`f`g3R1
 VCQ]B;N]ghP[KcYbfo3F<23
 R1
-w1583390232
+w1583804324
 8D:/Elec_374/Virtual-Processor/datapath_test.v
 FD:/Elec_374/Virtual-Processor/datapath_test.v
-L0 3
+L0 2
 R5
 r1
 !s85 0
 31
-!s108 1583390260.080000
+!s108 1583805043.202000
 !s107 D:/Elec_374/Virtual-Processor/datapath_test.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Elec_374/Virtual-Processor|D:/Elec_374/Virtual-Processor/datapath_test.v|
 !s101 -O0
@@ -100,7 +100,7 @@ R10
 !i10b 1
 !s100 N8oA=gCehVRK_DK=HeLJ21
 !s85 0
-!s108 1583390259.564000
+!s108 1583805042.765000
 !s107 D:/Elec_374/Virtual-Processor/encoder_32_to_5.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Elec_374/Virtual-Processor|D:/Elec_374/Virtual-Processor/encoder_32_to_5.v|
 !s101 -O0
@@ -128,7 +128,7 @@ vMD_Mux
 INW3We=Oo3`?3d:8L6O]>]0
 Vf:M6RVBXJOA5KFJWz:Lj33
 R1
-w1583387179
+w1583390779
 8D:/Elec_374/Virtual-Processor/MD_Mux.v
 FD:/Elec_374/Virtual-Processor/MD_Mux.v
 L0 1
@@ -141,7 +141,7 @@ R10
 !i10b 1
 !s100 Y:j6PO5NFN_z[F2=DGhW13
 !s85 0
-!s108 1583390259.501000
+!s108 1583805042.709000
 !s107 D:/Elec_374/Virtual-Processor/MD_Mux.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Elec_374/Virtual-Processor|D:/Elec_374/Virtual-Processor/MD_Mux.v|
 !s101 -O0
@@ -149,14 +149,14 @@ vmdr_reg
 IzIL@Xj7HGoDh`SmB=9_;P3
 V4A2b4GkJSld5j5_^@<dNP0
 R1
-Z11 w1583389936
+Z11 w1583393536
 Z12 8D:/Elec_374/Virtual-Processor/REG32_MDR.v
 Z13 FD:/Elec_374/Virtual-Processor/REG32_MDR.v
 L0 25
 R5
 r1
 31
-Z14 !s108 1583390259.906000
+Z14 !s108 1583805043.055000
 Z15 !s107 D:/Elec_374/Virtual-Processor/REG32_MDR.v|
 Z16 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Elec_374/Virtual-Processor|D:/Elec_374/Virtual-Processor/REG32_MDR.v|
 R9
@@ -166,10 +166,10 @@ R10
 !s85 0
 !s101 -O0
 vMux_32_to_1
-IlcY8HofQ@?]3cn<7coY<;1
+IzJF<nc=^P`OAGbIajF0U_0
 VGeE>GE`WR[C4CA_IAjF<O0
 R1
-R2
+w1583804984
 8D:/Elec_374/Virtual-Processor/Mux_32_to_1.v
 FD:/Elec_374/Virtual-Processor/Mux_32_to_1.v
 L0 1
@@ -180,9 +180,9 @@ R9
 R10
 n@mux_32_to_1
 !i10b 1
-!s100 G19JJe39CBO:<98[GFIcJ2
+!s100 @`a0?e5]S7U9X_:Tf3Rb53
 !s85 0
-!s108 1583390259.658000
+!s108 1583805042.823000
 !s107 D:/Elec_374/Virtual-Processor/Mux_32_to_1.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Elec_374/Virtual-Processor|D:/Elec_374/Virtual-Processor/Mux_32_to_1.v|
 !s101 -O0

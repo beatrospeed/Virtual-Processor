@@ -1,4 +1,3 @@
-
 `timescale 1ns/10ps module 
 datapath_test;     
          
@@ -36,19 +35,19 @@ dataPath DUT(PCout, Zlowout, MDRout, R2out, R4out, MARin, Zin, PCin, MDRin, IRin
 	R0Val,R1Val,R2Val,R3Val,R4Val,R5Val,R6Val,R7Val,R8Val,R9Val,R10Val,R11Val,R12Val,R13Val,R14Val,R15Val,bus,MDRval,mux_data_out
 );
  
- 
+
 // add test logic here 
 initial      
 begin        
 	Clock = 0;        
-	forever #10 Clock = ~ Clock; 
+	forever #20 Clock = ~ Clock; 
 end 
-
+/*
 initial
 begin
 	reset <= 1;
 	#5 reset <= 0;
-	Mdatain <= 32'b1;
+	Mdatain <= 32'b101010;
 	#20 Read <= 1;
 	#5 MDRin <= 1;
 	#5 MDRout <= 1;
@@ -57,8 +56,8 @@ begin
 	#5 MDRin <= 0;
 	
 end
-
-/* 
+*/
+ 
 always @(posedge Clock) // finite state machine;
  begin  
  case (Present_state)   
@@ -90,30 +89,34 @@ end
 Reg_load1a: begin
 Mdatain <= 32'h00000022;
 Read = 0; MDRin = 0; // the first zero is there for completeness
-#10 Read <= 1; MDRin <= 1;
-#15 Read <= 0; MDRin <= 0;
+#10 Read <= 1; 
+#10 MDRin <= 1;
+//#25 Read <= 0; MDRin <= 0;
 end
  Reg_load1b: begin
- #10 MDRout <= 1; R2in <= 1;
+ #10 MDRout <= 1; R2in <= 1;//55
  #15 MDRout <= 0; R2in <= 0; // initialize R2 with the value $22
+ #25 Read <= 0; MDRin <= 0;
 end
 Reg_load2a: begin
 Mdatain <= 32'h00000024;
 #10 Read <= 1; MDRin <= 1;
-#15 Read <= 0; MDRin <= 0;
+//#15 Read <= 0; MDRin <= 0;
 end
  Reg_load2b: begin
- #10 MDRout <= 1; R4in <= 1;
+ #10 MDRout <= 1; R4in <= 1;//105
  #15 MDRout <= 0; R4in <= 0; // initialize R4 with the value $24
+ #15 Read <= 0; MDRin <= 0;
 end
 Reg_load3a: begin
 Mdatain <= 32'h00000026;
 #10 Read <= 1; MDRin <= 1;
-#15 Read <= 0; MDRin <= 0;
+//#15 Read <= 0; MDRin <= 0;
 end
  Reg_load3b: begin
- #10 MDRout <= 1; R5in <= 1;
+ #10 MDRout <= 1; R5in <= 1; //155
  #15 MDRout <= 0; R5in <= 0; // initialize R5 with the value $26
+ #15 Read <= 0; MDRin <= 0;
 end
 T0: begin // see if you need to de-assert these signals
 PCout <= 1; MARin <= 1; IncPC <= 1; Zin <= 1;
@@ -136,5 +139,5 @@ T5: begin
 Zlowout <= 1; R5in <= 1;
 	end
    endcase
-  end */
+  end 
 endmodule

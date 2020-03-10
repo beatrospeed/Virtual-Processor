@@ -83,10 +83,10 @@
 # Loading work.thirtytwo_bit_subtractor
 # Loading work.thirtytwo_bit_booth_algorithm
 # Loading work.nonrestoring_divison_algo
-# ** Warning: (vsim-3015) D:/Elec_374/Virtual-Processor/datapath_test.v(37): [PCDPC] - Port size (1 or 1) does not match connection size (4) for port 'R5in'. The port definition is at: D:/Elec_374/Virtual-Processor/Datapath.v(7).
+# ** Warning: (vsim-3015) D:/Elec_374/Virtual-Processor/datapath_test.v(36): [PCDPC] - Port size (1 or 1) does not match connection size (4) for port 'R5in'. The port definition is at: D:/Elec_374/Virtual-Processor/Datapath.v(7).
 # 
 #         Region: /datapath_test/DUT
-# ** Warning: (vsim-3015) D:/Elec_374/Virtual-Processor/datapath_test.v(37): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'control'. The port definition is at: D:/Elec_374/Virtual-Processor/Datapath.v(8).
+# ** Warning: (vsim-3015) D:/Elec_374/Virtual-Processor/datapath_test.v(36): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'control'. The port definition is at: D:/Elec_374/Virtual-Processor/Datapath.v(8).
 # 
 #         Region: /datapath_test/DUT
 # ** Warning: (vsim-3015) D:/Elec_374/Virtual-Processor/ALU.v(103): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'c_0'. The port definition is at: D:/Elec_374/Virtual-Processor/ALU.v(84).
@@ -110,10 +110,10 @@
 # 
 #           File in use by: Christopher Masloub  Hostname: LAPTOP-R5L73M9C  ProcessID: 524
 # 
-#           Attempting to use alternate WLF file "./wlftgi3c7d".
+#           Attempting to use alternate WLF file "./wlftx5vtwf".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
 # 
-#           Using alternate file: ./wlftgi3c7d
+#           Using alternate file: ./wlftx5vtwf
 # 
 # view structure
 # .main_pane.structure.interior.cs.body.struct
