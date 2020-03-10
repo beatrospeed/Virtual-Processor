@@ -88,7 +88,7 @@ PCout <= 0; Zlowout <= 0; MDRout <= 0; // initialize the signals
  R5in <= 0; R2in <= 0; R4in <= 0; Mdatain <= 32'b0;
 end
 Reg_load1a: begin
-Mdatain <= 32'b1111;
+Mdatain <= 32'b100000;
 Read = 0; MDRin = 0; // the first zero is there for completeness
 #10 Read <= 1; MDRin <= 1;
 #25 Read <= 0; MDRin <= 0;
@@ -99,7 +99,7 @@ end
 
 end
 Reg_load2a: begin
-Mdatain <= 32'b0;
+Mdatain <= 32'b1000000;
 #40 Read <= 1; MDRin <= 1;
 //#15 Read <= 0; MDRin <= 0;
 end
@@ -119,7 +119,7 @@ end
  #15 Read <= 0; MDRin <= 0;
 end
 T0: begin // see if you need to de-assert these signals
-//PCout <= 1; MARin <= 1; IncPC <= 1; Zin <= 1;
+PCout <= 1; IncPC <= 1; Zin <= 1;
 end
 T1: begin
 Zlowout <= 1; PCin <= 1; Read <= 1; MDRin <= 1;
@@ -131,6 +131,7 @@ end
 
 T3: begin
 R2out <= 1; Yin <= 1;
+#5 R2out <= 0; Yin <= 0;
 end
 T4: begin
 R4out <= 1; control <= 10; Zin <= 1;
