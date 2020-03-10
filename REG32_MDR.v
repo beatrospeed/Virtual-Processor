@@ -11,7 +11,7 @@ module Reg32(input [31:0] D, input clock, input clear, input load, output reg [3
 endmodule 
 
 module Reg64(input [63:0] D, input clock, input clear, input load, output reg [63:0] Q); 
-	always @(posedge clock)
+	always @(*)
 		if(clear)
 		begin
 			Q <= 64'b0; 

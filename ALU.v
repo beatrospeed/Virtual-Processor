@@ -100,7 +100,7 @@ module thirtytwo_bit_twos_complement(output [31:0] complement, input [31:0] num)
 	wire [31:0] numComplement;
 	assign numComplement = ~num;
 
-	thirtytwo_bit_carry_adder ttb(complement, numComplement, 32'b00000000000000000000000000000001, 0);
+	thirtytwo_bit_carry_adder ttb(complement, numComplement, 32'b000000000000000000000001, 0);
 	endmodule
 
 module thirtytwo_bit_subtractor(output [31:0] out, input [31:0] num1, input [31:0] num2);
@@ -256,7 +256,7 @@ module alu(output reg [63:0] z_Output, input [31:0] reg1, input [31:0] reg2, inp
 		else if(control == 9)
 			z_Output[31:0] <= complement;
 		else if(control == 10) begin
-			z_Output[31:0] <= reg1 & reg2;
+			z_Output[31:0] <= (reg1 & reg2);
 		end
 		else if(control == 11) begin
 			z_Output[31:0] <= ~reg2;

@@ -13,8 +13,8 @@ module dataPath(
 	R0in, R1in, R3in, R6in, R7in, R8in,
 	R9in, R10in, R11in, R12in, R13in, R14in, R15in, HIin, LOin,
 	Zhighin, Zlowin, InPortin, Cin, reset,
-	output wire [31:0] R0Val,R1Val,R2Val,R3Val,R4Val,R5Val,R6Val,R7Val,R8Val,R9Val,R10Val,R11Val,R12Val,R13Val,R14Val,R15Val,bus,MDRval,mux_data_out
-	
+	output wire [31:0] R0Val,R1Val,R2Val,R3Val,R4Val,R5Val,R6Val,R7Val,R8Val,R9Val,R10Val,R11Val,R12Val,R13Val,R14Val,R15Val,bus,MDRval,mux_data_out,YVal,
+	output wire [63:0] ZVal,ALUVal_D
 );
 	
 	
@@ -26,11 +26,10 @@ module dataPath(
 	
 	
 	 
-	wire [63:0] ZVal;
+	
 	wire [31:0] IRval,HIval, LOval;
 	wire [4:0] Select_D; 
-	wire [31:0] YVal, InPort_D, OutPort_D, MAR_D, PCVal,CVal;//, mux_data_out; 
-	wire [63:0] ALUVal_D; 
+	wire [31:0]  InPort_D, OutPort_D, MAR_D, PCVal,CVal;//, mux_data_out;  
 	
 	
 	
