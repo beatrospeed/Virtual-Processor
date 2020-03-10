@@ -104,10 +104,10 @@
 # 
 #           File in use by: Christopher Masloub  Hostname: LAPTOP-R5L73M9C  ProcessID: 524
 # 
-#           Attempting to use alternate WLF file "./wlft9snmnm".
+#           Attempting to use alternate WLF file "./wlftyf4md8".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
 # 
-#           Using alternate file: ./wlft9snmnm
+#           Using alternate file: ./wlftyf4md8
 # 
 # view structure
 # .main_pane.structure.interior.cs.body.struct

@@ -7,14 +7,14 @@ valu
 Ig1eBF0aEclODYWfW<[Iee0
 VO8KgDLZD[[enjJE]DMSoJ3
 Z1 dD:\Elec_374\Virtual-Processor\simulation\modelsim
-Z2 w1583811934
+Z2 w1583818239
 Z3 8D:/Elec_374/Virtual-Processor/ALU.v
 Z4 FD:/Elec_374/Virtual-Processor/ALU.v
 L0 203
 Z5 OV;L;10.1d;51
 r1
 31
-Z6 !s108 1583816273.291000
+Z6 !s108 1583819472.062000
 Z7 !s107 D:/Elec_374/Virtual-Processor/ALU.v|
 Z8 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Elec_374/Virtual-Processor|D:/Elec_374/Virtual-Processor/ALU.v|
 Z9 o-vlog01compat -work work -O0
@@ -47,7 +47,7 @@ vdataPath
 I1R]Y[zil=D1W]EbVjag701
 VPm??E8K1G>f<7T>7^1O2d2
 R1
-w1583811429
+R2
 8D:/Elec_374/Virtual-Processor/Datapath.v
 FD:/Elec_374/Virtual-Processor/Datapath.v
 L0 3
@@ -60,17 +60,17 @@ ndata@path
 !i10b 1
 !s100 :UbOaci>GzciRi1Z]K6Zd2
 !s85 0
-!s108 1583816273.544000
+!s108 1583819472.597000
 !s107 D:/Elec_374/Virtual-Processor/Datapath.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Elec_374/Virtual-Processor|D:/Elec_374/Virtual-Processor/Datapath.v|
 !s101 -O0
 vdatapath_test
 !i10b 1
-!s100 o3QXkzOC<LPDPe<H8zW4z3
-Io6PDVUfE8FTmF2O[h2FW00
+!s100 ?M_CJ?VbXLnJ2L7BlAhYV2
+II7@B4_<eV52G30Mo^dHWk1
 VCQ]B;N]ghP[KcYbfo3F<23
 R1
-w1583816259
+w1583819442
 8D:/Elec_374/Virtual-Processor/datapath_test.v
 FD:/Elec_374/Virtual-Processor/datapath_test.v
 L0 2
@@ -78,7 +78,7 @@ R5
 r1
 !s85 0
 31
-!s108 1583816273.606000
+!s108 1583819472.759000
 !s107 D:/Elec_374/Virtual-Processor/datapath_test.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Elec_374/Virtual-Processor|D:/Elec_374/Virtual-Processor/datapath_test.v|
 !s101 -O0
@@ -88,7 +88,7 @@ vencoder_32_to_5
 I?IlRJX;o4A]T@;G<6TGlG2
 VYczETH9cgFeF>C]_ngNjD2
 R1
-w1583386541
+R2
 8D:/Elec_374/Virtual-Processor/encoder_32_to_5.v
 FD:/Elec_374/Virtual-Processor/encoder_32_to_5.v
 L0 1
@@ -100,7 +100,7 @@ R10
 !i10b 1
 !s100 N8oA=gCehVRK_DK=HeLJ21
 !s85 0
-!s108 1583816273.155000
+!s108 1583819471.807000
 !s107 D:/Elec_374/Virtual-Processor/encoder_32_to_5.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Elec_374/Virtual-Processor|D:/Elec_374/Virtual-Processor/encoder_32_to_5.v|
 !s101 -O0
@@ -128,7 +128,7 @@ vMD_Mux
 INW3We=Oo3`?3d:8L6O]>]0
 Vf:M6RVBXJOA5KFJWz:Lj33
 R1
-w1583390779
+R2
 8D:/Elec_374/Virtual-Processor/MD_Mux.v
 FD:/Elec_374/Virtual-Processor/MD_Mux.v
 L0 1
@@ -141,7 +141,7 @@ R10
 !i10b 1
 !s100 Y:j6PO5NFN_z[F2=DGhW13
 !s85 0
-!s108 1583816273.095000
+!s108 1583819471.650000
 !s107 D:/Elec_374/Virtual-Processor/MD_Mux.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Elec_374/Virtual-Processor|D:/Elec_374/Virtual-Processor/MD_Mux.v|
 !s101 -O0
@@ -149,16 +149,16 @@ vmdr_reg
 IzIL@Xj7HGoDh`SmB=9_;P3
 V4A2b4GkJSld5j5_^@<dNP0
 R1
-Z11 w1583808257
-Z12 8D:/Elec_374/Virtual-Processor/REG32_MDR.v
-Z13 FD:/Elec_374/Virtual-Processor/REG32_MDR.v
+R2
+Z11 8D:/Elec_374/Virtual-Processor/REG32_MDR.v
+Z12 FD:/Elec_374/Virtual-Processor/REG32_MDR.v
 L0 25
 R5
 r1
 31
-Z14 !s108 1583816273.464000
-Z15 !s107 D:/Elec_374/Virtual-Processor/REG32_MDR.v|
-Z16 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Elec_374/Virtual-Processor|D:/Elec_374/Virtual-Processor/REG32_MDR.v|
+Z13 !s108 1583819472.436000
+Z14 !s107 D:/Elec_374/Virtual-Processor/REG32_MDR.v|
+Z15 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Elec_374/Virtual-Processor|D:/Elec_374/Virtual-Processor/REG32_MDR.v|
 R9
 R10
 !i10b 1
@@ -169,7 +169,7 @@ vMux_32_to_1
 IzJF<nc=^P`OAGbIajF0U_0
 VGeE>GE`WR[C4CA_IAjF<O0
 R1
-w1583804984
+R2
 8D:/Elec_374/Virtual-Processor/Mux_32_to_1.v
 FD:/Elec_374/Virtual-Processor/Mux_32_to_1.v
 L0 1
@@ -182,7 +182,7 @@ n@mux_32_to_1
 !i10b 1
 !s100 @`a0?e5]S7U9X_:Tf3Rb53
 !s85 0
-!s108 1583816273.218000
+!s108 1583819471.932000
 !s107 D:/Elec_374/Virtual-Processor/Mux_32_to_1.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Elec_374/Virtual-Processor|D:/Elec_374/Virtual-Processor/Mux_32_to_1.v|
 !s101 -O0
@@ -210,16 +210,16 @@ vReg32
 ISKIBdHTKn2=Bn<7Pc>nL=2
 Vd8MSK>MP5W4CY2;N?`2R_1
 R1
+R2
 R11
 R12
-R13
 L0 1
 R5
 r1
 31
+R13
 R14
 R15
-R16
 R9
 R10
 n@reg32
@@ -231,16 +231,16 @@ vReg64
 I^7BJ1<b`o_cXeUVzQH`oR3
 V3:05]=OSQhVMbUeifBcRY2
 R1
+R2
 R11
 R12
-R13
 L0 13
 R5
 r1
 31
+R13
 R14
 R15
-R16
 R9
 R10
 n@reg64
