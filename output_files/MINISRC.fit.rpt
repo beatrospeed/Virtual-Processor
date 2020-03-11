@@ -1,5 +1,5 @@
 Fitter report for MINISRC
-Mon Mar 09 23:42:30 2020
+Wed Mar 11 19:40:44 2020
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -55,7 +55,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Fitter Summary                                                                       ;
 +------------------------------------+-------------------------------------------------+
-; Fitter Status                      ; Failed - Mon Mar 09 23:42:30 2020               ;
+; Fitter Status                      ; Failed - Wed Mar 11 19:40:44 2020               ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; MINISRC                                         ;
 ; Top-level Entity Name              ; dataPath                                        ;
@@ -6491,12 +6491,12 @@ Critical Warning (169085): No exact pin location assignment(s) for 861 pins of 8
     Info (169086): Pin HIin not assigned to an exact location on the device
     Info (169086): Pin PCin not assigned to an exact location on the device
 Error (169282): There are 768 IO output pads in the design, but only 331 IO output pad locations available on the device.
-Info (171121): Fitter preparation operations ending: elapsed time is 00:00:01
+Info (171121): Fitter preparation operations ending: elapsed time is 00:00:02
 Error (171000): Can't fit design in device
 Error: Quartus II 64-Bit Fitter was unsuccessful. 2 errors, 4 warnings
     Error: Peak virtual memory: 4789 megabytes
-    Error: Processing ended: Mon Mar 09 23:42:31 2020
-    Error: Elapsed time: 00:00:06
-    Error: Total CPU time (on all processors): 00:00:06
+    Error: Processing ended: Wed Mar 11 19:40:45 2020
+    Error: Elapsed time: 00:00:14
+    Error: Total CPU time (on all processors): 00:00:13
 
 

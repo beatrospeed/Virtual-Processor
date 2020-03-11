@@ -29,8 +29,8 @@ module dataPath(
 	
 	wire [31:0] IRval,HIval, LOval;
 	wire [4:0] Select_D; 
-	wire [31:0]  InPort_D, OutPort_D, MAR_D, PCVal,CVal;//, mux_data_out;  
-	
+	wire [31:0]  InPort_D, OutPort_D, PCVal,CVal;//, mux_data_out;  
+	wire [8:0]  MAR_D; // THis is 9 bits as specified by the CPU phase 2 Instructions
 	
 	
    Reg32 HI(bus, clk, reset, HIin, HIval); 
@@ -38,11 +38,17 @@ module dataPath(
    Reg32 Y(bus, clk, reset, Yin, YVal);
    Reg64 Z(ALUVal_D, clk, reset, Zin, ZVal);
    
+	
 	MD_Mux md_mux(mux_data_out, bus, Mdatain, read);
 	Reg32  mdrReg(mux_data_out,clk,reset,MDRin, MDRval);
+	
 	Reg32 InPort(32'b0, clk, reset, InPortin, InPort_D);
    Reg32 IR(bus, clk, reset, IRin, IRval);
    Reg32 PC(bus, clk, reset, PCin, PCVal);
+	
+	Reg32 MAR(bus, clk, reset, MARin, MAR_D);
+	
+	
    Reg32 R0(bus, clk, reset, R0in, R0Val); 
    Reg32 R1(bus, clk, reset, R1in, R1Val); 
    Reg32 R2(bus, clk, reset, R2in, R2Val); 
