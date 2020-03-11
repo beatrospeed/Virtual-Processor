@@ -17,9 +17,10 @@ reg R0out, R1out, R3out, R5out, R6out, R7out, R8out, R9out,
 	R9in, R10in, R11in, R12in, R13in, R14in, R15in, HIin, LOin,
 	Zhighin, Zlowin, InPortin, Cin, reset; 
 
-wire [31:0] R0Val,R1Val,R2Val,R3Val,R4Val,R5Val,R6Val,R7Val,R8Val,R9Val,R10Val,R11Val,R12Val,R13Val,R14Val,R15Val,bus,MDRval,mux_data_out,YVal;
+wire [31:0] R0Val,R1Val,R2Val,R3Val,R4Val,R5Val,bus,MDRval,mux_data_out,YVal;
 wire [63:0] ZVal,ALUVal_D;
-	 
+wire [31:0] R6Val,R7Val,R8Val,R9Val,R10Val,R11Val,R12Val,R13Val,R14Val,R15Val;
+
 parameter  Default = 4'b0000, Reg_load1a = 4'b0001, Reg_load1b = 4'b0010, 
 Reg_load2a = 4'b0011,Reg_load2b = 4'b0100, Reg_load3a = 4'b0101,
  Reg_load3b = 4'b0110, T0 = 4'b0111, T1 = 4'b1000, T2 = 4'b1001,
@@ -99,7 +100,7 @@ end
 
 end
 Reg_load2a: begin
-Mdatain <= 32'b1111;
+Mdatain <= 32'b101;
 #40 Read <= 1; MDRin <= 1;
 //#15 Read <= 0; MDRin <= 0;
 end
@@ -135,12 +136,12 @@ R2out <= 1; Yin <= 1;
 #10 R2out <= 0; Yin <= 0;
 end
 T4: begin
-R4out <= 1; control <= 3; Zin <= 1;
+R4out <= 1; control <=0; Zin <= 1;
 
 end
 T5: begin
 R4out<=0;
-Zlowout <= 1; R5in <= 1;
+Zlowout <= 1; R5in <= 9;
 #10 Zlowout <= 0; R5in <= 0;
 
 	end
