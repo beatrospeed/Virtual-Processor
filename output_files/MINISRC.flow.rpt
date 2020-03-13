@@ -1,5 +1,5 @@
 Flow report for MINISRC
-Thu Mar 12 23:58:37 2020
+Fri Mar 13 01:50:32 2020
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -40,7 +40,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Flow Summary                                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Flow Status                        ; Successful - Thu Mar 12 23:58:37 2020           ;
+; Flow Status                        ; Successful - Fri Mar 13 01:50:32 2020           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; MINISRC                                         ;
 ; Top-level Entity Name              ; RAM                                             ;
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 03/12/2020 23:58:37 ;
+; Start date & time ; 03/13/2020 01:50:31 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; MINISRC             ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ applicable agreement for further details.
 +--------------------------------------+---------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                      ; Value                                 ; Default Value ; Entity Name ; Section Id     ;
 +--------------------------------------+---------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID                ; 255543653867349.158407191711116       ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID                ; 255543653867349.158407863118316       ; --            ; --          ; --             ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --          ; RAM_tb         ;
 ; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; RAM_tb                                ; --            ; --          ; eda_simulation ;
 ; EDA_OUTPUT_DATA_FORMAT               ; Verilog Hdl                           ; --            ; --          ; eda_simulation ;
@@ -104,8 +104,8 @@ applicable agreement for further details.
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name            ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Elaboration ; 00:00:00     ; 1.0                     ; 4576 MB             ; 00:00:01                           ;
-; Total                  ; 00:00:00     ; --                      ; --                  ; 00:00:01                           ;
+; Analysis & Elaboration ; 00:00:01     ; 1.0                     ; 4576 MB             ; 00:00:01                           ;
+; Total                  ; 00:00:01     ; --                      ; --                  ; 00:00:01                           ;
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

@@ -1,4 +1,4 @@
-module encoder_32_to_5(output reg [4:0] SelectOut, input R0out,input R1out,input R2out,input R3out,input R4out,input R5out,input R6out,input R7out,input R8out,input R9out,input R10out,input R11out,input R12out,input R13out,input R14out,input R15out,input HIout,input LOout,input Zhighout,input Zlowout,input PCout,input MDRout,input In_Portout,input Cout);
+module encoder_32_to_5(output reg [4:0] SelectOut, input R0out,input R1out,input R2out,input R3out,input R4out,input R5out,input R6out,input R7out,input R8out,input R9out,input R10out,input R11out,input R12out,input R13out,input R14out,input R15out,input HIout,input LOout,input Zhighout,input Zlowout,input PCout,input MDRout,input In_Portout,input Cout, input MARout);
 
 always@(*)
 	begin 
@@ -26,6 +26,7 @@ always@(*)
 	else if(MDRout) SelectOut =21;
 	else if(In_Portout) SelectOut =22;
 	else if(Cout) SelectOut =23;
+	
 	end
 endmodule
 
