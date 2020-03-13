@@ -1,5 +1,5 @@
 Flow report for MINISRC
-Wed Mar 11 19:40:56 2020
+Thu Mar 12 23:58:37 2020
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -40,10 +40,10 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Flow Summary                                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Flow Status                        ; Successful - Wed Mar 11 19:40:56 2020           ;
+; Flow Status                        ; Successful - Thu Mar 12 23:58:37 2020           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; MINISRC                                         ;
-; Top-level Entity Name              ; dataPath                                        ;
+; Top-level Entity Name              ; RAM                                             ;
 ; Family                             ; Cyclone III                                     ;
 ; Device                             ; EP3C16F484C6                                    ;
 ; Timing Models                      ; Final                                           ;
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 03/11/2020 19:40:54 ;
+; Start date & time ; 03/12/2020 23:58:37 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; MINISRC             ;
 +-------------------+---------------------+
@@ -75,31 +75,27 @@ applicable agreement for further details.
 +--------------------------------------+---------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                      ; Value                                 ; Default Value ; Entity Name ; Section Id     ;
 +--------------------------------------+---------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID                ; 247207024892228.158397005403144       ; --            ; --          ; --             ;
-; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --          ; datapath_test  ;
-; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --          ; reg_tb         ;
-; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; datapath_test                         ; --            ; --          ; eda_simulation ;
+; COMPILER_SIGNATURE_ID                ; 255543653867349.158407191711116       ; --            ; --          ; --             ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --          ; RAM_tb         ;
+; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; RAM_tb                                ; --            ; --          ; eda_simulation ;
 ; EDA_OUTPUT_DATA_FORMAT               ; Verilog Hdl                           ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                  ; ModelSim-Altera (Verilog)             ; <None>        ; --          ; --             ;
 ; EDA_TEST_BENCH_ENABLE_STATUS         ; TEST_BENCH_MODE                       ; --            ; --          ; eda_simulation ;
-; EDA_TEST_BENCH_FILE                  ; datapath_test.v                       ; --            ; --          ; datapath_test  ;
-; EDA_TEST_BENCH_FILE                  ; reg_tb.v                              ; --            ; --          ; reg_tb         ;
-; EDA_TEST_BENCH_MODULE_NAME           ; datapath_test                         ; --            ; --          ; datapath_test  ;
-; EDA_TEST_BENCH_MODULE_NAME           ; reg_tb                                ; --            ; --          ; reg_tb         ;
-; EDA_TEST_BENCH_NAME                  ; datapath_test                         ; --            ; --          ; eda_simulation ;
-; EDA_TEST_BENCH_NAME                  ; reg_tb                                ; --            ; --          ; eda_simulation ;
-; EDA_TEST_BENCH_RUN_SIM_FOR           ; 500 ns                                ; --            ; --          ; datapath_test  ;
+; EDA_TEST_BENCH_FILE                  ; RAM_tb.v                              ; --            ; --          ; RAM_tb         ;
+; EDA_TEST_BENCH_MODULE_NAME           ; RAM_tb                                ; --            ; --          ; RAM_tb         ;
+; EDA_TEST_BENCH_NAME                  ; RAM_tb                                ; --            ; --          ; eda_simulation ;
+; EDA_TEST_BENCH_RUN_SIM_FOR           ; 500 ms                                ; --            ; --          ; RAM_tb         ;
 ; EDA_TIME_SCALE                       ; 1 ps                                  ; --            ; --          ; eda_simulation ;
 ; MAX_CORE_JUNCTION_TEMP               ; 85                                    ; --            ; --          ; --             ;
 ; MIN_CORE_JUNCTION_TEMP               ; 0                                     ; --            ; --          ; --             ;
 ; NOMINAL_CORE_SUPPLY_VOLTAGE          ; 1.2V                                  ; --            ; --          ; --             ;
-; PARTITION_COLOR                      ; 16764057                              ; --            ; dataPath    ; Top            ;
-; PARTITION_FITTER_PRESERVATION_LEVEL  ; PLACEMENT_AND_ROUTING                 ; --            ; dataPath    ; Top            ;
-; PARTITION_NETLIST_TYPE               ; SOURCE                                ; --            ; dataPath    ; Top            ;
+; PARTITION_COLOR                      ; 16764057                              ; --            ; RAM         ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL  ; PLACEMENT_AND_ROUTING                 ; --            ; RAM         ; Top            ;
+; PARTITION_NETLIST_TYPE               ; SOURCE                                ; --            ; RAM         ; Top            ;
 ; POWER_BOARD_THERMAL_MODEL            ; None (CONSERVATIVE)                   ; --            ; --          ; --             ;
 ; POWER_PRESET_COOLING_SOLUTION        ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW ; --            ; --          ; --             ;
 ; PROJECT_OUTPUT_DIRECTORY             ; output_files                          ; --            ; --          ; --             ;
-; TOP_LEVEL_ENTITY                     ; dataPath                              ; MINISRC       ; --          ; --             ;
+; TOP_LEVEL_ENTITY                     ; RAM                                   ; MINISRC       ; --          ; --             ;
 +--------------------------------------+---------------------------------------+---------------+-------------+----------------+
 
 
@@ -108,8 +104,8 @@ applicable agreement for further details.
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name            ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Elaboration ; 00:00:03     ; 1.0                     ; 4593 MB             ; 00:00:02                           ;
-; Total                  ; 00:00:03     ; --                      ; --                  ; 00:00:02                           ;
+; Analysis & Elaboration ; 00:00:00     ; 1.0                     ; 4576 MB             ; 00:00:01                           ;
+; Total                  ; 00:00:00     ; --                      ; --                  ; 00:00:01                           ;
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -118,7 +114,7 @@ applicable agreement for further details.
 +------------------------+------------------+-----------+------------+----------------+
 ; Module Name            ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
 +------------------------+------------------+-----------+------------+----------------+
-; Analysis & Elaboration ; DESKTOP-D9MMIA5  ; Windows 7 ; 6.2        ; x86_64         ;
+; Analysis & Elaboration ; LAPTOP-R5L73M9C  ; Windows 7 ; 6.2        ; x86_64         ;
 +------------------------+------------------+-----------+------------+----------------+
 
 
