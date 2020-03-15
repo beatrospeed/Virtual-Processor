@@ -26,7 +26,7 @@ module dataPath(
 	
 	
 	 
-	
+	wire [31:0] R0TempOut;
 	wire [31:0] IRval,HIval, LOval;
 	wire [4:0] Select_D; 
 	wire [31:0]  InPort_D, OutPort_D, PCVal,CVal;//, mux_data_out;  
@@ -49,7 +49,7 @@ module dataPath(
 	Reg32 MAR(bus, clk, reset, MARin, MAR_D);
 	
 	
-   Reg32 R0(bus, clk, reset, R0in, R0Val); 
+   Reg32 R0(bus, clk, reset, R0in, R0TempOut);   assign R0Val = ((~BAout) & R0TempOut);// based on schematic
    Reg32 R1(bus, clk, reset, R1in, R1Val); 
    Reg32 R2(bus, clk, reset, R2in, R2Val); 
    Reg32 R3(bus, clk, reset, R3in, R3Val); 

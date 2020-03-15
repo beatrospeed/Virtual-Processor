@@ -1,5 +1,5 @@
 Assembler report for MINISRC
-Tue Mar 03 23:29:43 2020
+Sun Mar 15 18:03:34 2020
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -10,7 +10,7 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   2. Assembler Summary
   3. Assembler Settings
   4. Assembler Generated Files
-  5. Assembler Device Options: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/output_files/MINISRC.sof
+  5. Assembler Device Options: D:/Elec_374/Virtual-Processor/output_files/MINISRC.sof
   6. Assembler Messages
 
 
@@ -37,9 +37,9 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Tue Mar 03 23:29:43 2020 ;
+; Assembler Status      ; Successful - Sun Mar 15 18:03:34 2020 ;
 ; Revision Name         ; MINISRC                               ;
-; Top-level Entity Name ; dataPath                              ;
+; Top-level Entity Name ; RAM                                   ;
 ; Family                ; Cyclone III                           ;
 ; Device                ; EP3C16F484C6                          ;
 +-----------------------+---------------------------------------+
@@ -77,24 +77,24 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------+----------+---------------+
 
 
-+------------------------------------------------------------------------------------------+
-; Assembler Generated Files                                                                ;
-+------------------------------------------------------------------------------------------+
-; File Name                                                                                ;
-+------------------------------------------------------------------------------------------+
-; C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/output_files/MINISRC.sof ;
-+------------------------------------------------------------------------------------------+
++--------------------------------------------------------+
+; Assembler Generated Files                              ;
++--------------------------------------------------------+
+; File Name                                              ;
++--------------------------------------------------------+
+; D:/Elec_374/Virtual-Processor/output_files/MINISRC.sof ;
++--------------------------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------+
-; Assembler Device Options: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/output_files/MINISRC.sof ;
-+----------------+---------------------------------------------------------------------------------------------------+
-; Option         ; Setting                                                                                           ;
-+----------------+---------------------------------------------------------------------------------------------------+
-; Device         ; EP3C16F484C6                                                                                      ;
-; JTAG usercode  ; 0x000C68A3                                                                                        ;
-; Checksum       ; 0x000C68A3                                                                                        ;
-+----------------+---------------------------------------------------------------------------------------------------+
++----------------------------------------------------------------------------------+
+; Assembler Device Options: D:/Elec_374/Virtual-Processor/output_files/MINISRC.sof ;
++----------------+-----------------------------------------------------------------+
+; Option         ; Setting                                                         ;
++----------------+-----------------------------------------------------------------+
+; Device         ; EP3C16F484C6                                                    ;
+; JTAG usercode  ; 0x000CEF1E                                                      ;
+; Checksum       ; 0x000CEF1E                                                      ;
++----------------+-----------------------------------------------------------------+
 
 
 +--------------------+
@@ -103,14 +103,14 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Assembler
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Tue Mar 03 23:29:41 2020
+    Info: Processing started: Sun Mar 15 18:03:33 2020
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off MINISRC -c MINISRC
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info: Quartus II 64-Bit Assembler was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 4553 megabytes
-    Info: Processing ended: Tue Mar 03 23:29:43 2020
-    Info: Elapsed time: 00:00:02
-    Info: Total CPU time (on all processors): 00:00:02
+    Info: Peak virtual memory: 4545 megabytes
+    Info: Processing ended: Sun Mar 15 18:03:34 2020
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
 
 
