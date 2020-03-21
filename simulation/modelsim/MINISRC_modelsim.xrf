@@ -8,6 +8,7 @@ source_file = 1, D:/Elec_374/Virtual-Processor/Datapath.v
 source_file = 1, D:/Elec_374/Virtual-Processor/RAM.v
 source_file = 1, D:/Elec_374/Virtual-Processor/RAM_tb.v
 source_file = 1, D:/Elec_374/Virtual-Processor/SelectAndEncode.v
+source_file = 1, D:/Elec_374/Virtual-Processor/CONFF.v
 source_file = 1, D:/Elec_374/Virtual-Processor/db/MINISRC.cbx.xml
 source_file = 1, c:/altera/13.0sp1/quartus/libraries/megafunctions/altsyncram.tdf
 source_file = 1, c:/altera/13.0sp1/quartus/libraries/megafunctions/stratix_ram_block.inc

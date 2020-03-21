@@ -10,54 +10,230 @@
 # ** Warning: Copied C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
 #          Updated modelsim.ini.
 # 
-# vlog -vlog01compat -work work +incdir+C:/Users/Christopher\ Masloub/Documents/GitHub/Virtual-Processor {C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/RAM.v}
+# vlog -vlog01compat -work work +incdir+D:/Elec_374/Virtual-Processor {D:/Elec_374/Virtual-Processor/MD_Mux.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module RAM
+# -- Compiling module MD_Mux
 # 
 # Top level modules:
-# 	RAM
-# 
-# vlog -vlog01compat -work work +incdir+C:/Users/Christopher\ Masloub/Documents/GitHub/Virtual-Processor {C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/RAM_tb.v}
+# 	MD_Mux
+# vlog -vlog01compat -work work +incdir+D:/Elec_374/Virtual-Processor {D:/Elec_374/Virtual-Processor/encoder_32_to_5.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module RAM_tb
+# -- Compiling module encoder_32_to_5
 # 
 # Top level modules:
-# 	RAM_tb
+# 	encoder_32_to_5
+# vlog -vlog01compat -work work +incdir+D:/Elec_374/Virtual-Processor {D:/Elec_374/Virtual-Processor/Mux_32_to_1.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module Mux_32_to_1
 # 
-# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneiii_ver -L rtl_work -L work -voptargs="+acc"  RAM_tb
-# vsim -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneiii_ver -L rtl_work -L work -voptargs=\"+acc\" -t 1ps RAM_tb 
-# Loading work.RAM_tb
-# Loading work.RAM
-# ** Warning: (vsim-3017) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/RAM_tb.v(48): [TFMPC] - Too few port connections. Expected 6, found 5.
+# Top level modules:
+# 	Mux_32_to_1
+# vlog -vlog01compat -work work +incdir+D:/Elec_374/Virtual-Processor {D:/Elec_374/Virtual-Processor/ALU.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module bit_stage_cell
+# -- Compiling module four_bit_adder
+# -- Compiling module sixteen_bit_carry_adder
+# -- Compiling module thirtytwo_bit_carry_adder
+# -- Compiling module thirtytwo_bit_twos_complement
+# -- Compiling module thirtytwo_bit_subtractor
+# -- Compiling module thirtytwo_bit_booth_algorithm
+# -- Compiling module nonrestoring_divison_algo
+# -- Compiling module alu
 # 
-#         Region: /RAM_tb/sram_test
-# ** Warning: (vsim-3722) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/RAM_tb.v(48): [TFMPC] - Missing connection for port 'read'.
+# Top level modules:
+# 	alu
+# vlog -vlog01compat -work work +incdir+D:/Elec_374/Virtual-Processor {D:/Elec_374/Virtual-Processor/REG32_MDR.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module Reg32
+# -- Compiling module Reg64
+# -- Compiling module mdr_reg
 # 
+# Top level modules:
+# 	Reg64
+# 	mdr_reg
+# vlog -vlog01compat -work work +incdir+D:/Elec_374/Virtual-Processor {D:/Elec_374/Virtual-Processor/Datapath.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module dataPath
+# 
+# Top level modules:
+# 	dataPath
+# vlog -vlog01compat -work work +incdir+D:/Elec_374/Virtual-Processor {D:/Elec_374/Virtual-Processor/SelectAndEncode.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module SelectEncode
+# 
+# Top level modules:
+# 	SelectEncode
+# 
+# vlog -vlog01compat -work work +incdir+D:/Elec_374/Virtual-Processor {D:/Elec_374/Virtual-Processor/datapath_test.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module datapath_test
+# 
+# Top level modules:
+# 	datapath_test
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneiii_ver -L rtl_work -L work -voptargs="+acc"  datapath_test
+# vsim -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneiii_ver -L rtl_work -L work -voptargs=\"+acc\" -t 1ps datapath_test 
+# Loading work.datapath_test
+# Loading work.dataPath
+# Loading work.Reg32
+# Loading work.Reg64
+# Loading work.MD_Mux
+# Loading work.SelectEncode
+# Loading work.encoder_32_to_5
+# Loading work.Mux_32_to_1
+# Loading work.alu
+# Loading work.thirtytwo_bit_twos_complement
+# Loading work.thirtytwo_bit_carry_adder
+# Loading work.sixteen_bit_carry_adder
+# Loading work.four_bit_adder
+# Loading work.bit_stage_cell
+# Loading work.thirtytwo_bit_subtractor
+# Loading work.thirtytwo_bit_booth_algorithm
+# Loading work.nonrestoring_divison_algo
+# ** Warning: (vsim-3015) D:/Elec_374/Virtual-Processor/datapath_test.v(36): [PCDPC] - Port size (1 or 1) does not match connection size (64) for port 'BAout'. The port definition is at: D:/Elec_374/Virtual-Processor/Datapath.v(15).
+# 
+#         Region: /datapath_test/DUT
+# ** Warning: (vsim-3015) D:/Elec_374/Virtual-Processor/datapath_test.v(36): [PCDPC] - Port size (1 or 1) does not match connection size (64) for port 'OutPortin'. The port definition is at: D:/Elec_374/Virtual-Processor/Datapath.v(15).
+# 
+#         Region: /datapath_test/DUT
+# ** Warning: (vsim-3015) D:/Elec_374/Virtual-Processor/Datapath.v(38): [PCDPC] - Port size (32 or 32) does not match connection size (1) for port 'D'. The port definition is at: D:/Elec_374/Virtual-Processor/REG32_MDR.v(1).
+# 
+#         Region: /datapath_test/DUT/C
+# ** Warning: (vsim-3015) D:/Elec_374/Virtual-Processor/Datapath.v(48): [PCDPC] - Port size (32 or 32) does not match connection size (9) for port 'Q'. The port definition is at: D:/Elec_374/Virtual-Processor/REG32_MDR.v(1).
+# 
+#         Region: /datapath_test/DUT/MAR
+# ** Warning: (vsim-3015) D:/Elec_374/Virtual-Processor/Datapath.v(70): [PCDPC] - Port size (16 or 16) does not match connection size (1) for port 'R0in'. The port definition is at: D:/Elec_374/Virtual-Processor/SelectAndEncode.v(2).
+# 
+#         Region: /datapath_test/DUT/SelectAndEncode
+# ** Warning: (vsim-3015) D:/Elec_374/Virtual-Processor/Datapath.v(70): [PCDPC] - Port size (16 or 16) does not match connection size (1) for port 'R1in'. The port definition is at: D:/Elec_374/Virtual-Processor/SelectAndEncode.v(2).
+# 
+#         Region: /datapath_test/DUT/SelectAndEncode
+# ** Warning: (vsim-3015) D:/Elec_374/Virtual-Processor/Datapath.v(70): [PCDPC] - Port size (16 or 16) does not match connection size (1) for port 'R2in'. The port definition is at: D:/Elec_374/Virtual-Processor/SelectAndEncode.v(2).
+# 
+#         Region: /datapath_test/DUT/SelectAndEncode
+# ** Warning: (vsim-3015) D:/Elec_374/Virtual-Processor/Datapath.v(70): [PCDPC] - Port size (16 or 16) does not match connection size (1) for port 'R3in'. The port definition is at: D:/Elec_374/Virtual-Processor/SelectAndEncode.v(2).
+# 
+#         Region: /datapath_test/DUT/SelectAndEncode
+# ** Warning: (vsim-3015) D:/Elec_374/Virtual-Processor/Datapath.v(70): [PCDPC] - Port size (16 or 16) does not match connection size (1) for port 'R4in'. The port definition is at: D:/Elec_374/Virtual-Processor/SelectAndEncode.v(2).
+# 
+#         Region: /datapath_test/DUT/SelectAndEncode
+# ** Warning: (vsim-3015) D:/Elec_374/Virtual-Processor/Datapath.v(70): [PCDPC] - Port size (16 or 16) does not match connection size (1) for port 'R5in'. The port definition is at: D:/Elec_374/Virtual-Processor/SelectAndEncode.v(2).
+# 
+#         Region: /datapath_test/DUT/SelectAndEncode
+# ** Warning: (vsim-3015) D:/Elec_374/Virtual-Processor/Datapath.v(70): [PCDPC] - Port size (16 or 16) does not match connection size (1) for port 'R6in'. The port definition is at: D:/Elec_374/Virtual-Processor/SelectAndEncode.v(2).
+# 
+#         Region: /datapath_test/DUT/SelectAndEncode
+# ** Warning: (vsim-3015) D:/Elec_374/Virtual-Processor/Datapath.v(70): [PCDPC] - Port size (16 or 16) does not match connection size (1) for port 'R7in'. The port definition is at: D:/Elec_374/Virtual-Processor/SelectAndEncode.v(2).
+# 
+#         Region: /datapath_test/DUT/SelectAndEncode
+# ** Warning: (vsim-3015) D:/Elec_374/Virtual-Processor/Datapath.v(70): [PCDPC] - Port size (16 or 16) does not match connection size (1) for port 'R8in'. The port definition is at: D:/Elec_374/Virtual-Processor/SelectAndEncode.v(2).
+# 
+#         Region: /datapath_test/DUT/SelectAndEncode
+# ** Warning: (vsim-3015) D:/Elec_374/Virtual-Processor/Datapath.v(70): [PCDPC] - Port size (16 or 16) does not match connection size (1) for port 'R9in'. The port definition is at: D:/Elec_374/Virtual-Processor/SelectAndEncode.v(3).
+# 
+#         Region: /datapath_test/DUT/SelectAndEncode
+# ** Warning: (vsim-3015) D:/Elec_374/Virtual-Processor/Datapath.v(70): [PCDPC] - Port size (16 or 16) does not match connection size (1) for port 'R10in'. The port definition is at: D:/Elec_374/Virtual-Processor/SelectAndEncode.v(3).
+# 
+#         Region: /datapath_test/DUT/SelectAndEncode
+# ** Warning: (vsim-3015) D:/Elec_374/Virtual-Processor/Datapath.v(70): [PCDPC] - Port size (16 or 16) does not match connection size (1) for port 'R11in'. The port definition is at: D:/Elec_374/Virtual-Processor/SelectAndEncode.v(3).
+# 
+#         Region: /datapath_test/DUT/SelectAndEncode
+# ** Warning: (vsim-3015) D:/Elec_374/Virtual-Processor/Datapath.v(70): [PCDPC] - Port size (16 or 16) does not match connection size (1) for port 'R12in'. The port definition is at: D:/Elec_374/Virtual-Processor/SelectAndEncode.v(3).
+# 
+#         Region: /datapath_test/DUT/SelectAndEncode
+# ** Warning: (vsim-3015) D:/Elec_374/Virtual-Processor/Datapath.v(70): [PCDPC] - Port size (16 or 16) does not match connection size (1) for port 'R13in'. The port definition is at: D:/Elec_374/Virtual-Processor/SelectAndEncode.v(3).
+# 
+#         Region: /datapath_test/DUT/SelectAndEncode
+# ** Warning: (vsim-3015) D:/Elec_374/Virtual-Processor/Datapath.v(70): [PCDPC] - Port size (16 or 16) does not match connection size (1) for port 'R14in'. The port definition is at: D:/Elec_374/Virtual-Processor/SelectAndEncode.v(3).
+# 
+#         Region: /datapath_test/DUT/SelectAndEncode
+# ** Warning: (vsim-3015) D:/Elec_374/Virtual-Processor/Datapath.v(70): [PCDPC] - Port size (16 or 16) does not match connection size (1) for port 'R15in'. The port definition is at: D:/Elec_374/Virtual-Processor/SelectAndEncode.v(3).
+# 
+#         Region: /datapath_test/DUT/SelectAndEncode
+# ** Warning: (vsim-3015) D:/Elec_374/Virtual-Processor/Datapath.v(70): [PCDPC] - Port size (16 or 16) does not match connection size (1) for port 'R0out'. The port definition is at: D:/Elec_374/Virtual-Processor/SelectAndEncode.v(3).
+# 
+#         Region: /datapath_test/DUT/SelectAndEncode
+# ** Warning: (vsim-3015) D:/Elec_374/Virtual-Processor/Datapath.v(70): [PCDPC] - Port size (16 or 16) does not match connection size (1) for port 'R1out'. The port definition is at: D:/Elec_374/Virtual-Processor/SelectAndEncode.v(3).
+# 
+#         Region: /datapath_test/DUT/SelectAndEncode
+# ** Warning: (vsim-3015) D:/Elec_374/Virtual-Processor/Datapath.v(70): [PCDPC] - Port size (16 or 16) does not match connection size (1) for port 'R2out'. The port definition is at: D:/Elec_374/Virtual-Processor/SelectAndEncode.v(3).
+# 
+#         Region: /datapath_test/DUT/SelectAndEncode
+# ** Warning: (vsim-3015) D:/Elec_374/Virtual-Processor/Datapath.v(70): [PCDPC] - Port size (16 or 16) does not match connection size (1) for port 'R3out'. The port definition is at: D:/Elec_374/Virtual-Processor/SelectAndEncode.v(3).
+# 
+#         Region: /datapath_test/DUT/SelectAndEncode
+# ** Warning: (vsim-3015) D:/Elec_374/Virtual-Processor/Datapath.v(70): [PCDPC] - Port size (16 or 16) does not match connection size (1) for port 'R4out'. The port definition is at: D:/Elec_374/Virtual-Processor/SelectAndEncode.v(3).
+# 
+#         Region: /datapath_test/DUT/SelectAndEncode
+# ** Warning: (vsim-3015) D:/Elec_374/Virtual-Processor/Datapath.v(70): [PCDPC] - Port size (16 or 16) does not match connection size (1) for port 'R5out'. The port definition is at: D:/Elec_374/Virtual-Processor/SelectAndEncode.v(3).
+# 
+#         Region: /datapath_test/DUT/SelectAndEncode
+# ** Warning: (vsim-3015) D:/Elec_374/Virtual-Processor/Datapath.v(70): [PCDPC] - Port size (16 or 16) does not match connection size (1) for port 'R6out'. The port definition is at: D:/Elec_374/Virtual-Processor/SelectAndEncode.v(3).
+# 
+#         Region: /datapath_test/DUT/SelectAndEncode
+# ** Warning: (vsim-3015) D:/Elec_374/Virtual-Processor/Datapath.v(70): [PCDPC] - Port size (16 or 16) does not match connection size (1) for port 'R7out'. The port definition is at: D:/Elec_374/Virtual-Processor/SelectAndEncode.v(3).
+# 
+#         Region: /datapath_test/DUT/SelectAndEncode
+# ** Warning: (vsim-3015) D:/Elec_374/Virtual-Processor/Datapath.v(70): [PCDPC] - Port size (16 or 16) does not match connection size (1) for port 'R8out'. The port definition is at: D:/Elec_374/Virtual-Processor/SelectAndEncode.v(3).
+# 
+#         Region: /datapath_test/DUT/SelectAndEncode
+# ** Warning: (vsim-3015) D:/Elec_374/Virtual-Processor/Datapath.v(70): [PCDPC] - Port size (16 or 16) does not match connection size (1) for port 'R9out'. The port definition is at: D:/Elec_374/Virtual-Processor/SelectAndEncode.v(3).
+# 
+#         Region: /datapath_test/DUT/SelectAndEncode
+# ** Warning: (vsim-3015) D:/Elec_374/Virtual-Processor/Datapath.v(70): [PCDPC] - Port size (16 or 16) does not match connection size (1) for port 'R10out'. The port definition is at: D:/Elec_374/Virtual-Processor/SelectAndEncode.v(4).
+# 
+#         Region: /datapath_test/DUT/SelectAndEncode
+# ** Warning: (vsim-3015) D:/Elec_374/Virtual-Processor/Datapath.v(70): [PCDPC] - Port size (16 or 16) does not match connection size (1) for port 'R11out'. The port definition is at: D:/Elec_374/Virtual-Processor/SelectAndEncode.v(4).
+# 
+#         Region: /datapath_test/DUT/SelectAndEncode
+# ** Warning: (vsim-3015) D:/Elec_374/Virtual-Processor/Datapath.v(70): [PCDPC] - Port size (16 or 16) does not match connection size (1) for port 'R12out'. The port definition is at: D:/Elec_374/Virtual-Processor/SelectAndEncode.v(4).
+# 
+#         Region: /datapath_test/DUT/SelectAndEncode
+# ** Warning: (vsim-3015) D:/Elec_374/Virtual-Processor/Datapath.v(70): [PCDPC] - Port size (16 or 16) does not match connection size (1) for port 'R13out'. The port definition is at: D:/Elec_374/Virtual-Processor/SelectAndEncode.v(4).
+# 
+#         Region: /datapath_test/DUT/SelectAndEncode
+# ** Warning: (vsim-3015) D:/Elec_374/Virtual-Processor/Datapath.v(70): [PCDPC] - Port size (16 or 16) does not match connection size (1) for port 'R14out'. The port definition is at: D:/Elec_374/Virtual-Processor/SelectAndEncode.v(4).
+# 
+#         Region: /datapath_test/DUT/SelectAndEncode
+# ** Warning: (vsim-3015) D:/Elec_374/Virtual-Processor/Datapath.v(70): [PCDPC] - Port size (16 or 16) does not match connection size (1) for port 'R15out'. The port definition is at: D:/Elec_374/Virtual-Processor/SelectAndEncode.v(4).
+# 
+#         Region: /datapath_test/DUT/SelectAndEncode
+# ** Warning: (vsim-3015) D:/Elec_374/Virtual-Processor/Datapath.v(70): [PCDPC] - Port size (32 or 32) does not match connection size (1) for port 'c_sign_extended'. The port definition is at: D:/Elec_374/Virtual-Processor/SelectAndEncode.v(5).
+# 
+#         Region: /datapath_test/DUT/SelectAndEncode
+# ** Warning: (vsim-3017) D:/Elec_374/Virtual-Processor/Datapath.v(74): [TFMPC] - Too few port connections. Expected 26, found 25.
+# 
+#         Region: /datapath_test/DUT/BusMux_encoder
+# ** Warning: (vsim-3722) D:/Elec_374/Virtual-Processor/Datapath.v(74): [TFMPC] - Missing connection for port 'MARout'.
+# 
+# ** Warning: (vsim-3015) D:/Elec_374/Virtual-Processor/ALU.v(103): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'c_0'. The port definition is at: D:/Elec_374/Virtual-Processor/ALU.v(84).
+# 
+#         Region: /datapath_test/DUT/Alu/c/ttb
+# ** Warning: (vsim-3015) D:/Elec_374/Virtual-Processor/ALU.v(212): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'c_0'. The port definition is at: D:/Elec_374/Virtual-Processor/ALU.v(84).
+# 
+#         Region: /datapath_test/DUT/Alu/a
+# ** Warning: (vsim-3015) D:/Elec_374/Virtual-Processor/ALU.v(103): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'c_0'. The port definition is at: D:/Elec_374/Virtual-Processor/ALU.v(84).
+# 
+#         Region: /datapath_test/DUT/Alu/s/compliment/ttb
+# ** Warning: (vsim-3015) D:/Elec_374/Virtual-Processor/ALU.v(111): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'c_0'. The port definition is at: D:/Elec_374/Virtual-Processor/ALU.v(84).
+# 
+#         Region: /datapath_test/DUT/Alu/s/sub
+# ** Warning: (vsim-3015) D:/Elec_374/Virtual-Processor/ALU.v(229): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'c_0'. The port definition is at: D:/Elec_374/Virtual-Processor/ALU.v(84).
+# 
+#         Region: /datapath_test/DUT/Alu/a2
 # 
 # add wave *
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 # 
 #           File in use by: Christopher Masloub  Hostname: LAPTOP-R5L73M9C  ProcessID: 524
 # 
-#           Attempting to use alternate WLF file "./wlft677t33".
+#           Attempting to use alternate WLF file "./wlft688288".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
 # 
-#           Using alternate file: ./wlft677t33
+#           Using alternate file: ./wlft688288
 # 
 # view structure
 # .main_pane.structure.interior.cs.body.struct
 # view signals
 # .main_pane.objects.interior.cs.body.tree
-# run 500 ms
-# sram test bench from timetoexplore.net.
-# 0x55
-# 0xaa
-# 0x55
-# 0x2a
-# ** Note: $finish    : C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/RAM_tb.v(36)
-#    Time: 150 ps  Iteration: 0  Instance: /RAM_tb
-# 1
-# Break in Module RAM_tb at C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/RAM_tb.v line 36
-# Simulation Breakpoint: 1
-# Break in Module RAM_tb at C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/RAM_tb.v line 36
-# MACRO ./MINISRC_run_msim_rtl_verilog.do PAUSED at line 17
+# run 500 ns

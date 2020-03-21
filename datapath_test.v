@@ -2,7 +2,7 @@
 datapath_test;     
          
 reg PCout, Zlowout, MDRout, R2out, R4out;     
-reg MARin, Zin, PCin, MDRin, IRin, Yin;        
+reg MARin, Zin, PCin, MDRin, IRin, Yin,GRA,GRB,GRC;        
 reg IncPC, Read; 
 reg R5in, R2in, R4in;     
 reg Clock;   
@@ -17,8 +17,8 @@ reg R0out, R1out, R3out, R5out, R6out, R7out, R8out, R9out,
 	R9in, R10in, R11in, R12in, R13in, R14in, R15in, HIin, LOin,
 	Zhighin, Zlowin, InPortin, Cin, reset; 
 
-wire [31:0] R0Val,R1Val,R2Val,R3Val,R4Val,R5Val,bus,MDRval,mux_data_out,YVal;
-wire [63:0] ZVal,ALUVal_D;
+wire [31:0] R0Val,R1Val,R2Val,R3Val,R4Val,R5Val,bus,MDRval,mux_data_out,YVal,IRval;
+wire [63:0] ZVal,ALUVal_D,BAout,OutPortin;
 wire [31:0] R6Val,R7Val,R8Val,R9Val,R10Val,R11Val,R12Val,R13Val,R14Val,R15Val;
 
 parameter  Default = 4'b0000, Reg_load1a = 4'b0001, Reg_load1b = 4'b0010, 
@@ -27,14 +27,12 @@ Reg_load2a = 4'b0011,Reg_load2b = 4'b0100, Reg_load3a = 4'b0101,
  T3 = 4'b1010, T4 = 4'b1011, T5 = 4'b1100;     
  reg  [3:0] Present_state = Default; 
  
-dataPath DUT(PCout, Zlowout, MDRout, R2out, R4out, MARin, Zin, PCin, MDRin, IRin, Yin, IncPC, Read, R5in, R2in, R4in, Clock, control, Mdatain
-	,R0out, R1out, R3out, R5out, R6out, R7out, R8out, R9out,
-	R10out, R11out, R12out, R13out, R14out, R15out,HIout, LOout,
-	InPortout, OutPortout,Cout, Zhighout,
-	R0in, R1in, R3in, R6in, R7in, R8in,
-	R9in, R10in, R11in, R12in, R13in, R14in, R15in, HIin, LOin,
+dataPath DUT(PCout, Zlowout, MDRout, MARin, Zin, PCin, MDRin, IRin, Yin, IncPC, Read, Clock, control, Mdatain
+	,HIout, LOout,
+	InPortout, OutPortout,Cout, Zhighout, HIin, LOin,
 	Zhighin, Zlowin, InPortin, Cin, reset,
-	R0Val,R1Val,R2Val,R3Val,R4Val,R5Val,R6Val,R7Val,R8Val,R9Val,R10Val,R11Val,R12Val,R13Val,R14Val,R15Val,bus,MDRval,mux_data_out,YVal,ZVal,ALUVal_D
+	R0Val,R1Val,R2Val,R3Val,R4Val,R5Val,R6Val,R7Val,R8Val,R9Val,R10Val,R11Val,R12Val,R13Val,R14Val,R15Val,IRval,bus,
+	MDRval,mux_data_out,YVal,ZVal,ALUVal_D,BAout,OutPortin,Rin,Rout,GRA, GRB, GRC
 );
  
 
@@ -110,7 +108,7 @@ end
  #15 Read <= 0; MDRin <= 0;
 end
 Reg_load3a: begin
-Mdatain <= 32'b1100;
+Mdatain <= 32'b0010;
 #10 Read <= 1; MDRin <= 1;
 //#15 Read <= 0; MDRin <= 0;
 end
@@ -119,13 +117,16 @@ end
  #15 MDRout <= 0; R5in <= 0; // initialize R5 with the value $26
  #15 Read <= 0; MDRin <= 0;
 end
+
+
+
 T0: begin // see if you need to de-assert these signals
 PCout <= 1; IncPC <= 1; Zin <= 1;
 end
 T1: begin
 PCout <= 0; IncPC <= 0;
 Zlowout <= 1; Read <= 1; MDRin <= 1;
-Mdatain <= 32'b1010; // opcode for “and R5, R2, R4”
+Mdatain <= 32'b0010; // opcode for “and R5, R2, R4”
 end
 T2: begin
 MDRout <= 1; IRin <= 1;

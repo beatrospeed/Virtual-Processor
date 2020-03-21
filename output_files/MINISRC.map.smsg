@@ -1,1 +1,2 @@
 Info (10281): Verilog HDL Declaration information at REG32_MDR.v(25): object "Q" differs only in case from object "q" in the same scope
+Warning (10268): Verilog HDL information at SelectAndEncode.v(16): always construct contains both blocking and non-blocking assignments
