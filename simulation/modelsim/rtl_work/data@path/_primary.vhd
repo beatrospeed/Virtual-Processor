@@ -9,13 +9,14 @@ entity dataPath is
         Zin             : in     vl_logic;
         PCin            : in     vl_logic;
         MDRin           : in     vl_logic;
+        read            : in     vl_logic;
+        write           : in     vl_logic;
         IRin            : in     vl_logic;
         Yin             : in     vl_logic;
         IncPc           : in     vl_logic;
-        read            : in     vl_logic;
         clk             : in     vl_logic;
+        mdr_read        : in     vl_logic_vector(1 downto 0);
         control         : in     vl_logic_vector(3 downto 0);
-        Mdatain         : in     vl_logic_vector(31 downto 0);
         HIout           : in     vl_logic;
         LOout           : in     vl_logic;
         InPortout       : in     vl_logic;
@@ -29,6 +30,14 @@ entity dataPath is
         InPortin        : in     vl_logic;
         Cin             : in     vl_logic;
         reset           : in     vl_logic;
+        BAout           : in     vl_logic;
+        OutPortin       : in     vl_logic;
+        Rin             : in     vl_logic;
+        Rout            : in     vl_logic;
+        GRA             : in     vl_logic;
+        GRB             : in     vl_logic;
+        GRC             : in     vl_logic;
+        Immediate       : in     vl_logic_vector(31 downto 0);
         R0Val           : out    vl_logic_vector(31 downto 0);
         R1Val           : out    vl_logic_vector(31 downto 0);
         R2Val           : out    vl_logic_vector(31 downto 0);
@@ -50,14 +59,17 @@ entity dataPath is
         MDRval          : out    vl_logic_vector(31 downto 0);
         mux_data_out    : out    vl_logic_vector(31 downto 0);
         YVal            : out    vl_logic_vector(31 downto 0);
+        R0TempOut       : out    vl_logic_vector(31 downto 0);
+        C_sign_extended : out    vl_logic_vector(31 downto 0);
+        InPort_D        : out    vl_logic_vector(31 downto 0);
+        OutPort_D       : out    vl_logic_vector(31 downto 0);
+        PCVal           : out    vl_logic_vector(31 downto 0);
+        CVal            : out    vl_logic_vector(31 downto 0);
+        Mdatain         : out    vl_logic_vector(31 downto 0);
         ZVal            : out    vl_logic_vector(63 downto 0);
         ALUVal_D        : out    vl_logic_vector(63 downto 0);
-        BAout           : in     vl_logic;
-        OutPortin       : in     vl_logic;
-        Rin             : in     vl_logic;
-        Rout            : in     vl_logic;
-        GRA             : in     vl_logic;
-        GRB             : in     vl_logic;
-        GRC             : in     vl_logic
+        Rin_Select      : out    vl_logic_vector(15 downto 0);
+        Rout_Select     : out    vl_logic_vector(15 downto 0);
+        MAR_D           : out    vl_logic_vector(31 downto 0)
     );
 end dataPath;

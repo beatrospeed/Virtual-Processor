@@ -1,7 +1,5 @@
 module SelectEncode (
-output reg [15:0] R0in, R1in,R2in, R3in,R4in,R5in, R6in, R7in, R8in,
-	R9in, R10in, R11in, R12in, R13in, R14in, R15in, R0out, R1out,R2out, R3out,R4out, R5out, R6out, R7out, R8out, R9out,
-	R10out, R11out, R12out, R13out, R14out, R15out,
+output reg [15:0] RinOut, RoutOut,
 output reg [31:0] c_sign_extended,
 input [31:0] IRin, 
 input Rin, Rout, BAout,GRA, GRB, GRC
@@ -9,18 +7,12 @@ input Rin, Rout, BAout,GRA, GRB, GRC
 
 
 reg [3:0] temp; 
-integer i;
 	always@(*)
 	begin
-
-		for ( i = 0 ; i < 13 ; i = i + 1) begin
 	
-		c_sign_extended[i] <= IRin [18]; 
+		c_sign_extended = { {14{IRin[18]}}, IRin[17:0]};
 	
-		end
-	
-		c_sign_extended[17:0] <= IRin[17:0];
-	
+		
 	
 		if(GRA == 1)begin 
 			temp [3:0] = IRin[26:23];
@@ -37,52 +29,58 @@ integer i;
 	if (Rin == 1)begin 
 		case(temp)
 		
-			4'b0000 : R0in <= 1; 
-			4'b0001 : R1in <= 1;
-			4'b0010 : R2in <= 1;
-			4'b0011 : R3in <= 1;
-			4'b0100 : R4in <= 1;
-			4'b0101 : R5in <= 1;
-			4'b0110 : R6in <= 1;
-			4'b0111 : R7in <= 1;
-			4'b1000 : R8in <= 1;
-			4'b1001 : R9in <= 1;
-			4'b1010 : R10in <= 1;
-			4'b1011 : R11in <= 1;
-			4'b1100 : R12in <= 1;
-			4'b1101 : R13in <= 1;
-			4'b1110 : R14in <= 1;
-			4'b1111 : R15in <= 1;
+			4'b0000 : RinOut <= 16'b0000000000000001; 
+			4'b0001 : RinOut <= 16'b0000000000000010;
+			4'b0010 : RinOut <= 16'b0000000000000100;
+			4'b0011 : RinOut <= 16'b0000000000001000;
+			4'b0100 : RinOut <= 16'b0000000000010000;
+			4'b0101 : RinOut <= 16'b0000000000100000;
+			4'b0110 : RinOut <= 16'b0000000001000000;
+			4'b0111 : RinOut <= 16'b0000000010000000;
+			4'b1000 : RinOut <= 16'b0000000100000000;
+			4'b1001 : RinOut <= 16'b0000001000000000;
+			4'b1010 : RinOut <= 16'b0000010000000000;
+			4'b1011 : RinOut <= 16'b0000100000000000;
+			4'b1100 : RinOut <= 16'b0001000000000000;
+			4'b1101 : RinOut <= 16'b0010000000000000;
+			4'b1110 : RinOut <= 16'b0100000000000000;
+			4'b1111 : RinOut <= 16'b1000000000000000;
 		endcase
+		end
+	else begin 
+		RinOut <= 16'b0000000000000000; 
 		end
 		
 	if (BAout == 1)begin 
 		if(temp == 4'b0000)begin
-			R0out <= 1; 
+			RoutOut = 16'b0000000000000001; 
 			end 
 	end 
 	
 	if (Rout == 1)begin 
 		case(temp)
-		
-			4'b0000 : R0out <= 1; 
-			4'b0001 : R1out <= 1;
-			4'b0010 : R2out <= 1;
-			4'b0011 : R3out <= 1;
-			4'b0100 : R4out <= 1;
-			4'b0101 : R5out <= 1;
-			4'b0110 : R6out <= 1;
-			4'b0111 : R7out <= 1;
-			4'b1000 : R8out <= 1;
-			4'b1001 : R9out <= 1;
-			4'b1010 : R10out <= 1;
-			4'b1011 : R11out <= 1;
-			4'b1100 : R12out <= 1;
-			4'b1101 : R13out <= 1;
-			4'b1110 : R14out <= 1;
-			4'b1111 : R15out <= 1;
+			4'b0000 : RoutOut <= 16'b0000000000000001; 
+			4'b0001 : RoutOut <= 16'b0000000000000010;
+			4'b0010 : RoutOut <= 16'b0000000000000100;
+			4'b0011 : RoutOut <= 16'b0000000000001000;
+			4'b0100 : RoutOut <= 16'b0000000000010000;
+			4'b0101 : RoutOut <= 16'b0000000000100000;
+			4'b0110 : RoutOut <= 16'b0000000001000000;
+			4'b0111 : RoutOut <= 16'b0000000010000000;
+			4'b1000 : RoutOut <= 16'b0000000100000000;
+			4'b1001 : RoutOut <= 16'b0000001000000000;
+			4'b1010 : RoutOut <= 16'b0000010000000000;
+			4'b1011 : RoutOut <= 16'b0000100000000000;
+			4'b1100 : RoutOut <= 16'b0001000000000000;
+			4'b1101 : RoutOut <= 16'b0010000000000000;
+			4'b1110 : RoutOut <= 16'b0100000000000000;
+			4'b1111 : RoutOut <= 16'b1000000000000000;
+			default :  RoutOut <= 16'b0000000000000000;
 		endcase
-		end
+	end
+		else if (BAout == 0)begin 
+				RoutOut <= 16'b0000000000000000; 
+		end 
+		
 	end 
-endmodule
- 
+endmodule 

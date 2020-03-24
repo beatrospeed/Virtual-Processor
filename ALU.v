@@ -198,7 +198,7 @@ endmodule
 
 
 
-`timescale 1ns/10ps
+
 
 module alu(output reg [63:0] z_Output, input [31:0] reg1, input [31:0] reg2, input [3:0] control, input inc_pc, input Clk);
 
@@ -230,7 +230,7 @@ module alu(output reg [63:0] z_Output, input [31:0] reg1, input [31:0] reg2, inp
 
 
 	always @(negedge Clk) begin
-	#5 //delay necessary to allow for control signals to get set on negative edge
+	#10 
 	if(inc_pc == 1)
 		z_Output[31:0] <=  pc_inc;
 	else if(control == 0)

@@ -26,7 +26,6 @@ entity encoder_32_to_5 is
         PCout           : in     vl_logic;
         MDRout          : in     vl_logic;
         In_Portout      : in     vl_logic;
-        Cout            : in     vl_logic;
-        MARout          : in     vl_logic
+        Cout            : in     vl_logic
     );
 end encoder_32_to_5;
