@@ -200,7 +200,7 @@ endmodule
 
 
 
-module alu(output reg [63:0] z_Output, input [31:0] reg1, input [31:0] reg2, input [3:0] control, input inc_pc, input Clk);
+module alu(output reg [31:0] z_Output1,output reg [31:0] z_Output2, input [31:0] reg1, input [31:0] reg2, input [3:0] control, input inc_pc, input Clk);
 
 
 	wire [31:0] complement;
@@ -230,36 +230,38 @@ module alu(output reg [63:0] z_Output, input [31:0] reg1, input [31:0] reg2, inp
 
 
 	always @(negedge Clk) begin
-	#10 
+	#10
 	if(inc_pc == 1)
-		z_Output[31:0] <=  pc_inc;
-	else if(control == 0)
-			z_Output[31:0] <= divide_q;
-			z_Output[63:32] <= divide_r;
+		z_Output1 <=  pc_inc;
+	else if(control == 0)begin
+			z_Output1 <= divide_q;
+			z_Output2 <= divide_r;
+			end
 		if(control == 1)begin
-			z_Output[31:0] <= multiply[31:0];
-			z_Output[63:32] <= multiply[63:32];end
+			z_Output1 <= multiply[31:0];
+			z_Output2 <= multiply[63:32];
+			end
 		else if(control == 2)
-			z_Output[31:0] <= add;
+			z_Output1<= add;
 		else if(control == 3)
-			z_Output[31:0] <= sub;
+			z_Output1 <= sub;
 		else if(control == 4)
-			z_Output[31:0] <= reg1 << reg2;
+			z_Output1 <= reg1 << reg2;
 		else if(control == 5)
-			z_Output[31:0] <= reg1 >> reg2;
+			z_Output1 <= reg1 >> reg2;
 		else if(control == 6) 
-			z_Output[31:0] <= (reg1 >> reg2) | (reg1 << (32-reg2));
+			z_Output1 <= (reg1 >> reg2) | (reg1 << (32-reg2));
 		else if(control == 7) 	
-			z_Output[31:0] <= (reg1 << reg2) | (reg1 >> (32-reg2));
+			z_Output1<= (reg1 << reg2) | (reg1 >> (32-reg2));
 		else if(control == 8)
-			z_Output[31:0] <= reg1 | reg2;
+			z_Output1 <= reg1 | reg2;
 		else if(control == 9)
-			z_Output[31:0] <= complement;
+			z_Output1 <= complement;
 		else if(control == 10) begin
-			z_Output[31:0] <= (reg1 & reg2);
+			z_Output1 <= (reg1 & reg2);
 		end
 		else if(control == 11) begin
-			z_Output[31:0] <= ~reg2;
+			z_Output1[31:0] <= ~reg2;
 			end
 		end
 endmodule

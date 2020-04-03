@@ -28,7 +28,6 @@ entity dataPath is
         Zhighin         : in     vl_logic;
         Zlowin          : in     vl_logic;
         InPortin        : in     vl_logic;
-        Cin             : in     vl_logic;
         reset           : in     vl_logic;
         BAout           : in     vl_logic;
         OutPortin       : in     vl_logic;
@@ -66,8 +65,10 @@ entity dataPath is
         PCVal           : out    vl_logic_vector(31 downto 0);
         CVal            : out    vl_logic_vector(31 downto 0);
         Mdatain         : out    vl_logic_vector(31 downto 0);
-        ZVal            : out    vl_logic_vector(63 downto 0);
-        ALUVal_D        : out    vl_logic_vector(63 downto 0);
+        ZVal1           : out    vl_logic_vector(31 downto 0);
+        ZVal2           : out    vl_logic_vector(31 downto 0);
+        ALUVal_D1       : out    vl_logic_vector(31 downto 0);
+        ALUVal_D2       : out    vl_logic_vector(31 downto 0);
         Rin_Select      : out    vl_logic_vector(15 downto 0);
         Rout_Select     : out    vl_logic_vector(15 downto 0);
         MAR_D           : out    vl_logic_vector(31 downto 0)

@@ -6,7 +6,7 @@ module dataPath(
 	input [1:0] mdr_read,
 	input [3:0] control,
 	input HIout, LOout,InPortout, OutPortout,Cout, Zhighout, 
-	HIin, LOin, Zhighin, Zlowin, InPortin, Cin, reset,
+	HIin, LOin, Zhighin, Zlowin, InPortin, reset,
 	input BAout,OutPortin,Rin,Rout,GRA, GRB, GRC,
 	input [31:0] Immediate,
 	//demonstration ports
@@ -14,7 +14,7 @@ module dataPath(
 	R7Val,R8Val,R9Val,R10Val,R11Val,R12Val,R13Val,R14Val,
 	R15Val,IRval,bus,MDRval,mux_data_out,YVal,R0TempOut,
 	C_sign_extended,InPort_D, OutPort_D, PCVal,CVal,Mdatain,
-	output wire [63:0] ZVal,ALUVal_D, 
+	output wire [31:0] ZVal1,ZVal2,ALUVal_D1,ALUVal_D2, 
 	output wire [15:0] Rin_Select, Rout_Select,
 	output wire [31:0] MAR_D
 	
@@ -22,45 +22,49 @@ module dataPath(
 	
 	wire [31:0]HIval, LOval;
 	wire [4:0] Select_D; 	
-	wire [31:0] temp; 
-	assign temp [0] = ~BAout; 
-	assign temp [1] = ~BAout; 
-	assign temp [2] = ~BAout; 
-	assign temp [3] = ~BAout; 
-	assign temp [4] = ~BAout; 
-	assign temp [5] = ~BAout; 
-	assign temp [6] = ~BAout; 
-	assign temp [7] = ~BAout; 
-	assign temp [8] = ~BAout; 
-	assign temp [9] = ~BAout; 
-	assign temp [10] = ~BAout; 
-	assign temp [11] = ~BAout; 
-	assign temp [12] = ~BAout; 
-	assign temp [13] = ~BAout; 
-	assign temp [14] = ~BAout; 
-	assign temp [15] = ~BAout; 
-	assign temp [16] = ~BAout; 
-	assign temp [17] = ~BAout; 
-	assign temp [18] = ~BAout; 
-	assign temp [19] = ~BAout; 
-	assign temp [20] = ~BAout; 
-	assign temp [21] = ~BAout; 
-	assign temp [22] = ~BAout; 
-	assign temp [23] = ~BAout; 
-	assign temp [24] = ~BAout; 
-	assign temp [25] = ~BAout; 
-	assign temp [26] = ~BAout; 
-	assign temp [27] = ~BAout; 
-	assign temp [28] = ~BAout; 
-	assign temp [29] = ~BAout; 
-	assign temp [30] = ~BAout; 
-	assign temp [31] = ~BAout; 
+	wire  negateBA; 
+	
+	not(negateBA, BAout);
+	and(R0Val[0], R0TempOut[0], negateBA);
+	and(R0Val[1], R0TempOut[1], negateBA);
+	and(R0Val[2], R0TempOut[2], negateBA);
+	and(R0Val[3], R0TempOut[3], negateBA);
+	and(R0Val[4], R0TempOut[4], negateBA);
+	and(R0Val[5], R0TempOut[5], negateBA);
+	and(R0Val[6], R0TempOut[6], negateBA);
+	and(R0Val[7], R0TempOut[7], negateBA);
+	and(R0Val[8], R0TempOut[8], negateBA);
+	and(R0Val[9], R0TempOut[9], negateBA);
+	and(R0Val[10], R0TempOut[10], negateBA);
+	and(R0Val[11], R0TempOut[11], negateBA);
+	and(R0Val[12], R0TempOut[12], negateBA);
+	and(R0Val[13], R0TempOut[13], negateBA);
+	and(R0Val[14], R0TempOut[14], negateBA);
+	and(R0Val[15], R0TempOut[15], negateBA);
+	and(R0Val[16], R0TempOut[16], negateBA);
+	and(R0Val[17], R0TempOut[17], negateBA);
+	and(R0Val[18], R0TempOut[18], negateBA);
+	and(R0Val[19], R0TempOut[19], negateBA);
+	and(R0Val[20], R0TempOut[20], negateBA);
+	and(R0Val[21], R0TempOut[21], negateBA);
+	and(R0Val[22], R0TempOut[22], negateBA);
+	and(R0Val[23], R0TempOut[23], negateBA);
+	and(R0Val[24], R0TempOut[24], negateBA);
+	and(R0Val[25], R0TempOut[25], negateBA);
+	and(R0Val[26], R0TempOut[26], negateBA);
+	and(R0Val[27], R0TempOut[27], negateBA);
+	and(R0Val[28], R0TempOut[28], negateBA);
+	and(R0Val[29], R0TempOut[29], negateBA);
+	and(R0Val[30], R0TempOut[30], negateBA);
+	and(R0Val[31], R0TempOut[31], negateBA);
+
 
    Reg32 HI(bus, clk, reset, HIin, HIval); 
    Reg32 LO(bus, clk, reset, LOin, LOval);
    Reg32 Y(bus, clk, reset, Yin, YVal);
-   Reg64 Z(ALUVal_D, clk, reset, Zin, ZVal);
-   Reg32 C(C_sign_extended,clk,reset,Cin,CVal);
+   Reg32 Zlow(ALUVal_D1, clk, reset, Zlowin, ZVal1);
+   Reg32 Zhigh(ALUVal_D2, clk, reset, Zhighin, ZVal2);
+   
 	MD_Mux md_mux(mux_data_out, bus, Mdatain, Immediate,32'b0, mdr_read);
 	Reg32  mdrReg(mux_data_out,clk,reset,MDRin, MDRval);
    Reg32 InPort(32'b0, clk, reset, InPortin, InPort_D);
@@ -69,7 +73,7 @@ module dataPath(
    Reg32 PC(bus, clk, reset, PCin, PCVal);
    Reg32 MAR(bus, clk, reset, MARin, MAR_D);
    Reg32 R0(bus, clk, reset, Rin_Select[0], R0TempOut); 
-	assign R0Val = R0TempOut & temp; 
+
    Reg32 R1(bus, clk, reset, Rin_Select[1], R1Val); 
    Reg32 R2(bus, clk, reset, Rin_Select[2], R2Val); 
    Reg32 R3(bus, clk, reset, Rin_Select[3], R3Val); 
@@ -96,9 +100,9 @@ module dataPath(
 
 	Mux_32_to_1 Bus_Mux(bus,R0Val,R1Val,R2Val,R3Val,
 	R4Val,R5Val,R6Val,R7Val,R8Val,R9Val,R10Val,
-	R11Val,R12Val,R13Val,R14Val,R15Val,HIval,LOval,ZVal[63:32],
-	ZVal[31:0],PCVal,MDRval,InPort_D,CVal,Select_D);
+	R11Val,R12Val,R13Val,R14Val,R15Val,HIval,LOval,ZVal2,
+	ZVal1,PCVal,MDRval,InPort_D,C_sign_extended,Select_D);
 	
-	alu Alu(ALUVal_D,YVal,bus,control,IncPc,clk);
+	alu Alu(ALUVal_D1,ALUVal_D2,YVal,bus,control,IncPc,clk);
 
 endmodule 
