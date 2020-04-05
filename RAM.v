@@ -85,7 +85,7 @@ end
 
 always@(negedge clock) 
 begin
-   #10
+   #5
 	if(write == 1)
 		mem_array[Address] <= data; 
 		

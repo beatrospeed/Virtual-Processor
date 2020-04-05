@@ -29,6 +29,7 @@ always@(*)
 	21: BusMuxOut =MDRoutin;
 	22: BusMuxOut =In_Portoutin;
 	23: BusMuxOut =Coutin;
+	default: BusMuxOut = 32'b00000000000000000000000000000000;
 	endcase
 endmodule
 	

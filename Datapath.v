@@ -13,7 +13,7 @@ module dataPath(
 	output wire [31:0] R0Val,R1Val,R2Val,R3Val,R4Val,R5Val,R6Val,
 	R7Val,R8Val,R9Val,R10Val,R11Val,R12Val,R13Val,R14Val,
 	R15Val,IRval,bus,MDRval,mux_data_out,YVal,R0TempOut,
-	C_sign_extended,InPort_D, OutPort_D, PCVal,CVal,Mdatain,
+	C_sign_extended,InPort_D, OutPort_D, PCVal,Mdatain,
 	output wire [31:0] ZVal1,ZVal2,ALUVal_D1,ALUVal_D2, 
 	output wire [15:0] Rin_Select, Rout_Select,
 	output wire [31:0] MAR_D
@@ -21,7 +21,9 @@ module dataPath(
 );
 	
 	wire [31:0]HIval, LOval;
-	wire [4:0] Select_D; 	
+	wire [4:0] Select_D;
+
+	
 	wire  negateBA; 
 	
 	not(negateBA, BAout);
@@ -57,7 +59,6 @@ module dataPath(
 	and(R0Val[29], R0TempOut[29], negateBA);
 	and(R0Val[30], R0TempOut[30], negateBA);
 	and(R0Val[31], R0TempOut[31], negateBA);
-
 
    Reg32 HI(bus, clk, reset, HIin, HIval); 
    Reg32 LO(bus, clk, reset, LOin, LOval);

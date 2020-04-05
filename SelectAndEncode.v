@@ -45,6 +45,7 @@ module mux_decoder_4_16(input [3:0] select , output reg [15:0] result);
        4'b1101 : result = 16'b0010000000000000;  
 		 4'b1110 : result = 16'b0100000000000000; 
 		 4'b1111 : result = 16'b1000000000000000; 
+		 default : result = 16'b0000000000000000; 
       
     endcase  
   end  

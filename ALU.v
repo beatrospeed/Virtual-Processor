@@ -230,9 +230,9 @@ module alu(output reg [31:0] z_Output1,output reg [31:0] z_Output2, input [31:0]
 
 
 	always @(negedge Clk) begin
-	#10
+	#5
 	if(inc_pc == 1)
-		z_Output1 <=  pc_inc;
+		z_Output1 <= reg2 + 1;
 	else if(control == 0)begin
 			z_Output1 <= divide_q;
 			z_Output2 <= divide_r;

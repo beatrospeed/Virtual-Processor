@@ -19,8 +19,8 @@ module datapath_ld_test();
 	wire [31:0] R0Val,R1Val,R2Val,R3Val,R4Val,R5Val,R6Val,
 	R7Val,R8Val,R9Val,R10Val,R11Val,R12Val,R13Val,R14Val,
 	R15Val,IRval,bus,MDRval,mux_data_out,YVal,R0TempOut,
-	C_sign_extended,InPort_D, OutPort_D, PCVal,CVal,mdatain;
-	wire [63:0]  ZVal1,ZVal2,ALUVal_D1,ALUVal_D2;
+	C_sign_extended,InPort_D, OutPort_D, PCVal,mdatain;
+	wire [31:0]  ZVal1,ZVal2,ALUVal_D1,ALUVal_D2;
 	wire [15:0] Rin_Select, Rout_Select; 
 	wire [31:0] MAR_D;
 	dataPath dp(PCout,Zlowout, MDRout, MARin,Zin,PCin,MDRin, read, write,
@@ -29,7 +29,7 @@ module datapath_ld_test();
    BAout,OutPortin,Rin,Rout,GRA, GRB, GRC,Immediate,R0Val,R1Val,R2Val,R3Val,
 	R4Val,R5Val,R6Val,R7Val,R8Val,R9Val,R10Val,R11Val,R12Val,R13Val,R14Val,
 	R15Val,IRval,bus,MDRval,mux_data_out,YVal,R0TempOut,
-	C_sign_extended,InPort_D, OutPort_D, PCVal,CVal,mdatain,
+	C_sign_extended,InPort_D, OutPort_D, PCVal,mdatain,
 	ZVal1,ZVal2,ALUVal_D1,ALUVal_D2,Rin_Select, Rout_Select, MAR_D);
 	 
 	 
@@ -72,7 +72,7 @@ module datapath_ld_test();
 				Yin <= 0; control <= 4'b0; Zin <= 0; 
 				end
 			PC_load1a: begin //0
-				Immediate <= 32'd2;
+				Immediate <= 32'd3;
 				mdr_read <= 2'b10; MDRin <= 1;
 				end
 			PC_load1b: begin //20

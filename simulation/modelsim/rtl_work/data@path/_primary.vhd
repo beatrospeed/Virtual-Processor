@@ -63,7 +63,6 @@ entity dataPath is
         InPort_D        : out    vl_logic_vector(31 downto 0);
         OutPort_D       : out    vl_logic_vector(31 downto 0);
         PCVal           : out    vl_logic_vector(31 downto 0);
-        CVal            : out    vl_logic_vector(31 downto 0);
         Mdatain         : out    vl_logic_vector(31 downto 0);
         ZVal1           : out    vl_logic_vector(31 downto 0);
         ZVal2           : out    vl_logic_vector(31 downto 0);
