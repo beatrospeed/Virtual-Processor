@@ -10,25 +10,25 @@
 # ** Warning: Copied C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
 #          Updated modelsim.ini.
 # 
-# vlog -vlog01compat -work work +incdir+C:/Users/Christopher\ Masloub/Documents/GitHub/Virtual-Processor {C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/MD_Mux.v}
+# vlog -vlog01compat -work work +incdir+D:/Elec_374/Virtual-Processor {D:/Elec_374/Virtual-Processor/MD_Mux.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module MD_Mux
 # 
 # Top level modules:
 # 	MD_Mux
-# vlog -vlog01compat -work work +incdir+C:/Users/Christopher\ Masloub/Documents/GitHub/Virtual-Processor {C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/encoder_32_to_5.v}
+# vlog -vlog01compat -work work +incdir+D:/Elec_374/Virtual-Processor {D:/Elec_374/Virtual-Processor/encoder_32_to_5.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module encoder_32_to_5
 # 
 # Top level modules:
 # 	encoder_32_to_5
-# vlog -vlog01compat -work work +incdir+C:/Users/Christopher\ Masloub/Documents/GitHub/Virtual-Processor {C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Mux_32_to_1.v}
+# vlog -vlog01compat -work work +incdir+D:/Elec_374/Virtual-Processor {D:/Elec_374/Virtual-Processor/Mux_32_to_1.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module Mux_32_to_1
 # 
 # Top level modules:
 # 	Mux_32_to_1
-# vlog -vlog01compat -work work +incdir+C:/Users/Christopher\ Masloub/Documents/GitHub/Virtual-Processor {C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v}
+# vlog -vlog01compat -work work +incdir+D:/Elec_374/Virtual-Processor {D:/Elec_374/Virtual-Processor/ALU.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module bit_stage_cell
 # -- Compiling module four_bit_adder
@@ -42,7 +42,7 @@
 # 
 # Top level modules:
 # 	alu
-# vlog -vlog01compat -work work +incdir+C:/Users/Christopher\ Masloub/Documents/GitHub/Virtual-Processor {C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/REG32_MDR.v}
+# vlog -vlog01compat -work work +incdir+D:/Elec_374/Virtual-Processor {D:/Elec_374/Virtual-Processor/REG32_MDR.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module Reg32
 # -- Compiling module Reg64
@@ -51,19 +51,19 @@
 # Top level modules:
 # 	Reg64
 # 	mdr_reg
-# vlog -vlog01compat -work work +incdir+C:/Users/Christopher\ Masloub/Documents/GitHub/Virtual-Processor {C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v}
+# vlog -vlog01compat -work work +incdir+D:/Elec_374/Virtual-Processor {D:/Elec_374/Virtual-Processor/Datapath.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module dataPath
 # 
 # Top level modules:
 # 	dataPath
-# vlog -vlog01compat -work work +incdir+C:/Users/Christopher\ Masloub/Documents/GitHub/Virtual-Processor {C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/RAM.v}
+# vlog -vlog01compat -work work +incdir+D:/Elec_374/Virtual-Processor {D:/Elec_374/Virtual-Processor/RAM.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module RAM
 # 
 # Top level modules:
 # 	RAM
-# vlog -vlog01compat -work work +incdir+C:/Users/Christopher\ Masloub/Documents/GitHub/Virtual-Processor {C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/SelectAndEncode.v}
+# vlog -vlog01compat -work work +incdir+D:/Elec_374/Virtual-Processor {D:/Elec_374/Virtual-Processor/SelectAndEncode.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module SelectEncode
 # -- Compiling module mux_decoder_4_16
@@ -71,16 +71,16 @@
 # Top level modules:
 # 	SelectEncode
 # 
-# vlog -vlog01compat -work work +incdir+C:/Users/Christopher\ Masloub/Documents/GitHub/Virtual-Processor {C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/datapathST2_tb.v}
+# vlog -vlog01compat -work work +incdir+D:/Elec_374/Virtual-Processor {D:/Elec_374/Virtual-Processor/datapath_ALU_tb.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module datapathST2_tb
+# -- Compiling module datapath_ALU_tb
 # 
 # Top level modules:
-# 	datapathST2_tb
+# 	datapath_ALU_tb
 # 
-# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneiii_ver -L rtl_work -L work -voptargs="+acc"  datapathST2_tb
-# vsim -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneiii_ver -L rtl_work -L work -voptargs=\"+acc\" -t 1ps datapathST2_tb 
-# Loading work.datapathST2_tb
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneiii_ver -L rtl_work -L work -voptargs="+acc"  datapath_ALU_tb
+# vsim -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneiii_ver -L rtl_work -L work -voptargs=\"+acc\" -t 1ps datapath_ALU_tb 
+# Loading work.datapath_ALU_tb
 # Loading work.dataPath
 # Loading work.Reg32
 # Loading work.MD_Mux
@@ -98,34 +98,34 @@
 # Loading work.thirtytwo_bit_subtractor
 # Loading work.thirtytwo_bit_booth_algorithm
 # Loading work.nonrestoring_divison_algo
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(103): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'c_0'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(84).
+# ** Warning: (vsim-3015) D:/Elec_374/Virtual-Processor/ALU.v(103): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'c_0'. The port definition is at: D:/Elec_374/Virtual-Processor/ALU.v(84).
 # 
-#         Region: /datapathST2_tb/dp/Alu/c/ttb
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(212): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'c_0'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(84).
+#         Region: /datapath_ALU_tb/dp/Alu/c/ttb
+# ** Warning: (vsim-3015) D:/Elec_374/Virtual-Processor/ALU.v(212): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'c_0'. The port definition is at: D:/Elec_374/Virtual-Processor/ALU.v(84).
 # 
-#         Region: /datapathST2_tb/dp/Alu/a
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(103): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'c_0'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(84).
+#         Region: /datapath_ALU_tb/dp/Alu/a
+# ** Warning: (vsim-3015) D:/Elec_374/Virtual-Processor/ALU.v(103): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'c_0'. The port definition is at: D:/Elec_374/Virtual-Processor/ALU.v(84).
 # 
-#         Region: /datapathST2_tb/dp/Alu/s/compliment/ttb
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(111): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'c_0'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(84).
+#         Region: /datapath_ALU_tb/dp/Alu/s/compliment/ttb
+# ** Warning: (vsim-3015) D:/Elec_374/Virtual-Processor/ALU.v(111): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'c_0'. The port definition is at: D:/Elec_374/Virtual-Processor/ALU.v(84).
 # 
-#         Region: /datapathST2_tb/dp/Alu/s/sub
-# ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(229): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'c_0'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(84).
+#         Region: /datapath_ALU_tb/dp/Alu/s/sub
+# ** Warning: (vsim-3015) D:/Elec_374/Virtual-Processor/ALU.v(229): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'c_0'. The port definition is at: D:/Elec_374/Virtual-Processor/ALU.v(84).
 # 
-#         Region: /datapathST2_tb/dp/Alu/a2
+#         Region: /datapath_ALU_tb/dp/Alu/a2
 # 
 # add wave *
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 # 
 #           File in use by: Christopher Masloub  Hostname: LAPTOP-R5L73M9C  ProcessID: 524
 # 
-#           Attempting to use alternate WLF file "./wlft4jdz3v".
+#           Attempting to use alternate WLF file "./wlft55nzhy".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
 # 
-#           Using alternate file: ./wlft4jdz3v
+#           Using alternate file: ./wlft55nzhy
 # 
 # view structure
 # .main_pane.structure.interior.cs.body.struct
 # view signals
 # .main_pane.objects.interior.cs.body.tree
-# run 1 ns
+# run 10 ns
