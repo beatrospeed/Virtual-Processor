@@ -1,11 +1,13 @@
 
 
 module dataPath(
+	input [31:0] InportData; 
 	input PCout,Zlowout, MDRout, MARin,Zin,
 	PCin,MDRin, read, write,IRin,Yin,IncPc,clk,
 	input [1:0] mdr_read,
 	input [3:0] control,
-	input HIout, LOout,InPortout, OutPortout,Cout, Zhighout, 
+	input HIout, LOout,
+	input InPortout, OutPortout,Cout, Zhighout, 
 	HIin, LOin, Zhighin, Zlowin, InPortin, reset,
 	input BAout,OutPortin,Rin,Rout,GRA, GRB, GRC,
 	input [31:0] Immediate,
@@ -16,7 +18,7 @@ module dataPath(
 	C_sign_extended,InPort_D, OutPort_D, PCVal,Mdatain,
 	output wire [31:0] ZVal1,ZVal2,ALUVal_D1,ALUVal_D2, 
 	output wire [15:0] Rin_Select, Rout_Select,
-	output wire [31:0] MAR_D
+	output wire [31:0] MAR_D, Branch
 	
 );
 	
@@ -68,7 +70,7 @@ module dataPath(
    
 	MD_Mux md_mux(mux_data_out, bus, Mdatain, Immediate,32'b0, mdr_read);
 	Reg32  mdrReg(mux_data_out,clk,reset,MDRin, MDRval);
-   Reg32 InPort(32'b0, clk, reset, InPortin, InPort_D);
+   Reg32 InPort(InportData, clk, reset, InPortin, InPort_D);
    Reg32 Outport(bus,clk,reset,OutPortin, OutPort_D);
    Reg32 IR(bus, clk, reset, IRin, IRval);
    Reg32 PC(bus, clk, reset, PCin, PCVal);
@@ -105,5 +107,7 @@ module dataPath(
 	ZVal1,PCVal,MDRval,InPort_D,C_sign_extended,Select_D);
 	
 	alu Alu(ALUVal_D1,ALUVal_D2,YVal,bus,control,IncPc,clk);
+	
+	CONFF controlLogic(bus,IR, Branch); 
 
 endmodule 
