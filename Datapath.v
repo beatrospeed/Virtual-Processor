@@ -1,7 +1,7 @@
 
 
 module dataPath(
-	input [31:0] InportData; 
+	input [31:0] InportData,
 	input PCout,Zlowout, MDRout, MARin,Zin,
 	PCin,MDRin, read, write,IRin,Yin,IncPc,clk,
 	input [1:0] mdr_read,
@@ -18,7 +18,8 @@ module dataPath(
 	C_sign_extended,InPort_D, OutPort_D, PCVal,Mdatain,
 	output wire [31:0] ZVal1,ZVal2,ALUVal_D1,ALUVal_D2, 
 	output wire [15:0] Rin_Select, Rout_Select,
-	output wire [31:0] MAR_D, Branch
+	output wire [31:0] MAR_D,
+	output wire Branch
 	
 );
 	
@@ -108,6 +109,6 @@ module dataPath(
 	
 	alu Alu(ALUVal_D1,ALUVal_D2,YVal,bus,control,IncPc,clk);
 	
-	CONFF controlLogic(bus,IR, Branch); 
+	CONFF controlLogic(bus,IRval, Branch); 
 
 endmodule 

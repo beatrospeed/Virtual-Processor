@@ -2,6 +2,7 @@ library verilog;
 use verilog.vl_types.all;
 entity dataPath is
     port(
+        InportData      : in     vl_logic_vector(31 downto 0);
         PCout           : in     vl_logic;
         Zlowout         : in     vl_logic;
         MDRout          : in     vl_logic;
@@ -70,6 +71,7 @@ entity dataPath is
         ALUVal_D2       : out    vl_logic_vector(31 downto 0);
         Rin_Select      : out    vl_logic_vector(15 downto 0);
         Rout_Select     : out    vl_logic_vector(15 downto 0);
-        MAR_D           : out    vl_logic_vector(31 downto 0)
+        MAR_D           : out    vl_logic_vector(31 downto 0);
+        Branch          : out    vl_logic
     );
 end dataPath;
