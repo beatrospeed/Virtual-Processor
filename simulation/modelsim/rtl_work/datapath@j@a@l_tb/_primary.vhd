@@ -1,38 +1,36 @@
 library verilog;
 use verilog.vl_types.all;
-entity datapath_Branch_tb is
+entity datapathJAL_tb is
     generic(
         Default         : vl_logic_vector(0 to 4) := (Hi0, Hi0, Hi0, Hi0, Hi0);
         PC_load1a       : vl_logic_vector(0 to 4) := (Hi0, Hi0, Hi0, Hi0, Hi1);
         PC_load1b       : vl_logic_vector(0 to 4) := (Hi0, Hi0, Hi0, Hi1, Hi0);
-        PRE_T0          : vl_logic_vector(0 to 4) := (Hi0, Hi0, Hi0, Hi1, Hi1);
-        PRE_T1          : vl_logic_vector(0 to 4) := (Hi0, Hi0, Hi1, Hi0, Hi0);
-        PRE_T2          : vl_logic_vector(0 to 4) := (Hi0, Hi0, Hi1, Hi0, Hi1);
-        PRE_T3          : vl_logic_vector(0 to 4) := (Hi0, Hi0, Hi1, Hi1, Hi0);
-        PRE_T4          : vl_logic_vector(0 to 4) := (Hi0, Hi0, Hi1, Hi1, Hi1);
-        PRE_T5          : vl_logic_vector(0 to 4) := (Hi0, Hi1, Hi0, Hi0, Hi0);
-        PRE_T6          : vl_logic_vector(0 to 4) := (Hi0, Hi1, Hi0, Hi0, Hi1);
+        PRET0           : vl_logic_vector(0 to 4) := (Hi0, Hi0, Hi0, Hi1, Hi1);
+        PRET1           : vl_logic_vector(0 to 4) := (Hi0, Hi0, Hi1, Hi0, Hi0);
+        PRET2           : vl_logic_vector(0 to 4) := (Hi0, Hi0, Hi1, Hi0, Hi1);
+        PRET3           : vl_logic_vector(0 to 4) := (Hi0, Hi0, Hi1, Hi1, Hi0);
+        PRET4           : vl_logic_vector(0 to 4) := (Hi0, Hi0, Hi1, Hi1, Hi1);
+        PRET5           : vl_logic_vector(0 to 4) := (Hi0, Hi1, Hi0, Hi0, Hi0);
+        PRET6           : vl_logic_vector(0 to 4) := (Hi0, Hi1, Hi0, Hi0, Hi1);
         PC_load1c       : vl_logic_vector(0 to 4) := (Hi0, Hi1, Hi0, Hi1, Hi0);
         PC_load1d       : vl_logic_vector(0 to 4) := (Hi0, Hi1, Hi0, Hi1, Hi1);
         T0              : vl_logic_vector(0 to 4) := (Hi0, Hi1, Hi1, Hi0, Hi0);
         T1              : vl_logic_vector(0 to 4) := (Hi0, Hi1, Hi1, Hi0, Hi1);
         T2              : vl_logic_vector(0 to 4) := (Hi0, Hi1, Hi1, Hi1, Hi0);
         T3              : vl_logic_vector(0 to 4) := (Hi0, Hi1, Hi1, Hi1, Hi1);
-        T4              : vl_logic_vector(0 to 4) := (Hi1, Hi0, Hi0, Hi0, Hi0);
-        T5              : vl_logic_vector(0 to 4) := (Hi1, Hi0, Hi0, Hi0, Hi1);
-        T6              : vl_logic_vector(0 to 4) := (Hi1, Hi0, Hi0, Hi1, Hi0)
+        T4              : vl_logic_vector(0 to 4) := (Hi1, Hi0, Hi0, Hi0, Hi0)
     );
     attribute mti_svvh_generic_type : integer;
     attribute mti_svvh_generic_type of Default : constant is 1;
     attribute mti_svvh_generic_type of PC_load1a : constant is 1;
     attribute mti_svvh_generic_type of PC_load1b : constant is 1;
-    attribute mti_svvh_generic_type of PRE_T0 : constant is 1;
-    attribute mti_svvh_generic_type of PRE_T1 : constant is 1;
-    attribute mti_svvh_generic_type of PRE_T2 : constant is 1;
-    attribute mti_svvh_generic_type of PRE_T3 : constant is 1;
-    attribute mti_svvh_generic_type of PRE_T4 : constant is 1;
-    attribute mti_svvh_generic_type of PRE_T5 : constant is 1;
-    attribute mti_svvh_generic_type of PRE_T6 : constant is 1;
+    attribute mti_svvh_generic_type of PRET0 : constant is 1;
+    attribute mti_svvh_generic_type of PRET1 : constant is 1;
+    attribute mti_svvh_generic_type of PRET2 : constant is 1;
+    attribute mti_svvh_generic_type of PRET3 : constant is 1;
+    attribute mti_svvh_generic_type of PRET4 : constant is 1;
+    attribute mti_svvh_generic_type of PRET5 : constant is 1;
+    attribute mti_svvh_generic_type of PRET6 : constant is 1;
     attribute mti_svvh_generic_type of PC_load1c : constant is 1;
     attribute mti_svvh_generic_type of PC_load1d : constant is 1;
     attribute mti_svvh_generic_type of T0 : constant is 1;
@@ -40,6 +38,4 @@ entity datapath_Branch_tb is
     attribute mti_svvh_generic_type of T2 : constant is 1;
     attribute mti_svvh_generic_type of T3 : constant is 1;
     attribute mti_svvh_generic_type of T4 : constant is 1;
-    attribute mti_svvh_generic_type of T5 : constant is 1;
-    attribute mti_svvh_generic_type of T6 : constant is 1;
-end datapath_Branch_tb;
+end datapathJAL_tb;

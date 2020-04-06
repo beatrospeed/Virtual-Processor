@@ -77,16 +77,16 @@
 # Top level modules:
 # 	CONFF
 # 
-# vlog -vlog01compat -work work +incdir+C:/Users/Christopher\ Masloub/Documents/GitHub/Virtual-Processor {C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/datapath_Branch_tb.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/Christopher\ Masloub/Documents/GitHub/Virtual-Processor {C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/datapathJAL_tb.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module datapath_Branch_tb
+# -- Compiling module datapathJAL_tb
 # 
 # Top level modules:
-# 	datapath_Branch_tb
+# 	datapathJAL_tb
 # 
-# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneiii_ver -L rtl_work -L work -voptargs="+acc"  datapath_Branch_tb
-# vsim -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneiii_ver -L rtl_work -L work -voptargs=\"+acc\" -t 1ps datapath_Branch_tb 
-# Loading work.datapath_Branch_tb
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneiii_ver -L rtl_work -L work -voptargs="+acc"  datapathJAL_tb
+# vsim -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneiii_ver -L rtl_work -L work -voptargs=\"+acc\" -t 1ps datapathJAL_tb 
+# Loading work.datapathJAL_tb
 # Loading work.dataPath
 # Loading work.Reg32
 # Loading work.MD_Mux
@@ -107,29 +107,29 @@
 # Loading work.CONFF
 # ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(103): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'c_0'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(84).
 # 
-#         Region: /datapath_Branch_tb/dp/Alu/c/ttb
+#         Region: /datapathJAL_tb/dp/Alu/c/ttb
 # ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(212): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'c_0'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(84).
 # 
-#         Region: /datapath_Branch_tb/dp/Alu/a
+#         Region: /datapathJAL_tb/dp/Alu/a
 # ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(103): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'c_0'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(84).
 # 
-#         Region: /datapath_Branch_tb/dp/Alu/s/compliment/ttb
+#         Region: /datapathJAL_tb/dp/Alu/s/compliment/ttb
 # ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(111): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'c_0'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(84).
 # 
-#         Region: /datapath_Branch_tb/dp/Alu/s/sub
+#         Region: /datapathJAL_tb/dp/Alu/s/sub
 # ** Warning: (vsim-3015) C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(229): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'c_0'. The port definition is at: C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v(84).
 # 
-#         Region: /datapath_Branch_tb/dp/Alu/a2
+#         Region: /datapathJAL_tb/dp/Alu/a2
 # 
 # add wave *
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 # 
 #           File in use by: Christopher Masloub  Hostname: LAPTOP-R5L73M9C  ProcessID: 524
 # 
-#           Attempting to use alternate WLF file "./wlfts4f8fc".
+#           Attempting to use alternate WLF file "./wlftt7yerh".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
 # 
-#           Using alternate file: ./wlfts4f8fc
+#           Using alternate file: ./wlftt7yerh
 # 
 # view structure
 # .main_pane.structure.interior.cs.body.struct
