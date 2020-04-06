@@ -20,7 +20,7 @@ module datapathSt1_tb();
    BAout,OutPortin,Rin,Rout,GRA, GRB, GRC;
 	reg [31:0] Immediate;
 	reg [31:0] InportData;
-	
+	reg CONin; 
 	
 	//demonstration ports
 	wire [31:0] R0Val,R1Val,R2Val,R3Val,R4Val,R5Val,R6Val,

@@ -14,6 +14,7 @@ module datapath_ALU_tb();
    BAout,OutPortin,Rin,Rout,GRA, GRB, GRC;
 	reg [31:0] Immediate;
 	reg [31:0] InportData;
+	reg CONin; 
 	
 	//demonstration ports
 	wire [31:0] R0Val,R1Val,R2Val,R3Val,R4Val,R5Val,R6Val,
@@ -25,7 +26,7 @@ module datapath_ALU_tb();
 	wire [31:0] MAR_D;
 	wire  Branch;
 	
-dataPath dp(InportData,PCout,Zlowout, MDRout, MARin,Zin,PCin,MDRin, read, write,
+dataPath dp(CONin,InportData,PCout,Zlowout, MDRout, MARin,Zin,PCin,MDRin, read, write,
 	IRin,Yin,IncPc,clk,mdr_read, control,HIout, LOout,InPortout, OutPortout,
 	Cout, Zhighout,HIin, LOin, Zhighin, Zlowin, InPortin,reset,
    BAout,OutPortin,Rin,Rout,GRA, GRB, GRC,Immediate,R0Val,R1Val,R2Val,R3Val,

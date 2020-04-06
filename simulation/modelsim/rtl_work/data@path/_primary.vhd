@@ -2,6 +2,7 @@ library verilog;
 use verilog.vl_types.all;
 entity dataPath is
     port(
+        CONin           : in     vl_logic;
         InportData      : in     vl_logic_vector(31 downto 0);
         PCout           : in     vl_logic;
         Zlowout         : in     vl_logic;

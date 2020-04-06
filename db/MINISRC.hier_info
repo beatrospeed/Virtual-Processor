@@ -1,4 +1,5 @@
 |dataPath
+CONin => CONin.IN1
 InportData[0] => InportData[0].IN1
 InportData[1] => InportData[1].IN1
 InportData[2] => InportData[2].IN1
@@ -1157,7 +1158,7 @@ MAR_D[28] <= MAR_D[28].DB_MAX_OUTPUT_PORT_TYPE
 MAR_D[29] <= MAR_D[29].DB_MAX_OUTPUT_PORT_TYPE
 MAR_D[30] <= MAR_D[30].DB_MAX_OUTPUT_PORT_TYPE
 MAR_D[31] <= MAR_D[31].DB_MAX_OUTPUT_PORT_TYPE
-Branch <= CONFF:controlLogic.port2
+Branch <= CONFF:controlLogic.port3
 
 
 |dataPath|Reg32:HI
@@ -16881,6 +16882,7 @@ IR[28] => ~NO_FANOUT~
 IR[29] => ~NO_FANOUT~
 IR[30] => ~NO_FANOUT~
 IR[31] => ~NO_FANOUT~
+CONin => ~NO_FANOUT~
 q <= q.DB_MAX_OUTPUT_PORT_TYPE
 
 

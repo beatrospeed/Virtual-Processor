@@ -18,7 +18,7 @@ module datapath_ld_2();
    BAout,OutPortin,Rin,Rout,GRA, GRB, GRC;
 	reg [31:0] Immediate;
 	reg [31:0] InportData;
-	
+	reg CONin; 
 	//demonstration ports
 	wire [31:0] R0Val,R1Val,R2Val,R3Val,R4Val,R5Val,R6Val,
 	R7Val,R8Val,R9Val,R10Val,R11Val,R12Val,R13Val,R14Val,
@@ -27,7 +27,7 @@ module datapath_ld_2();
 	wire [31:0]  ZVal1,ZVal2,ALUVal_D1,ALUVal_D2;
 	wire [15:0] Rin_Select, Rout_Select; 
 	wire [31:0] MAR_D;
-	dataPath dp(InportData,PCout,Zlowout, MDRout, MARin,Zin,PCin,MDRin, read, write,
+	dataPath dp(CONin,InportData,PCout,Zlowout, MDRout, MARin,Zin,PCin,MDRin, read, write,
 	IRin,Yin,IncPc,clk,mdr_read, control,HIout, LOout,InPortout, OutPortout,
 	Cout, Zhighout,HIin, LOin, Zhighin, Zlowin, InPortin,reset,
    BAout,OutPortin,Rin,Rout,GRA, GRB, GRC,Immediate,R0Val,R1Val,R2Val,R3Val,

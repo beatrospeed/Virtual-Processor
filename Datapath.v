@@ -1,6 +1,7 @@
 
 
 module dataPath(
+	input CONin,
 	input [31:0] InportData,
 	input PCout,Zlowout, MDRout, MARin,Zin,
 	PCin,MDRin, read, write,IRin,Yin,IncPc,clk,
@@ -109,6 +110,6 @@ module dataPath(
 	
 	alu Alu(ALUVal_D1,ALUVal_D2,YVal,bus,control,IncPc,clk);
 	
-	CONFF controlLogic(bus,IRval, Branch); 
+	CONFF controlLogic(bus,IRval,CONin,Branch); 
 
 endmodule 

@@ -14,7 +14,7 @@ L0 203
 Z5 OV;L;10.1d;51
 r1
 31
-Z6 !s108 1586134594.650000
+Z6 !s108 1586139120.771000
 Z7 !s107 C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v|
 Z8 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor|C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/ALU.v|
 Z9 o-vlog01compat -work work -O0
@@ -44,10 +44,10 @@ R10
 !s85 0
 !s101 -O0
 vCONFF
-I`P882o^7a8PSQ9Y83WZFA2
-VaYPJLoX]dR7czTFK8z[E82
+I8IXE_@Q^10`Tg]P0T6k`Z3
+Ve]mFN9iW6LDaO`zT[IUFD3
 R1
-w1586134527
+w1586138990
 8C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/CONFF.v
 FC:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/CONFF.v
 L0 1
@@ -58,17 +58,17 @@ R9
 R10
 n@c@o@n@f@f
 !i10b 1
-!s100 L4fJadCQ4fR51hQ8fkkQ11
+!s100 7WZcfPMNl^^A90KhYZEPG2
 !s85 0
-!s108 1586134595.226000
+!s108 1586139121.828000
 !s107 C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/CONFF.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor|C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/CONFF.v|
 !s101 -O0
 vdataPath
-IXco0iEmODc1JZ[L[MO56d2
-VQGUEBdW2XDiEZNgD8XcMS3
+IL;YKX0_E9^1d43X<HMfZf3
+Vce<KX`F<8=:;<<@Im^3mk0
 R1
-w1586134523
+w1586138559
 8C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v
 FC:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v
 L0 3
@@ -79,33 +79,33 @@ R9
 R10
 ndata@path
 !i10b 1
-!s100 Gcgf0N:UEMoNCiggA1cXH0
+!s100 lV6=JRjWRYSncY6OAZPZZ3
 !s85 0
-!s108 1586134594.986000
+!s108 1586139121.323000
 !s107 C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor|C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Datapath.v|
 !s101 -O0
-vdatapath_ALU_tb
+vdatapath_Branch_tb
 !i10b 1
-!s100 m25?EeJQ5]@NbL9m8JTgD1
-I5;=1aC[H6:aL>R1^NW=cQ2
-VMEzU?QVW;IM`PJ>UPNZ>H0
+!s100 60PLE_6BBOU;mB:hCIMmM1
+I5z4KlT8zIG<GE0@llc>Bh2
+Vbf<1DLNoTeB3PMZGJb@RD1
 R1
-w1586134548
-8C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/datapath_ALU_tb.v
-FC:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/datapath_ALU_tb.v
+w1586138838
+8C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/datapath_Branch_tb.v
+FC:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/datapath_Branch_tb.v
 L0 1
 R5
 r1
 !s85 0
 31
-!s108 1586134595.304000
-!s107 C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/datapath_ALU_tb.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor|C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/datapath_ALU_tb.v|
+!s108 1586139121.953000
+!s107 C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/datapath_Branch_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor|C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/datapath_Branch_tb.v|
 !s101 -O0
 R9
 R10
-ndatapath_@a@l@u_tb
+ndatapath_@branch_tb
 vencoder_32_to_5
 I`?hD?fj[JI9MBYFoEYSD;3
 VYczETH9cgFeF>C]_ngNjD2
@@ -122,7 +122,7 @@ R10
 !i10b 1
 !s100 oM:^8AN4GY5jM3Mg5[U:W2
 !s85 0
-!s108 1586134594.505000
+!s108 1586139120.557000
 !s107 C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/encoder_32_to_5.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor|C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/encoder_32_to_5.v|
 !s101 -O0
@@ -163,7 +163,7 @@ R10
 !i10b 1
 !s100 TeVz6C?[^RaEXmKg7NAR>1
 !s85 0
-!s108 1586134594.421000
+!s108 1586139120.450000
 !s107 C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/MD_Mux.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor|C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/MD_Mux.v|
 !s101 -O0
@@ -178,7 +178,7 @@ L0 25
 R5
 r1
 31
-Z14 !s108 1586134594.882000
+Z14 !s108 1586139121.147000
 Z15 !s107 C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/REG32_MDR.v|
 Z16 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor|C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/REG32_MDR.v|
 R9
@@ -204,7 +204,7 @@ n@mux_32_to_1
 !i10b 1
 !s100 _e6iJmDf^FcU_P^f9@k1G2
 !s85 0
-!s108 1586134594.578000
+!s108 1586139120.662000
 !s107 C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Mux_32_to_1.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor|C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/Mux_32_to_1.v|
 !s101 -O0
@@ -219,7 +219,7 @@ L0 28
 R5
 r1
 31
-Z20 !s108 1586134595.133000
+Z20 !s108 1586139121.625000
 Z21 !s107 C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/SelectAndEncode.v|
 Z22 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor|C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/SelectAndEncode.v|
 R9
@@ -249,10 +249,10 @@ R10
 !s85 0
 !s101 -O0
 vRAM
-IX@;doQVCXgJoDijY;[XOK0
+Id7gDd:0<N3dbbWK;dAO2N3
 V66?N[O4]be93iCd5WD5OV2
 R1
-w1586114161
+w1586139108
 8C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/RAM.v
 FC:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/RAM.v
 L0 3
@@ -263,9 +263,9 @@ R9
 R10
 n@r@a@m
 !i10b 1
-!s100 Q@RBb8Oca;MW>CEWU_:8]2
+!s100 <bRj==flQZgPI;kZEVOeY0
 !s85 0
-!s108 1586134595.066000
+!s108 1586139121.478000
 !s107 C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/RAM.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor|C:/Users/Christopher Masloub/Documents/GitHub/Virtual-Processor/RAM.v|
 !s101 -O0

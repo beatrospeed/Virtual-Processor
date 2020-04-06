@@ -1,17 +1,17 @@
 library verilog;
 use verilog.vl_types.all;
-entity datapath_ALU_tb is
+entity datapath_Branch_tb is
     generic(
         Default         : vl_logic_vector(0 to 4) := (Hi0, Hi0, Hi0, Hi0, Hi0);
         PC_load1a       : vl_logic_vector(0 to 4) := (Hi0, Hi0, Hi0, Hi0, Hi1);
         PC_load1b       : vl_logic_vector(0 to 4) := (Hi0, Hi0, Hi0, Hi1, Hi0);
-        PT0             : vl_logic_vector(0 to 4) := (Hi0, Hi0, Hi0, Hi1, Hi1);
-        PT1             : vl_logic_vector(0 to 4) := (Hi0, Hi0, Hi1, Hi0, Hi0);
-        PT2             : vl_logic_vector(0 to 4) := (Hi0, Hi0, Hi1, Hi0, Hi1);
-        PT3             : vl_logic_vector(0 to 4) := (Hi0, Hi0, Hi1, Hi1, Hi0);
-        PT4             : vl_logic_vector(0 to 4) := (Hi0, Hi0, Hi1, Hi1, Hi1);
-        PT5             : vl_logic_vector(0 to 4) := (Hi0, Hi1, Hi0, Hi0, Hi0);
-        PT6             : vl_logic_vector(0 to 4) := (Hi0, Hi1, Hi0, Hi0, Hi1);
+        PRE_T0          : vl_logic_vector(0 to 4) := (Hi0, Hi0, Hi0, Hi1, Hi1);
+        PRE_T1          : vl_logic_vector(0 to 4) := (Hi0, Hi0, Hi1, Hi0, Hi0);
+        PRE_T2          : vl_logic_vector(0 to 4) := (Hi0, Hi0, Hi1, Hi0, Hi1);
+        PRE_T3          : vl_logic_vector(0 to 4) := (Hi0, Hi0, Hi1, Hi1, Hi0);
+        PRE_T4          : vl_logic_vector(0 to 4) := (Hi0, Hi0, Hi1, Hi1, Hi1);
+        PRE_T5          : vl_logic_vector(0 to 4) := (Hi0, Hi1, Hi0, Hi0, Hi0);
+        PRE_T6          : vl_logic_vector(0 to 4) := (Hi0, Hi1, Hi0, Hi0, Hi1);
         PC_load1c       : vl_logic_vector(0 to 4) := (Hi0, Hi1, Hi0, Hi1, Hi0);
         PC_load1d       : vl_logic_vector(0 to 4) := (Hi0, Hi1, Hi0, Hi1, Hi1);
         T0              : vl_logic_vector(0 to 4) := (Hi0, Hi1, Hi1, Hi0, Hi0);
@@ -26,13 +26,13 @@ entity datapath_ALU_tb is
     attribute mti_svvh_generic_type of Default : constant is 1;
     attribute mti_svvh_generic_type of PC_load1a : constant is 1;
     attribute mti_svvh_generic_type of PC_load1b : constant is 1;
-    attribute mti_svvh_generic_type of PT0 : constant is 1;
-    attribute mti_svvh_generic_type of PT1 : constant is 1;
-    attribute mti_svvh_generic_type of PT2 : constant is 1;
-    attribute mti_svvh_generic_type of PT3 : constant is 1;
-    attribute mti_svvh_generic_type of PT4 : constant is 1;
-    attribute mti_svvh_generic_type of PT5 : constant is 1;
-    attribute mti_svvh_generic_type of PT6 : constant is 1;
+    attribute mti_svvh_generic_type of PRE_T0 : constant is 1;
+    attribute mti_svvh_generic_type of PRE_T1 : constant is 1;
+    attribute mti_svvh_generic_type of PRE_T2 : constant is 1;
+    attribute mti_svvh_generic_type of PRE_T3 : constant is 1;
+    attribute mti_svvh_generic_type of PRE_T4 : constant is 1;
+    attribute mti_svvh_generic_type of PRE_T5 : constant is 1;
+    attribute mti_svvh_generic_type of PRE_T6 : constant is 1;
     attribute mti_svvh_generic_type of PC_load1c : constant is 1;
     attribute mti_svvh_generic_type of PC_load1d : constant is 1;
     attribute mti_svvh_generic_type of T0 : constant is 1;
@@ -42,4 +42,4 @@ entity datapath_ALU_tb is
     attribute mti_svvh_generic_type of T4 : constant is 1;
     attribute mti_svvh_generic_type of T5 : constant is 1;
     attribute mti_svvh_generic_type of T6 : constant is 1;
-end datapath_ALU_tb;
+end datapath_Branch_tb;

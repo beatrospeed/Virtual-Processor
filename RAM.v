@@ -44,8 +44,8 @@ initial begin
 	//branch instruction
 	//For checking brzr
 	//mem_array[8] = 32'b00000001000000000000000000000000; //takes branch
-	//mem_array[8] = 32'b00000001000000000000000000000001; //does not take branch
-	//mem_array[9] = 32'b00000001000000000000000000100011;
+	mem_array[8] = 32'b00000001000000000000000000000001; //does not take branch
+	mem_array[9] = 32'b00000001000000000000000000100011;
 				
 	//For checking brnz
 	//mem_array[8] = 32'b00000001000000000000000000000001; //takes branch
@@ -59,8 +59,8 @@ initial begin
 				
 	//For checking brmi
 	//mem_array[8] = 32'b00000001000001000000000000000000; //takes branch
-	mem_array[8] = 32'b00000001000000000000000000000001; //does not take branch
-	mem_array[9] = 32'b00000001000110000000000000100011;
+	//mem_array[8] = 32'b00000001000000000000000000000001; //does not take branch
+	//mem_array[9] = 32'b00000001000110000000000000100011;
 	
 	//jr instruction
 	mem_array[10] = 32'b00000000100000000000000000010010;
